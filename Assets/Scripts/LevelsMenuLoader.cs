@@ -148,7 +148,6 @@ public class LevelsMenuLoader : MonoBehaviour
         {
             Debug.Log("No info about: " + levelName);
 
-
             return;
         }
     }

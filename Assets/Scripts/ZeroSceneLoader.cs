@@ -6,11 +6,12 @@ using IJunior.TypedScenes;
 
 public sealed class ZeroSceneLoader : MonoBehaviour
 {
+#if !UNITY_EDITOR && UNITY_WEBGL
     private void Awake()
     {
         YandexGamesSdk.CallbackLogging = true;
     }
-
+        
     private IEnumerator Start()
     {
         yield return YandexGamesSdk.Initialize(OnInitialized);
@@ -20,4 +21,5 @@ public sealed class ZeroSceneLoader : MonoBehaviour
     {
         StarterScene.Load();
     }
+#endif
 }
