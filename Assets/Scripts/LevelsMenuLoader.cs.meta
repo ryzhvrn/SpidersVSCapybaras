@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 73268aa16f1b4c64baf138725e8caf14
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _levelConfig: {instanceID: 0}
+  - _ZeroStarsEarnedFirstLevel: {instanceID: 0}
+  - _OneStarsEarnedFirstLevel: {instanceID: 0}
+  - _TwoStarsEarnedFirstLevel: {instanceID: 0}
+  - _ThreeStarsEarnedFirstLevel: {instanceID: 0}
+  - _ZeroStarsEarnedSecondLevel: {instanceID: 0}
+  - _OneStarsEarnedSecondLevel: {instanceID: 0}
+  - _TwoStarsEarnedSecondLevel: {instanceID: 0}
+  - _ThreeStarsEarnedSecondLevel: {instanceID: 0}
+  - _lockedLevelSecondLevelImage: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
