@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Agava.YandexGames;
-//using Lean.Localization;
+using Lean.Localization;
 
 public class Localization : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class Localization : MonoBehaviour
     private const string Russian = "ru";
     private const string English = "en";
 
-    //[SerializeField] private LeanLocalization _leanLanguage;
+    [SerializeField] private LeanLocalization _leanLanguage;
 
     private void Awake()
     {
@@ -29,13 +29,13 @@ ChangeLanguage();
         switch (languageCode)
         {
             case English:
-                //_leanLanguage.SetCurrentLenguage(EnglishCode);
+                _leanLanguage.SetCurrentLanguage(EnglishCode);
                 break;
             case Turkish:
-                //_leanLanguage.SetCurrentLenguage(TurkishCode);
+                _leanLanguage.SetCurrentLanguage(TurkishCode);
                 break;
             case Russian:
-               // _leanLanguage.SetCurrentLenguage(RussianCode);
+                _leanLanguage.SetCurrentLanguage(RussianCode);
                 break;
         }
     }
