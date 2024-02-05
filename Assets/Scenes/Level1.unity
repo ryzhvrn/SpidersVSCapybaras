@@ -123,6 +123,65 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: fd745607160aece4782b8d974f98e7f8, type: 2}
+--- !u!1 &969875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969876}
+  - component: {fileID: 969877}
+  m_Layer: 0
+  m_Name: Tip5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270850002}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &969877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'Player management is WASD.
+
+      The camera is controlled by a mouse.'
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0438\u0433\u0440\u043E\u043A\u043E\u043C
+      - WASD.\r\n\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u043A\u0430\u043C\u0435\u0440\u043E\u0439
+      - \u043C\u044B\u0448\u043A\u0430."
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "Oyuncu kontrol\xFC WASD'D\u0130R.\r\nKameran\u0131n kontrol\xFC faredir."
+    Object: {fileID: 0}
 --- !u!1001 &4915862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3395,6 +3454,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 108507113624698413, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
   m_PrefabInstance: {fileID: 322642103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &227898301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227898302}
+  - component: {fileID: 227898303}
+  m_Layer: 0
+  m_Name: Tip6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227898302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227898301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270850002}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &227898303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227898301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: If all the little capybaras are eaten by spiders, reach the finish to restart
+      the level!
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0415\u0441\u043B\u0438 \u0432\u0441\u0435\u0445 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0445
+      \u043A\u0430\u043F\u0438\u0431\u0430\u0440 \u0441\u044A\u0435\u0434\u044F\u0442
+      \u043F\u0430\u0443\u043A\u0438, \u0434\u043E\u0439\u0434\u0438 \u0434\u043E
+      \u0444\u0438\u043D\u0438\u0448\u0430, \u0447\u0442\u043E\u0431\u044B \u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C
+      \u0443\u0440\u043E\u0432\u0435\u043D\u044C!"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "T\xFCm k\xFC\xE7\xFCk kapibaralar \xF6r\xFCmcekler taraf\u0131ndan yenirse,
+      seviyeyi yeniden ba\u015Flatmak i\xE7in biti\u015F \xE7izgisine ula\u015F\u0131n!"
+    Object: {fileID: 0}
 --- !u!4 &228166401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
@@ -4153,6 +4273,7 @@ GameObject:
   - component: {fileID: 310898443}
   - component: {fileID: 310898445}
   - component: {fileID: 310898444}
+  - component: {fileID: 310898446}
   m_Layer: 5
   m_Name: Tip1
   m_TagString: Untagged
@@ -4226,6 +4347,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310898442}
   m_CullTransparentMesh: 1
+--- !u!114 &310898446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310898442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: 
+  FallbackText: "\u041A\u0430\u043A \u0432\u044B\u0438\u0433\u0440\u0430\u0442\u044C?\n\u0421\u043E\u0431\u0438\u0440\u0430\u0439
+    \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0445 \u043A\u0430\u043F\u0438\u0431\u0430\u0440!\n\u041E\u043D\u0438
+    \u0432\u0441\u0435\u0433\u0434\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0442
+    \u0437\u0430 \u0442\u043E\u0431\u043E\u0439.\n\u0414\u043E\u0432\u0435\u0434\u0438
+    \u0438\u0445 \u0434\u043E \u0444\u0438\u043D\u0438\u0448\u0430."
 --- !u!4 &317008392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2222111361405018444, guid: 88f2fd29f58b9734683512546acec310, type: 3}
@@ -6551,6 +6690,7 @@ GameObject:
   - component: {fileID: 430690950}
   - component: {fileID: 430690949}
   - component: {fileID: 430690948}
+  - component: {fileID: 430690951}
   m_Layer: 5
   m_Name: Tip6
   m_TagString: Untagged
@@ -6624,6 +6764,24 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: 132}
   m_SizeDelta: {x: 967.1303, y: 255.2861}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &430690951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430690947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Tip6
+  FallbackText: "\u0415\u0441\u043B\u0438 \u0432\u0441\u0435\u0445 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0445
+    \u043A\u0430\u043F\u0438\u0431\u0430\u0440 \u0441\u044A\u0435\u0434\u044F\u0442
+    \u043F\u0430\u0443\u043A\u0438, \u0434\u043E\u0439\u0434\u0438 \u0434\u043E \u0444\u0438\u043D\u0438\u0448\u0430,
+    \u0447\u0442\u043E\u0431\u044B \u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C
+    \u0443\u0440\u043E\u0432\u0435\u043D\u044C!"
 --- !u!1001 &442447909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8138,6 +8296,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
   m_PrefabInstance: {fileID: 1868863460}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &486709747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486709748}
+  - component: {fileID: 486709749}
+  m_Layer: 0
+  m_Name: Tip4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486709748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486709747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270850002}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486709749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486709747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: "The level will end when \r\nYou will save all the little capybaras!"
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u0442\u0441\u044F,
+      \u043A\u043E\u0433\u0434\u0430 \n\u0442\u044B \u0441\u043F\u0430\u0441\u0451\u0448\u044C
+      \u0432\u0441\u0435\u0445 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0445
+      \u043A\u0430\u043F\u0438\u0431\u0430\u0440!"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "Seviye ne zaman bitecek \r\nT\xFCm k\xFC\xE7\xFCk kapibaralar\u0131 kurtaracaks\u0131n!"
+    Object: {fileID: 0}
 --- !u!4 &489484635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
@@ -9288,7 +9504,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616947311}
-  m_LocalRotation: {x: 0.11126461, y: 0.000000003474534, z: -3.8900763e-10, w: 0.99379086}
+  m_LocalRotation: {x: 0.11126459, y: -0.00000002982038, z: 0.0000000033386827, w: 0.99379086}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10515,6 +10731,68 @@ Mesh:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
   m_PrefabInstance: {fileID: 609384851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &711823968
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1270850002}
+    m_Modifications:
+    - target: {fileID: 765358623864573794, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_Name
+      value: English
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+--- !u!4 &711823969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+  m_PrefabInstance: {fileID: 711823968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &713199589
 PrefabInstance:
@@ -11800,6 +12078,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+--- !u!1001 &809001202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1270850002}
+    m_Modifications:
+    - target: {fileID: 765358623864573794, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_Name
+      value: Russian
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+--- !u!4 &809001203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
+  m_PrefabInstance: {fileID: 809001202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &814995909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
@@ -15364,6 +15704,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+--- !u!1 &1058739217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058739218}
+  - component: {fileID: 1058739219}
+  m_Layer: 0
+  m_Name: Tip1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058739218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058739217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270850002}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058739219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058739217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'How to win?
+
+      Collect little capybaras!
+
+      They always follow
+      you.
+
+      Take them to the finish line.'
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u041A\u0430\u043A \u0432\u044B\u0438\u0433\u0440\u0430\u0442\u044C?\r\n\u0421\u043E\u0431\u0438\u0440\u0430\u0439
+      \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0445 \u043A\u0430\u043F\u0438\u0431\u0430\u0440!\r\n\u041E\u043D\u0438
+      \u0432\u0441\u0435\u0433\u0434\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0442
+      \u0437\u0430 \u0442\u043E\u0431\u043E\u0439.\r\n\u0414\u043E\u0432\u0435\u0434\u0438
+      \u0438\u0445 \u0434\u043E \u0444\u0438\u043D\u0438\u0448\u0430."
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "Nas\u0131l kazan\u0131l\u0131r?\r\nK\xFC\xE7\xFCk kapibaralar\u0131 topla!\r\nHer
+      zaman seni takip ediyorlar.\r\nOnlar\u0131 biti\u015F \xE7izgisine getir."
+    Object: {fileID: 0}
 --- !u!1001 &1061391885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15444,6 +15851,7 @@ GameObject:
   - component: {fileID: 1061475804}
   - component: {fileID: 1061475803}
   - component: {fileID: 1061475802}
+  - component: {fileID: 1061475805}
   m_Layer: 5
   m_Name: Tip3
   m_TagString: Untagged
@@ -15516,6 +15924,24 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: 132}
   m_SizeDelta: {x: 967.1303, y: 255.2861}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1061475805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061475801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Tip3
+  FallbackText: "\u0414\u0432\u0438\u0433\u0430\u0439\u0441\u044F \u0441 \u043A\u0430\u043F\u0438\u0431\u0430\u0440\u0430\u043C\u0438
+    \u043A \u043C\u0430\u0440\u043A\u0435\u0440\u0443! \u0417\u0435\u043B\u0451\u043D\u044B\u0439
+    - \u043F\u043E\u043A\u0430\u0436\u0435\u0442 \u0433\u0434\u0435 \u0444\u0438\u043D\u0438\u0448.
+    \u0427\u0451\u0440\u043D\u044B\u0439 - \u0433\u0434\u0435 \u0438\u0445 \u043C\u043E\u0436\u043D\u043E
+    \u0437\u0430\u0431\u0440\u0430\u0442\u044C."
 --- !u!1001 &1061541004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16523,6 +16949,68 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1115083989
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1270850002}
+    m_Modifications:
+    - target: {fileID: 765358623864573794, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_Name
+      value: Turkish
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+--- !u!4 &1115083990 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+  m_PrefabInstance: {fileID: 1115083989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1115899118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17883,6 +18371,79 @@ MonoBehaviour:
   m_SkinMeshRef: {fileID: 0}
   m_OriginalMeshObject: {fileID: 4300000, guid: 33ebf3440b12ec245bd008cd464f8d9a, type: 3}
   m_Mode: 0
+--- !u!1 &1270849999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270850002}
+  - component: {fileID: 1270850001}
+  - component: {fileID: 1270850000}
+  m_Layer: 0
+  m_Name: LeanLocalization
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1270850000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270849999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7514b9438c1326448bc39d717163394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leanLanguage: {fileID: 1270850001}
+--- !u!114 &1270850001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270849999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLanguage: Ru
+  detectLanguage: 1
+  defaultLanguage: Russian
+  saveLoad: 1
+  prefabs: []
+--- !u!4 &1270850002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270849999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 711823969}
+  - {fileID: 809001203}
+  - {fileID: 1115083990}
+  - {fileID: 1058739218}
+  - {fileID: 1330217437}
+  - {fileID: 1768361943}
+  - {fileID: 486709748}
+  - {fileID: 969876}
+  - {fileID: 227898302}
+  - {fileID: 1559563394}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1282642712
 GameObject:
   m_ObjectHideFlags: 0
@@ -17954,6 +18515,7 @@ GameObject:
   - component: {fileID: 1316549667}
   - component: {fileID: 1316549666}
   - component: {fileID: 1316549665}
+  - component: {fileID: 1316549668}
   m_Layer: 5
   m_Name: Tip5
   m_TagString: Untagged
@@ -17995,8 +18557,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0438\u0433\u0440\u043E\u043A\u043E\u043C
-    - WASD\n\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u043A\u0430\u043C\u0435\u0440\u043E\u0439
-    - \u043C\u044B\u0448\u043A\u0430"
+    - WASD.\n\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u043A\u0430\u043C\u0435\u0440\u043E\u0439
+    - \u043C\u044B\u0448\u043A\u0430."
 --- !u!222 &1316549666
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18025,6 +18587,22 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: 132}
   m_SizeDelta: {x: 967.1303, y: 255.2861}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1316549668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316549664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Tip5
+  FallbackText: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0438\u0433\u0440\u043E\u043A\u043E\u043C
+    - WASD. \u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u043A\u0430\u043C\u0435\u0440\u043E\u0439
+    - \u043C\u044B\u0448\u043A\u0430."
 --- !u!1 &1320724199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
@@ -18596,6 +19174,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+--- !u!1 &1330217436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1330217437}
+  - component: {fileID: 1330217438}
+  m_Layer: 0
+  m_Name: Tip2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1330217437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330217436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270850002}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1330217438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330217436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'Beware of spiders! They
+
+      only hunt for small capybaras.
+
+      But
+      you can run away from them and they will stop chasing you!'
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u041E\u043F\u0430\u0441\u0430\u0439\u0441\u044F \u043F\u0430\u0443\u043A\u043E\u0432!
+      \u041E\u043D\u0438 \u043E\u0445\u043E\u0442\u044F\u0442\u0441\u044F \n\u0442\u043E\u043B\u044C\u043A\u043E
+      \u0437\u0430 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u043C\u0438 \u043A\u0430\u043F\u0438\u0431\u0430\u0440\u0430\u043C\u0438.\n\u041D\u043E
+      \u043E\u0442 \u043D\u0438\u0445 \u043C\u043E\u0436\u043D\u043E \u0443\u0431\u0435\u0436\u0430\u0442\u044C
+      \u0438 \u043E\u043D\u0438 \u043F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u0443\u0442
+      \u043F\u0440\u0435\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u044C \u0442\u0435\u0431\u044F!"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "\xD6r\xFCmceklere dikkat et! Avlan\u0131yorlar \r\nsadece k\xFC\xE7\xFCk
+      kapibaralar i\xE7in.\r\nAma onlardan ka\xE7abilirsin ve seni takip etmeyi b\u0131rakacaklar!"
+    Object: {fileID: 0}
 --- !u!1001 &1337990456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21579,6 +22223,7 @@ GameObject:
   - component: {fileID: 1539379889}
   - component: {fileID: 1539379888}
   - component: {fileID: 1539379887}
+  - component: {fileID: 1539379890}
   m_Layer: 5
   m_Name: Tip4
   m_TagString: Untagged
@@ -21651,6 +22296,23 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: 132}
   m_SizeDelta: {x: 967.1303, y: 255.2861}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1539379890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539379886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Tip4
+  FallbackText: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u0442\u0441\u044F,
+    \u043A\u043E\u0433\u0434\u0430  \u0442\u044B \u0441\u043F\u0430\u0441\u0451\u0448\u044C
+    \u0432\u0441\u0435\u0445 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0445
+    \u043A\u0430\u043F\u0438\u0431\u0430\u0440!"
 --- !u!1001 &1555515965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21873,6 +22535,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
   m_PrefabInstance: {fileID: 1480878570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1559563393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559563394}
+  - component: {fileID: 1559563395}
+  m_Layer: 0
+  m_Name: UI-Saved capybaras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559563394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559563393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270850002}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559563395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559563393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Capybaras saved
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0421\u043F\u0430\u0441\u0435\u043D\u043E \u043A\u0430\u043F\u0438\u0431\u0430\u0440"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "Kapibaralar kurtar\u0131ld\u0131"
+    Object: {fileID: 0}
 --- !u!4 &1561875209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
@@ -22396,6 +23113,7 @@ GameObject:
   - component: {fileID: 1619082746}
   - component: {fileID: 1619082745}
   - component: {fileID: 1619082744}
+  - component: {fileID: 1619082747}
   m_Layer: 5
   m_Name: Tip2
   m_TagString: Untagged
@@ -22470,6 +23188,25 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: 132}
   m_SizeDelta: {x: 967.1303, y: 255.2861}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1619082747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619082743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Tip2
+  FallbackText: "\u041E\u043F\u0430\u0441\u0430\u0439\u0441\u044F \u043F\u0430\u0443\u043A\u043E\u0432!
+    \u041E\u043D\u0438 \u043E\u0445\u043E\u0442\u044F\u0442\u0441\u044F  \u0442\u043E\u043B\u044C\u043A\u043E
+    \u0437\u0430 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u043C\u0438 \u043A\u0430\u043F\u0438\u0431\u0430\u0440\u0430\u043C\u0438.
+    \u041D\u043E \u043E\u0442 \u043D\u0438\u0445 \u043C\u043E\u0436\u043D\u043E \u0443\u0431\u0435\u0436\u0430\u0442\u044C
+    \u0438 \u043E\u043D\u0438 \u043F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u0443\u0442
+    \u043F\u0440\u0435\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u044C \u0442\u0435\u0431\u044F!"
 --- !u!4 &1624838480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
@@ -22709,6 +23446,7 @@ GameObject:
   - component: {fileID: 1678855286}
   - component: {fileID: 1678855288}
   - component: {fileID: 1678855287}
+  - component: {fileID: 1678855289}
   m_Layer: 5
   m_Name: SavedCapybarasText
   m_TagString: Untagged
@@ -22778,6 +23516,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678855285}
   m_CullTransparentMesh: 1
+--- !u!114 &1678855289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678855285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: UI-Saved capybaras
+  FallbackText: "\u0421\u043F\u0430\u0441\u0435\u043D\u043E \u043A\u0430\u043F\u0438\u0431\u0430\u0440"
 --- !u!4 &1692093407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
@@ -23789,6 +24541,71 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1768361942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1768361943}
+  - component: {fileID: 1768361944}
+  m_Layer: 0
+  m_Name: Tip3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1768361943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768361942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270850002}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1768361944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768361942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'Move with the capybaras to the marker!
+
+      Green marker shows where
+      the finish line is.
+
+      Black marker shows where they can be picked up.'
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0414\u0432\u0438\u0433\u0430\u0439\u0441\u044F \u0441 \u043A\u0430\u043F\u0438\u0431\u0430\u0440\u0430\u043C\u0438
+      \u043A \u043C\u0430\u0440\u043A\u0435\u0440\u0443!\n\u0417\u0435\u043B\u0451\u043D\u044B\u0439
+      - \u043F\u043E\u043A\u0430\u0436\u0435\u0442 \u0433\u0434\u0435 \u0444\u0438\u043D\u0438\u0448.\n\u0427\u0451\u0440\u043D\u044B\u0439
+      - \u0433\u0434\u0435 \u0438\u0445 \u043C\u043E\u0436\u043D\u043E \u0437\u0430\u0431\u0440\u0430\u0442\u044C."
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "Kapibaralarla i\u015Farete do\u011Fru ilerleyin!\r\nYe\u015Fil i\u015Faretleyici
+      biti\u015F \xE7izgisinin nerede oldu\u011Funu g\xF6sterir.\r\nSiyah i\u015Faretleyici,
+      nereden al\u0131nabileceklerini g\xF6sterir."
+    Object: {fileID: 0}
 --- !u!4 &1770120544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}

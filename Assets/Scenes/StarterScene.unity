@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLanguage: Ru
   detectLanguage: 1
-  defaultLanguage: 
+  defaultLanguage: Russian
   saveLoad: 1
   prefabs: []
 --- !u!4 &71611112
@@ -173,6 +173,7 @@ Transform:
   - {fileID: 687177118}
   - {fileID: 431792385}
   - {fileID: 1624195354}
+  - {fileID: 657297869}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -326,6 +327,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1527055450098318974, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
   m_PrefabInstance: {fileID: 431792384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &657297868
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 71611112}
+    m_Modifications:
+    - target: {fileID: 765358623864573794, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_Name
+      value: Turkish
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+--- !u!4 &657297869 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1527055450098318974, guid: 0e6d733017b180f4aa757c25039abc1d, type: 3}
+  m_PrefabInstance: {fileID: 657297868}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &687177117
 PrefabInstance:
@@ -923,6 +986,9 @@ MonoBehaviour:
     Object: {fileID: 0}
   - Language: English
     Text: Choose level
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: "Seviyeyi se\xE7"
     Object: {fileID: 0}
 --- !u!1 &1728384860
 GameObject:
