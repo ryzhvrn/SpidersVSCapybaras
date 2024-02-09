@@ -14,7 +14,11 @@ public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
     public void OnSceneLoaded(LevelConfig argument)
     {
         int starsEarnedAmount = argument.StarsEarned;
+        SetCurrentLevelResul(starsEarnedAmount);
+    }
 
+    private void SetCurrentLevelResul(int starsEarnedAmount)
+    {
         if (starsEarnedAmount == 3)
         {
             OneStarsEarned.gameObject.SetActive(true);

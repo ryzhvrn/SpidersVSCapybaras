@@ -923,7 +923,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96986183}
-  m_LocalRotation: {x: 0.035484754, y: -9.875805e-10, z: 3.506615e-11, w: 0.9993702}
+  m_LocalRotation: {x: 0.035484754, y: -9.875809e-10, z: 3.5066155e-11, w: 0.9993702}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4776,10 +4776,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 5
+  m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -8937,7 +8937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLanguage: Ru
   detectLanguage: 1
-  defaultLanguage: 
+  defaultLanguage: Turkish
   saveLoad: 1
   prefabs: []
 --- !u!4 &1070045645
@@ -12088,7 +12088,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -13}
-  m_SizeDelta: {x: 667.68, y: 149.04}
+  m_SizeDelta: {x: 828.6, y: 149.04}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1543065334
 MonoBehaviour:
@@ -12112,18 +12112,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7a9506cbcaba4e6488a923ba4bde5925, type: 3}
-    m_FontSize: 58
+    m_FontSize: 55
     m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 63
+    m_BestFit: 1
+    m_MinSize: 40
+    m_MaxSize: 60
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0421\u043F\u0430\u0441\u0435\u043D\u043E \u043A\u0430\u043F\u0438\u0431\u0430\u0440"
+  m_Text: "Kapibaralar kurtar\u0131ld\u0131"
 --- !u!222 &1543065335
 CanvasRenderer:
   m_ObjectHideFlags: 0

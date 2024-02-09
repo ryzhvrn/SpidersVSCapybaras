@@ -23,15 +23,9 @@ public class StartChoosenLevel : MonoBehaviour
         Debug.Log("Запускаем 3 уровень!");
     }
 
-    public void StartFourthLevel()
+    public void OpenLeaderboard()
     {
-        //Level1.Load();
-        Debug.Log("Запускаем 4 уровень!");
-    }
-
-    public void StartFifthLevel()
-    {
-        //Level1.Load();
-        Debug.Log("Запускаем 5 уровень!");
+        Leaderboard.Load();
+        Debug.Log("Открыли лидерборд");
     }
 }

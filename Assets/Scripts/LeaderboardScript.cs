@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Leaderboard : MonoBehaviour
+public class LeaderboardScript : MonoBehaviour
 {
     private const string AnonymousName = "Anonymous";
     private const string LeaderboardName = "Leaderboard";

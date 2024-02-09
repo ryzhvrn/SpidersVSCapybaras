@@ -15,8 +15,6 @@ public class FinishSceneLoader : MonoBehaviour
         RestartButtonPressed.RestartCurrentLevelScene += ReloadFirstLevel;
         RestartButtonPressed.RestartCurrentLevelScene += ReloadSecondLevel;
         RestartButtonPressed.RestartCurrentLevelScene += ReloadThirdLevel;
-        RestartButtonPressed.RestartCurrentLevelScene += ReloadFourthLevel;
-        RestartButtonPressed.RestartCurrentLevelScene += ReloadFifthLevel;
     }
 
     private void OnDisable()
@@ -26,8 +24,6 @@ public class FinishSceneLoader : MonoBehaviour
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadFirstLevel;
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadSecondLevel;
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadThirdLevel;
-        RestartButtonPressed.RestartCurrentLevelScene -= ReloadFourthLevel;
-        RestartButtonPressed.RestartCurrentLevelScene -= ReloadFifthLevel;
     }
 
     private void LoadLevelFinishedScene()
@@ -62,22 +58,6 @@ public class FinishSceneLoader : MonoBehaviour
         if (_levelConfig.CurrentLevelName == "Level3")
         {
             Level3.Load();
-        }
-    }
-
-    private void ReloadFourthLevel()
-    {
-        if (_levelConfig.CurrentLevelName == "Level4")
-        {
-            //Level4.Load();
-        }
-    }
-
-    private void ReloadFifthLevel()
-    {
-        if (_levelConfig.CurrentLevelName == "Level5")
-        {
-            //Level5.Load();
         }
     }
 }
