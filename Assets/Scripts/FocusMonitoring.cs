@@ -24,6 +24,8 @@ public class FocusMonitoring : MonoBehaviour
     private void MuteAudio(bool value)
     {
         _audioSource.volume = value ? 0 : 1;
+        AudioListener.volume = value ? 0 : 1;
+        AudioListener.pause = value;
     }
 
     private void PauseGame(bool value)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeaderboardPlayer : MonoBehaviour
+public class LeaderboardPlayer
 {
     public LeaderboardPlayer(int rank, string name, int score)
     {

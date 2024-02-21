@@ -22,10 +22,4 @@ public class StartChoosenLevel : MonoBehaviour
         Level3.Load();
         Debug.Log("Запускаем 3 уровень!");
     }
-
-    public void OpenLeaderboard()
-    {
-        Leaderboard.Load();
-        Debug.Log("Открыли лидерборд");
-    }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using IJunior.TypedScenes;
 using UnityEngine.UI;
+using System;
 
 public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
 {
@@ -11,10 +12,13 @@ public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
     [SerializeField] private Image OneStarsEarned;
     [SerializeField] private Text ZeroStarsEarnedWarning;
 
+    public static event Action SetPlayerScore;
+
     public void OnSceneLoaded(LevelConfig argument)
     {
         int starsEarnedAmount = argument.StarsEarned;
         SetCurrentLevelResul(starsEarnedAmount);
+        SetPlayerScore?.Invoke();
     }
 
     private void SetCurrentLevelResul(int starsEarnedAmount)

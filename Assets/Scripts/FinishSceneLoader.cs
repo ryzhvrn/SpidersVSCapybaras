@@ -8,6 +8,11 @@ public class FinishSceneLoader : MonoBehaviour
 {
     [SerializeField] private LevelConfig _levelConfig;
 
+    private string _firstLevelName = "Level1";
+    private string _secondLevelName = "Level2";
+    private string _thirdLevelName = "Level3";
+    private VideoAd _ads;
+
     private void OnEnable()
     {
         LevelManager.CurrentLevelFinished += LoadLevelFinishedScene;
@@ -29,7 +34,7 @@ public class FinishSceneLoader : MonoBehaviour
     private void LoadLevelFinishedScene()
     {
         LevelFinished.Load(_levelConfig);
-        Agava.YandexGames.VideoAd.Show();
+        _ads.ShowInterstitialAd();
     }
 
     private void LoadLevelsMenuScene()
@@ -39,7 +44,7 @@ public class FinishSceneLoader : MonoBehaviour
 
     private void ReloadFirstLevel()
     {
-        if (_levelConfig.CurrentLevelName == "Level1")
+        if (_levelConfig.CurrentLevelName == _firstLevelName)
         {
             Level1.Load();
         }
@@ -47,7 +52,7 @@ public class FinishSceneLoader : MonoBehaviour
 
     private void ReloadSecondLevel()
     {
-        if (_levelConfig.CurrentLevelName == "Level2")
+        if (_levelConfig.CurrentLevelName == _secondLevelName)
         {
             Level2.Load();
         }
@@ -55,7 +60,7 @@ public class FinishSceneLoader : MonoBehaviour
 
     private void ReloadThirdLevel()
     {
-        if (_levelConfig.CurrentLevelName == "Level3")
+        if (_levelConfig.CurrentLevelName == _thirdLevelName)
         {
             Level3.Load();
         }

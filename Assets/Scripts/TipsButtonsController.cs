@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,16 @@ public class TipsButtonsController : MonoBehaviour
     [SerializeField] private Button _nextButton;
     [SerializeField] private List<Text> _tipsList;
 
+    public static event Action DisableInput;
+    public static event Action EnableInput;
+    public static event Action HideCursor;
+
     private int _counter = 0;
+
+    private void Start()
+    {
+        DisableKeyboardInput();
+    }
 
     public void OnButtonClick()
     {
@@ -23,6 +33,7 @@ public class TipsButtonsController : MonoBehaviour
         EnableText();
         DisableTipsBackground();
         DisableTipsNextButton();
+        EnableKeyboardInput();
     }
 
     private void EnableText()
@@ -54,6 +65,20 @@ public class TipsButtonsController : MonoBehaviour
         if (_counter == _tipsList.Count)
         {
             _nextButton.gameObject.SetActive(false);
+        }
+    }
+
+    private void DisableKeyboardInput()
+    {
+        DisableInput?.Invoke();
+    }
+
+    private void EnableKeyboardInput()
+    {
+        if (_counter == _tipsList.Count)
+        {
+            EnableInput?.Invoke();
+            HideCursor?.Invoke();
         }
     }
 }

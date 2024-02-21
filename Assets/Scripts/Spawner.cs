@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Image _waypointImage;
     [SerializeField] private Text _waypointText;
     [SerializeField] private List<GameObject> _childCapybarasForSpawnList = new List<GameObject>();
+    [SerializeField] private float _radius = 5f;
 
     public static event Action<Capy> ChildCapybaraSpawned;
     public static event Action<int> ChildCapybarasSpawned;
@@ -18,11 +19,13 @@ public class Spawner : MonoBehaviour
     private int _spawnedCapybaraIndex = 0;
     private int _maximumChildCapybarasForSpawnAmount;
     private int _spawnedCapybarasAmount = 0;
+    private Vector3 _center;
 
     private void Start()
     {
         _maximumChildCapybarasForSpawnAmount = _childCapybarasForSpawnList.Count;
         Debug.Log("_maximumCapybarasForSpawnAmount " + _maximumChildCapybarasForSpawnAmount);
+        _center = transform.position;
     }
 
     private void OnEnable()
@@ -45,7 +48,9 @@ public class Spawner : MonoBehaviour
     {
         if (_spawnedCapybarasAmount < _maximumChildCapybarasForSpawnAmount)
         {
-            Capy spawnedCapy = Instantiate(_capybaraChildPrefab, transform.position, transform.rotation);
+            Vector3 position = RandomCircle(_center, _radius);
+
+            Capy spawnedCapy = Instantiate(_capybaraChildPrefab, position, transform.rotation);
             ChildCapybaraSpawned?.Invoke(spawnedCapy);
             _spawnedCapybarasAmount++;
             Destroy(_childCapybarasForSpawnList[_spawnedCapybaraIndex]);
@@ -61,5 +66,15 @@ public class Spawner : MonoBehaviour
             _waypointText.enabled = false;
             enabled = false;
         }
+    }
+
+    private Vector3 RandomCircle(Vector3 center, float radius)
+    {
+        float angle = UnityEngine.Random.Range(0f, Mathf.PI * 2);
+
+        float x = center.x + radius * Mathf.Cos(angle);
+        float z = center.z + radius * Mathf.Sin(angle);
+
+        return new Vector3(x, center.y, z);
     }
 }
