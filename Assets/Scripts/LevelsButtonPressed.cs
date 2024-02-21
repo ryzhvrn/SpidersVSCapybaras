@@ -13,8 +13,8 @@ public class LevelsButtonPressed : MonoBehaviour
 
     public void OnLevelsMenuButtonPressed()
     {
-        ShowAdOnLevelToLevelsMenuTransition();
         LevelsSceneActivated?.Invoke();
+        ShowAdOnLevelToLevelsMenuTransition();
     }
 
     private void ShowAdOnLevelToLevelsMenuTransition()

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DisableMouse : MonoBehaviour
 {
-    private string _firstLevelName = "Level1";
+    //private string _firstLevelName = "Level1";
 
     private void Start()
     {
