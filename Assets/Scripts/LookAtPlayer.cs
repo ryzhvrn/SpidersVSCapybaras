@@ -2,24 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAtPlayer : MonoBehaviour
+public class LookAtTarger : MonoBehaviour
 {
-    [SerializeField] private Transform _player;
-    [SerializeField] private Rigidbody _rigidbody;
-
-    private void Start()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-
-        _rigidbody.freezeRotation = true;
-        _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-    }
+    [SerializeField] private Transform _target;
 
     private void Update()
     {
-        if (_player != null)
+        if (_target != null)
         {
-            Vector3 directionToPlayer = _player.position - transform.position;
+            Vector3 directionToPlayer = _target.position - transform.position;
             float angle = Mathf.Atan2(directionToPlayer.x, directionToPlayer.z) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }

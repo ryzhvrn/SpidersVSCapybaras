@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VideoAd : MonoBehaviour
+public class AdService
 {
     public void ShowVideoAd() => Agava.YandexGames.VideoAd.Show(OnOpenAdCallback, OnCloseAdCallback);
     public void ShowInterstitialAd() => Agava.YandexGames.InterstitialAd.Show(OnOpenAdCallback, OnCloseInterstitialAdCallback);

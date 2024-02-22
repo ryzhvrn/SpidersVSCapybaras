@@ -11,7 +11,7 @@ public class FinishSceneLoader : MonoBehaviour
     private string _firstLevelName = "Level1";
     private string _secondLevelName = "Level2";
     private string _thirdLevelName = "Level3";
-    private VideoAd _ads;
+    private AdService _ads;
 
     private void OnEnable()
     {
