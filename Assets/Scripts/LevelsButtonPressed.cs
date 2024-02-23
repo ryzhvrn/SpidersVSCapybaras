@@ -9,7 +9,7 @@ public class LevelsButtonPressed : MonoBehaviour
 {
     public static event Action LevelsSceneActivated;
 
-    private AdService _ads;
+    private AdService _ads = new AdService();
 
     public void OnLevelsMenuButtonPressed()
     {
