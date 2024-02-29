@@ -9,7 +9,6 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private Transform _camera;
     [SerializeField] private float _speed = 6f;
     [SerializeField] private float _turnSmoothTime = 0.1f;
-    [SerializeField] private Rigidbody _rigidbody;
 
     public static event Action<bool> PlayerMoving;
 
@@ -23,15 +22,10 @@ public class ThirdPersonMovement : MonoBehaviour
         TipsButtonsController.EnableInput += OnEnableInput;
     }
 
-
     private void OnDisable()
     {
         TipsButtonsController.DisableInput -= OnDisableInput;
         TipsButtonsController.EnableInput -= OnEnableInput;
-    }
-    private void Start()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
     }
 
     private void Update()
