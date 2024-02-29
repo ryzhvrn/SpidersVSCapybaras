@@ -33,8 +33,8 @@ public class FinishSceneLoader : MonoBehaviour
 
     private void LoadLevelFinishedScene()
     {
-        LevelFinished.Load(_levelConfig);
         _ads.ShowInterstitialAd();
+        LevelFinished.Load(_levelConfig);
     }
 
     private void LoadLevelsMenuScene()

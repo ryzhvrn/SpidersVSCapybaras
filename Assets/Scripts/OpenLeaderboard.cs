@@ -39,41 +39,29 @@ public class OpenLeaderboard : MonoBehaviour
         if (PlayerAccount.IsAuthorized == false)
         {
             _authView.SetActive(true);
-
-            /*if (_isPlayerWantToAuth == true)
-            {
-                PlayerAccount.Authorize();
-                PlayerAccount.RequestPersonalProfileDataPermission();
-                _authView.SetActive(false);
-                Debug.Log("ѕытаемс€ открыть лидерборд!");
-                IJunior.TypedScenes.Leaderboard.Load();
-            }
-            else
-            {
-                _authView.SetActive(false);
-
-                return;
-            }*/
         }
     }
-    /*private void GetAuthButtonPressedResult(bool playerDecision)
-    {
-        _isPlayerWantToAuth = playerDecision;
-    }*/
 
     private void OnAccessButtonClicked()
     {
-        PlayerAccount.Authorize();
-        PlayerAccount.RequestPersonalProfileDataPermission();
-        _authView.SetActive(false);
-        Debug.Log("ѕытаемс€ открыть лидерборд!");
-        IJunior.TypedScenes.Leaderboard.Load();
+        if (PlayerAccount.IsAuthorized == false)
+        {
+            PlayerAccount.Authorize();
+            PlayerAccount.RequestPersonalProfileDataPermission();
+            _authView.SetActive(false);
+            Debug.Log("ќстаемс€ на сцене и ждем авторизации игрока!");
+        }
+
+        if (PlayerAccount.IsAuthorized)
+        {
+            PlayerAccount.RequestPersonalProfileDataPermission();
+            Debug.Log("ѕытаемс€ открыть лидерборд!");
+            IJunior.TypedScenes.Leaderboard.Load();
+        }
     }
 
     private void OnDeclineButtonClicked()
     {
         _authView.SetActive(false);
-
-        //return;
     }
 }
