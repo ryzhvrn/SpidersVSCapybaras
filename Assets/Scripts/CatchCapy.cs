@@ -22,14 +22,12 @@ public class CatchCapy : MonoBehaviour
     {
         if (_possibleTarget == null)
         {
-            Debug.Log("Цель не обнаружена");
             ChooseNextTarget();
 
             if (_possibleTarget == null)
             {
                 _navMeshAgent.isStopped = true;
                 _navMeshAgent.ResetPath();
-                Debug.Log("_navMeshAgent.ResetPath()");
             }
 
             return;
@@ -72,13 +70,7 @@ public class CatchCapy : MonoBehaviour
 
         if (allcapyes.Count == 0)
         {
-            Debug.Log("allcapyes.Count = 0");
             _possibleTarget = null;
-        }
-
-        if (allcapyes.Count != 0)
-        {
-            Debug.Log("allcapyes.Count != 0");
         }
     }
 

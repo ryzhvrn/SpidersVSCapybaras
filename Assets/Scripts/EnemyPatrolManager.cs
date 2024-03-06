@@ -59,6 +59,5 @@ public class EnemyPatrolManager : MonoBehaviour
     private void OnCapybarasDetected(bool isCapybarasDetected)
     {
         _isCapybarasDetected = isCapybarasDetected;
-        Debug.Log("Сработал обработчик события OnGetCapybarasDetectedStatus, "+ _isCapybarasDetected);
     }
 }

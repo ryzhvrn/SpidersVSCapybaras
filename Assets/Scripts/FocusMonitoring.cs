@@ -26,6 +26,11 @@ public class FocusMonitoring : MonoBehaviour
         _audioSource.volume = value ? 0 : 1;
         AudioListener.volume = value ? 0 : 1;
         AudioListener.pause = value;
+
+        if (!value && !_audioSource.isPlaying)
+        {
+            _audioSource.Play();
+        }
     }
 
     private void PauseGame(bool value)
@@ -35,13 +40,15 @@ public class FocusMonitoring : MonoBehaviour
 
     private void OnInBackgroundChangeWeb(bool inApp)
     {
+        Debug.Log("OnInBackgroundChangeWeb: " + inApp);
         MuteAudio(!inApp);
         PauseGame(!inApp);
     }
 
     private void OnInBackgroundChangeApp(bool isBackground)
     {
-        MuteAudio(isBackground);
+        Debug.Log("OnInBackgroundChangeApp: " + isBackground);
+        MuteAudio(!isBackground);
         PauseGame(isBackground);
     }
 }

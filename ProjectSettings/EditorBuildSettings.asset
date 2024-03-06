@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelFinished.unity
     guid: 23d3d602467109b4ab735622d2512518
   - enabled: 1
-    path: Assets/Scenes/LevelsMenu.unity
+    path: Assets/Scenes/LevelFun.unity
     guid: ed7fd392c5f7fdc40a3d4aab17ab8a7c
   - enabled: 0
     path: Assets/PlayerPrefsEditor/Samples/SampleScene/SampleScene.unity
@@ -71,4 +71,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Plugins/CW/LeanLocalization/Examples/_12_Dropdown.unity
     guid: c3e08e8983cfa8747a970b58d0a2a712
+  - enabled: 1
+    path: Assets/Scenes/LevelsMenu.unity
+    guid: 80b19ecb19797684b932e32a0d0b14e0
   m_configObjects: {}

@@ -1,3 +1,4 @@
+using IJunior.TypedScenes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,6 +52,16 @@ public class LevelsMenuLoader : MonoBehaviour
         SetLevelsProgress("Level5", _ZeroStarsEarnedFifthLevel, _OneStarsEarnedFifthLevel, _TwoStarsEarnedFifthLevel, _ThreeStarsEarnedFifthLevel, null);
     }
 
+    private void OnEnable()
+    {
+        SecretLevelButtonPressed.SecretLevelActivated += OnSecretLevelActivated;
+    }
+
+    private void OnDisable()
+    {
+        SecretLevelButtonPressed.SecretLevelActivated -= OnSecretLevelActivated;
+    }
+
     private void SetCurrentFinishedLevelProgress(string levelName)
     {
         if (_levelConfig.CurrentLevelName == levelName)
@@ -69,6 +80,11 @@ public class LevelsMenuLoader : MonoBehaviour
     {
         PlayerPrefs.SetInt(levelName, starsEarned);
         PlayerPrefs.Save();
+    }
+
+    private void OnSecretLevelActivated()
+    {
+        LevelFun.Load();
     }
 
     private int GetStarsOnLevelEarned(string levelName)

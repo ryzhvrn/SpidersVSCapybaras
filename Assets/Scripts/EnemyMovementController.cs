@@ -29,12 +29,10 @@ public class EnemyMovementController : MonoBehaviour
 
         if (_isMoving)
         {
-            Debug.Log("Враг движется!");
             EnemyMoving?.Invoke(_isMoving);
         }
         else
         {
-            Debug.Log("Враг не движется!");
             EnemyMoving?.Invoke(_isMoving);
         }
         _previousPosition= transform.position;

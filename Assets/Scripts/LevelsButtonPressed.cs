@@ -11,12 +11,6 @@ public class LevelsButtonPressed : MonoBehaviour
 
     private AdService _ads = new AdService();
 
-    public void OnLevelsMenuButtonPressed()
-    {
-        LevelsSceneActivated?.Invoke();
-        ShowAdOnLevelToLevelsMenuTransition();
-    }
-
     private void ShowAdOnLevelToLevelsMenuTransition()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
@@ -35,5 +29,11 @@ public class LevelsButtonPressed : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void OnLevelsMenuButtonPressed()
+    {
+        LevelsSceneActivated?.Invoke();
+        ShowAdOnLevelToLevelsMenuTransition();
     }
 }
