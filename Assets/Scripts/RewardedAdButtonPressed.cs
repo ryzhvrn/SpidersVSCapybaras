@@ -10,7 +10,7 @@ public class RewardedAdButtonPressed : MonoBehaviour
     [SerializeField] private Image _pants;
     [SerializeField] private Button _adButton;
     private AdService _ads = new AdService();
-    private int _adViewedCount = 0;
+    private int _adViewedCount;
 
     private void Start()
     {
@@ -19,6 +19,7 @@ public class RewardedAdButtonPressed : MonoBehaviour
             PlayerPrefs.SetInt("adViewedCount", 0);
         }
 
+        _adViewedCount = PlayerPrefs.GetInt("adViewedCount");
         int currentAdViewedCount = PlayerPrefs.GetInt("adViewedCount");
         ShowFunCapybaraView(currentAdViewedCount);
     }

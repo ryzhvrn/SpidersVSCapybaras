@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,7 +6,7 @@ using UnityEngine.AI;
 
 public class CatchCapy : MonoBehaviour
 {
-    public List<Capy> allcapyes = new List<Capy>();
+    public List<Capy> allCapybaras = new List<Capy>();
 
     [SerializeField] private Transform _target;
     [SerializeField] private NavMeshAgent _navMeshAgent;
@@ -55,9 +54,9 @@ public class CatchCapy : MonoBehaviour
 
     private void ChooseNextTarget()
     {
-        if (allcapyes != null && allcapyes.Count > 0)
+        if (allCapybaras != null && allCapybaras.Count > 0)
         {
-            _possibleTarget = allcapyes.FirstOrDefault().transform;
+            _possibleTarget = allCapybaras.FirstOrDefault().transform;
             CapybarasDetected?.Invoke(true);
             Debug.Log("Текущая цель: " + _possibleTarget.name);
         }
@@ -68,7 +67,7 @@ public class CatchCapy : MonoBehaviour
             _navMeshAgent.ResetPath();
         }
 
-        if (allcapyes.Count == 0)
+        if (allCapybaras.Count == 0)
         {
             _possibleTarget = null;
         }
@@ -123,12 +122,12 @@ public class CatchCapy : MonoBehaviour
     }
     private void OnTriggerZoneEntered(Capy capy)
     {
-        allcapyes.Add(capy);
-        Debug.Log("В сферу обнаружения всего попало: " + allcapyes.Count + " капибар!");
+        allCapybaras.Add(capy);
+        Debug.Log("В сферу обнаружения всего попало: " + allCapybaras.Count + " капибар!");
 
         Debug.Log("Список объектов в allcapyes после добавления объекта:");
 
-        foreach (var capyElement in allcapyes)
+        foreach (var capyElement in allCapybaras)
         {
 
             Debug.Log(capyElement.name);
@@ -137,12 +136,12 @@ public class CatchCapy : MonoBehaviour
 
     private void OnTriggerZoneLeft(Capy capy)
     {
-        allcapyes.Remove(capy);
-        Debug.Log("Капибара покинула сферу, теперь их: " + allcapyes.Count + " штук!");
+        allCapybaras.Remove(capy);
+        Debug.Log("Капибара покинула сферу, теперь их: " + allCapybaras.Count + " штук!");
         _possibleTarget = null;
         Debug.Log("Список объектов в allcapyes после удаления объекта:");
 
-        foreach (var capyElement in allcapyes)
+        foreach (var capyElement in allCapybaras)
         {
 
             Debug.Log(capyElement.name);
@@ -151,7 +150,6 @@ public class CatchCapy : MonoBehaviour
 
     private void OnCapyFinishedForEnemy()
     {
-        allcapyes.Clear();
+        allCapybaras.Clear();
     }
 }
-

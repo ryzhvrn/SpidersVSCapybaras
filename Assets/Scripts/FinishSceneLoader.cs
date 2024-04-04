@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using IJunior.TypedScenes;
 using System;
+using UnityEngine.UI;
 
 public class FinishSceneLoader : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class FinishSceneLoader : MonoBehaviour
     private string _firstLevelName = "Level1";
     private string _secondLevelName = "Level2";
     private string _thirdLevelName = "Level3";
-    private AdService _ads = new AdService();
+    private string _fourthLevelName = "Level4";
+    private string _fifthLevelName = "Level5";
 
     private void OnEnable()
     {
@@ -20,6 +22,8 @@ public class FinishSceneLoader : MonoBehaviour
         RestartButtonPressed.RestartCurrentLevelScene += ReloadFirstLevel;
         RestartButtonPressed.RestartCurrentLevelScene += ReloadSecondLevel;
         RestartButtonPressed.RestartCurrentLevelScene += ReloadThirdLevel;
+        RestartButtonPressed.RestartCurrentLevelScene += ReloadFourthLevel;
+        RestartButtonPressed.RestartCurrentLevelScene += ReloadFifthLevel;
     }
 
     private void OnDisable()
@@ -29,17 +33,19 @@ public class FinishSceneLoader : MonoBehaviour
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadFirstLevel;
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadSecondLevel;
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadThirdLevel;
+        RestartButtonPressed.RestartCurrentLevelScene -= ReloadFourthLevel;
+        RestartButtonPressed.RestartCurrentLevelScene -= ReloadFifthLevel;
     }
 
     private void LoadLevelFinishedScene()
     {
-        _ads.ShowInterstitialAd();
         LevelFinished.Load(_levelConfig);
     }
 
     private void LoadLevelsMenuScene()
     {
         LevelsMenu.Load();
+        Debug.Log("FinishSceneLoader - LoadLevelsMenu");
     }
 
     private void ReloadFirstLevel()
@@ -63,6 +69,22 @@ public class FinishSceneLoader : MonoBehaviour
         if (_levelConfig.CurrentLevelName == _thirdLevelName)
         {
             Level3.Load();
+        }
+    }
+
+    private void ReloadFourthLevel()
+    {
+        if (_levelConfig.CurrentLevelName == _fourthLevelName)
+        {
+            //Level4.Load();
+        }
+    }
+
+    private void ReloadFifthLevel()
+    {
+        if (_levelConfig.CurrentLevelName == _fifthLevelName)
+        {
+            //Level5.Load();
         }
     }
 }

@@ -772,6 +772,8 @@ MonoBehaviour:
   TwoStarsEarned: {fileID: 1563026704}
   OneStarsEarned: {fileID: 1285705599}
   ZeroStarsEarnedWarning: {fileID: 544841146}
+  _restartButton: {fileID: 1465873078}
+  _levelsMenuButton: {fileID: 1468006314}
 --- !u!4 &655393122
 Transform:
   m_ObjectHideFlags: 0

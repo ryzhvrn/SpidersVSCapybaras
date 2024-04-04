@@ -42,7 +42,6 @@ public class CheckRemainingCapybarasOnLevel : MonoBehaviour
                 {
                     ChildCapybarasEnded?.Invoke();
                     _isCoroutineWorking = false;
-                    Debug.Log("No LittleCapybaras left on the level.");
                 }
             }
             yield return null;

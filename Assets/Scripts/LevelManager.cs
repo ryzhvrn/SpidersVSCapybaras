@@ -1,3 +1,4 @@
+using IJunior.TypedScenes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,10 +11,10 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private int _maxChildCapybarasAmount;
     private int _currentSpawnedChildCapybarasAmount = 0;
-    private bool _isEventActivated = false;
-    private string _currentSceneName;
     private int _currentAmountCapybarasSaved = 0;
     private int _amountOfEarnedStars = 0;
+    private bool _isEventActivated = false;
+    private string _currentSceneName;
 
     public static event Action AllChildCapybarasSpawned;
     public static event Action CurrentLevelFinished;
@@ -32,7 +33,6 @@ public class LevelManager : MonoBehaviour
         {
             if (_isEventActivated == false)
             {
-                Debug.Log(_currentSpawnedChildCapybarasAmount + " = " + _maxChildCapybarasAmount);
                 AllChildCapybarasSpawned?.Invoke();
                 _isEventActivated = true;
             }
@@ -48,6 +48,7 @@ public class LevelManager : MonoBehaviour
         Spawner.ChildCapybarasSpawned += OnChildCapybarasSpawned;
         CheckRemainingCapybarasOnLevel.ChildCapybarasEnded += OnChildCapybarasEnded;
         Finish.AmountOfChildCapybarasSaved += OnAmountOfChildCapybarasSaved;
+        LevelsButtonPressed.LevelsSceneActivated += OnLevelsSceneActivated;
     }
 
     private void OnDisable()
@@ -55,6 +56,12 @@ public class LevelManager : MonoBehaviour
         Spawner.ChildCapybarasSpawned -= OnChildCapybarasSpawned;
         CheckRemainingCapybarasOnLevel.ChildCapybarasEnded -= OnChildCapybarasEnded;
         Finish.AmountOfChildCapybarasSaved -= OnAmountOfChildCapybarasSaved;
+        LevelsButtonPressed.LevelsSceneActivated -= OnLevelsSceneActivated;
+    }
+
+    private void OnLevelsSceneActivated()
+    {
+        LevelsMenu.Load();
     }
 
     private void CalculateMaximumChildCapybarasForSpawn()
@@ -99,8 +106,6 @@ public class LevelManager : MonoBehaviour
 
     private void CreateConfig()
     {
-        Debug.Log("CreateConfigEarnedStars: " + _amountOfEarnedStars);
-        Debug.Log("CreateConfigSceneName:" + _currentSceneName);
         NotifyLevelConfigAboutAmountOfEarnedStars?.Invoke(_amountOfEarnedStars, _currentSceneName);
     }
 

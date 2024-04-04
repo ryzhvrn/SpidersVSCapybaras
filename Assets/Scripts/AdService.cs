@@ -3,10 +3,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AdService
 {
     public static event Action CollectVideoAdReward;
+    public static event Action ShowInteractiveElements;
 
     public void ShowVideoAd() => Agava.YandexGames.VideoAd.Show(OnOpenAdCallback, OnRewardedCallback, OnCloseAdCallback);
     public void ShowInterstitialAd() => Agava.YandexGames.InterstitialAd.Show(OnOpenAdCallback, OnCloseInterstitialAdCallback);
@@ -21,6 +23,7 @@ public class AdService
     {
         Time.timeScale = 1;
         AudioListener.volume = 1f;
+        ShowInteractiveElements?.Invoke();
     }
 
     private void OnRewardedCallback()
@@ -32,5 +35,6 @@ public class AdService
     {
         Time.timeScale = 1;
         AudioListener.volume = 1f;
+        ShowInteractiveElements?.Invoke();
     }
 }

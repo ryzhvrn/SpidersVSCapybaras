@@ -8,18 +8,30 @@ public class StartChoosenLevel : MonoBehaviour
     public void StartFirstLevel()
     {
         Level1.Load();
-        Debug.Log("Запускаем 1 уровень!");
     }
 
     public void StartSecondLevel()
     {
         Level2.Load();
-        Debug.Log("Запускаем 2 уровень!");
     }
 
     public void StartThirdLevel()
     {
         Level3.Load();
-        Debug.Log("Запускаем 3 уровень!");
+    }
+
+    public void StartFourthLevel()
+    {
+        Level4.Load();
+    }
+
+    public void StartFifthLevel()
+    {
+        Level5.Load();
+    }
+
+    public void StartSixthLevel()
+    {
+        Level6.Load();
     }
 }

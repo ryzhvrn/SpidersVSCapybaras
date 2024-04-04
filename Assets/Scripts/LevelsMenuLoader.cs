@@ -33,10 +33,16 @@ public class LevelsMenuLoader : MonoBehaviour
     [SerializeField] private Image _TwoStarsEarnedFifthLevel;
     [SerializeField] private Image _ThreeStarsEarnedFifthLevel;
 
+    [SerializeField] private Image _ZeroStarsEarnedSixthLevel;
+    [SerializeField] private Image _OneStarsEarnedSixthLevel;
+    [SerializeField] private Image _TwoStarsEarnedSixthLevel;
+    [SerializeField] private Image _ThreeStarsEarnedSixthLevel;
+
     [SerializeField] private Image _lockedLevelSecondLevelImage;
     [SerializeField] private Image _lockedLevelThirdLevelImage;
     [SerializeField] private Image _lockedLevelFourthLevelImage;
     [SerializeField] private Image _lockedLevelFifthLevelImage;
+    [SerializeField] private Image _lockedLevelSixthLevelImage;
 
     private void Start()
     {
@@ -45,11 +51,19 @@ public class LevelsMenuLoader : MonoBehaviour
         SetCurrentFinishedLevelProgress("Level3");
         SetCurrentFinishedLevelProgress("Level4");
         SetCurrentFinishedLevelProgress("Level5");
-        SetLevelsProgress("Level1", _ZeroStarsEarnedFirstLevel, _OneStarsEarnedFirstLevel, _TwoStarsEarnedFirstLevel, _ThreeStarsEarnedFirstLevel, _lockedLevelSecondLevelImage);
-        SetLevelsProgress("Level2", _ZeroStarsEarnedSecondLevel, _OneStarsEarnedSecondLevel, _TwoStarsEarnedSecondLevel, _ThreeStarsEarnedSecondLevel, _lockedLevelThirdLevelImage);
-        SetLevelsProgress("Level3", _ZeroStarsEarnedThirdLevel, _OneStarsEarnedThirdLevel, _TwoStarsEarnedThirdLevel, _ThreeStarsEarnedThirdLevel, _lockedLevelFourthLevelImage);
-        SetLevelsProgress("Level4", _ZeroStarsEarnedFourthLevel, _OneStarsEarnedFourthLevel, _TwoStarsEarnedFourthLevel, _ThreeStarsEarnedFourthLevel, _lockedLevelFifthLevelImage);
-        SetLevelsProgress("Level5", _ZeroStarsEarnedFifthLevel, _OneStarsEarnedFifthLevel, _TwoStarsEarnedFifthLevel, _ThreeStarsEarnedFifthLevel, null);
+        SetCurrentFinishedLevelProgress("Level6");
+        SetLevelsProgress("Level1", _ZeroStarsEarnedFirstLevel, _OneStarsEarnedFirstLevel,
+            _TwoStarsEarnedFirstLevel, _ThreeStarsEarnedFirstLevel, _lockedLevelSecondLevelImage);
+        SetLevelsProgress("Level2", _ZeroStarsEarnedSecondLevel, _OneStarsEarnedSecondLevel,
+            _TwoStarsEarnedSecondLevel, _ThreeStarsEarnedSecondLevel, _lockedLevelThirdLevelImage);
+        SetLevelsProgress("Level3", _ZeroStarsEarnedThirdLevel, _OneStarsEarnedThirdLevel,
+            _TwoStarsEarnedThirdLevel, _ThreeStarsEarnedThirdLevel, _lockedLevelFourthLevelImage);
+        SetLevelsProgress("Level4", _ZeroStarsEarnedFourthLevel, _OneStarsEarnedFourthLevel,
+            _TwoStarsEarnedFourthLevel, _ThreeStarsEarnedFourthLevel, _lockedLevelFifthLevelImage);
+        SetLevelsProgress("Level5", _ZeroStarsEarnedFifthLevel, _OneStarsEarnedFifthLevel,
+            _TwoStarsEarnedFifthLevel, _ThreeStarsEarnedFifthLevel, _lockedLevelSixthLevelImage);
+        SetLevelsProgress("Level6", _ZeroStarsEarnedSixthLevel, _OneStarsEarnedSixthLevel,
+            _TwoStarsEarnedSixthLevel, _ThreeStarsEarnedSixthLevel, null);
     }
 
     private void OnEnable()
@@ -99,7 +113,8 @@ public class LevelsMenuLoader : MonoBehaviour
         }
     }
 
-    private void SetLevelsProgress(string levelName, Image zeroStars, Image OneStar, Image twoStars, Image threeStars, Image nextLevelLocked)
+    private void SetLevelsProgress(string levelName, Image zeroStars, Image OneStar,
+        Image twoStars, Image threeStars, Image nextLevelLocked)
     {
         if (PlayerPrefs.HasKey(levelName))
         {

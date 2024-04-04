@@ -36,17 +36,15 @@ public class Finish : MonoBehaviour
         {
             if (IsChildCapybarasRemaining() == true)
             {
-                Debug.Log("Дошли до финиша с капибарами!");
                 PlayerFinished?.Invoke();
                 ChildCapybarasFinishReached?.Invoke();
-                NotifyUiAboutFinish();
+                //NotifyUiAboutFinish();
                 NotifyEnemyAboutFinish();
             }
 
             if (IsStartPoolChildCapybarasRemaining() == true)
             {
                 ChildCapybarasFinishReached?.Invoke();
-                Debug.Log("Дошли до финиша без капибар!");
             }
         }
     }
@@ -57,7 +55,6 @@ public class Finish : MonoBehaviour
 
         if (capybaras.Length == 0)
         {
-            Debug.Log("No LittleCapybaras left on the finish.");
             return false;
         }
         else
@@ -72,7 +69,6 @@ public class Finish : MonoBehaviour
 
         if (capybaras.Length == 0)
         {
-            Debug.Log("No StartPoolChildCapybaras left on the level.");
             return true;
         }
         else
@@ -107,8 +103,8 @@ public class Finish : MonoBehaviour
             GameObject finishCapy = Instantiate(_capyFinishPrefab, spawnPoint, transform.rotation);
             finishCapy.transform.rotation = Quaternion.Euler(0, 180, 0);
             _finishedCapys.Add(finishCapy);
+            CapyFinishedForUI?.Invoke();
             _currentChildCapybaraIndex++;
-            Debug.Log("Создали финишную капибару. Index: " + _currentChildCapybaraIndex);
             _savedChildCapybarasAmount++;
         }
     }

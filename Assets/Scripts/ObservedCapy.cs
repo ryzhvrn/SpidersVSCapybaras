@@ -56,20 +56,17 @@ public class ObservedCapy : MonoBehaviour
     {
         foreach (Capy capy in _childCapybaras)
         {
-            Debug.Log("Капи доставлена!");
             CapyOnFinish?.Invoke();
         }
     }
 
     private void OnChildCapybaraSpawned(Capy capy)
     {
-        Debug.Log("Dobavili object");
         _childCapybaras.Add(capy);
     }
 
     private void OnChildCapybaraDied(Capy capy)
     {
-        Debug.Log("Ydalili object");
         _childCapybaras.Remove(capy);
     }
 }
