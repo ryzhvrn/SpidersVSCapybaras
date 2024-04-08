@@ -1,9 +1,5 @@
 using IJunior.TypedScenes;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing.Design;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -78,28 +74,26 @@ public class LevelManager : MonoBehaviour
 
             if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn == 100)
             {
-                Debug.Log("Получено 3 звезды");
                 _amountOfEarnedStars = 3;
             }
-            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 66 && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 99)
+            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 66
+                && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 99)
             {
-                Debug.Log("Получено 2 звезды");
                 _amountOfEarnedStars = 2;
             }
-            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 33 && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 65)
+            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 33 
+                && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 65)
             {
-                Debug.Log("Получена 1 звезда");
                 _amountOfEarnedStars = 1;
             }
-            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 1 && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 32)
+            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 1 
+                && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 32)
             {
-                Debug.Log("Получена 0 звезд");
                 _amountOfEarnedStars = 0;
             }
         }
         else
         {
-            Debug.Log("Получено 0 звёзд");
             _amountOfEarnedStars = 0;
         }
     }

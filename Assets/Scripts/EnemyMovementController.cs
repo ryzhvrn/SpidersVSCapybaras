@@ -1,14 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovementController : MonoBehaviour
 {
-    public static event Action<bool> EnemyMoving;
-
     private bool _isMoving = false;
     private Vector3 _previousPosition;
+
+    public static event Action<bool> EnemyMoving;
 
     private void Start()
     {
@@ -17,7 +15,6 @@ public class EnemyMovementController : MonoBehaviour
 
     private void Update()
     {
-
         if (transform.position.x!=_previousPosition.x)
         {
             _isMoving = true;
@@ -35,6 +32,7 @@ public class EnemyMovementController : MonoBehaviour
         {
             EnemyMoving?.Invoke(_isMoving);
         }
+
         _previousPosition= transform.position;
     }
 }

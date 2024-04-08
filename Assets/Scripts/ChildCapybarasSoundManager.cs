@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ChildCapybarasSoundManager : MonoBehaviour
@@ -22,12 +20,10 @@ public class ChildCapybarasSoundManager : MonoBehaviour
         if (foundChildCapybara.Length > 0)
         {
             _isChildCapybaraDetected = true;
-            Debug.Log("ChildCapy founded");
         }
         else
         {
             _isChildCapybaraDetected = false;
-            Debug.Log("ChildCapy not founded");
         }
     }
 
@@ -35,7 +31,6 @@ public class ChildCapybarasSoundManager : MonoBehaviour
     {
         if (_isChildCapybaraDetected)
         {
-            Debug.Log("Звук капибары");
             _audioSource.clip = _childCapybaraSound;
             _audioSource.Play();
         }

@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,12 +8,11 @@ public class TipsButtonsController : MonoBehaviour
     [SerializeField] private Image _tipsBackground;
     [SerializeField] private Button _nextButton;
     [SerializeField] private List<Text> _tipsList;
+    private int _counter = 0;
 
     public static event Action DisableInput;
     public static event Action EnableInput;
     public static event Action HideCursor;
-
-    private int _counter = 0;
 
     private void Start()
     {

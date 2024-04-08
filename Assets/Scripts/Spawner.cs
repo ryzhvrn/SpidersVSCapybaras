@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,18 +12,17 @@ public class Spawner : MonoBehaviour
     [SerializeField] private List<GameObject> _childCapybarasForSpawnList = new List<GameObject>();
     [SerializeField] private float _radius = 5f;
 
-    public static event Action<Capy> ChildCapybaraSpawned;
-    public static event Action<int> ChildCapybarasSpawned;
-
     private int _spawnedCapybaraIndex = 0;
     private int _maximumChildCapybarasForSpawnAmount;
     private int _spawnedCapybarasAmount = 0;
     private Vector3 _center;
 
+    public static event Action<Capy> ChildCapybaraSpawned;
+    public static event Action<int> ChildCapybarasSpawned;
+
     private void Start()
     {
         _maximumChildCapybarasForSpawnAmount = _childCapybarasForSpawnList.Count;
-        Debug.Log("_maximumCapybarasForSpawnAmount " + _maximumChildCapybarasForSpawnAmount);
         _center = transform.position;
     }
 
@@ -41,7 +39,6 @@ public class Spawner : MonoBehaviour
     private void NotifyLevelManagerAboutSpawnedCapybarasAmount()
     {
         ChildCapybarasSpawned?.Invoke(_maximumChildCapybarasForSpawnAmount);
-        Debug.Log("Было заспавнено: " + _maximumChildCapybarasForSpawnAmount + " капибар!");
     }
 
     private void OnPlayerDetected()
@@ -59,7 +56,6 @@ public class Spawner : MonoBehaviour
 
         if (_spawnedCapybarasAmount == _maximumChildCapybarasForSpawnAmount)
         {
-            Debug.Log("All capys were summon already!");
             NotifyLevelManagerAboutSpawnedCapybarasAmount();
             _waypointScript.enabled= false;
             _waypointImage.enabled= false;

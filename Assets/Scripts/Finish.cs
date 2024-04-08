@@ -8,6 +8,8 @@ public class Finish : MonoBehaviour
     [SerializeField] private GameObject _capyFinishPrefab;
     [SerializeField] private List<GameObject> _spawnPointsList;
     [SerializeField] private List<GameObject> _finishedCapys;
+    private int _savedChildCapybarasAmount = 0;
+    private int _currentChildCapybaraIndex = 0;
 
     public static event Action PlayerFinished;
     public static event Action CapyFinishedForUI;
@@ -15,8 +17,6 @@ public class Finish : MonoBehaviour
     public static event Action ChildCapybarasFinishReached;
     public static event Action<int> AmountOfChildCapybarasSaved;
 
-    private int _savedChildCapybarasAmount = 0;
-    private int _currentChildCapybaraIndex = 0;
 
     private void OnEnable()
     {
@@ -38,7 +38,6 @@ public class Finish : MonoBehaviour
             {
                 PlayerFinished?.Invoke();
                 ChildCapybarasFinishReached?.Invoke();
-                //NotifyUiAboutFinish();
                 NotifyEnemyAboutFinish();
             }
 
@@ -74,14 +73,6 @@ public class Finish : MonoBehaviour
         else
         {
             return false;
-        }
-    }
-
-    private void NotifyUiAboutFinish()
-    {
-        foreach (GameObject capy in _finishedCapys)
-        {
-            CapyFinishedForUI?.Invoke();
         }
     }
 

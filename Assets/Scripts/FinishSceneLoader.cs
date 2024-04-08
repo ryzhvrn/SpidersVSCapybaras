@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using IJunior.TypedScenes;
-using System;
-using UnityEngine.UI;
 
 public class FinishSceneLoader : MonoBehaviour
 {
@@ -14,6 +10,7 @@ public class FinishSceneLoader : MonoBehaviour
     private string _thirdLevelName = "Level3";
     private string _fourthLevelName = "Level4";
     private string _fifthLevelName = "Level5";
+    private string _sixthLevelName = "Level6";
 
     private void OnEnable()
     {
@@ -24,6 +21,7 @@ public class FinishSceneLoader : MonoBehaviour
         RestartButtonPressed.RestartCurrentLevelScene += ReloadThirdLevel;
         RestartButtonPressed.RestartCurrentLevelScene += ReloadFourthLevel;
         RestartButtonPressed.RestartCurrentLevelScene += ReloadFifthLevel;
+        RestartButtonPressed.RestartCurrentLevelScene += ReloadSixthLevel;
     }
 
     private void OnDisable()
@@ -35,6 +33,7 @@ public class FinishSceneLoader : MonoBehaviour
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadThirdLevel;
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadFourthLevel;
         RestartButtonPressed.RestartCurrentLevelScene -= ReloadFifthLevel;
+        RestartButtonPressed.RestartCurrentLevelScene -= ReloadSixthLevel;
     }
 
     private void LoadLevelFinishedScene()
@@ -45,7 +44,6 @@ public class FinishSceneLoader : MonoBehaviour
     private void LoadLevelsMenuScene()
     {
         LevelsMenu.Load();
-        Debug.Log("FinishSceneLoader - LoadLevelsMenu");
     }
 
     private void ReloadFirstLevel()
@@ -76,7 +74,7 @@ public class FinishSceneLoader : MonoBehaviour
     {
         if (_levelConfig.CurrentLevelName == _fourthLevelName)
         {
-            //Level4.Load();
+            Level4.Load();
         }
     }
 
@@ -84,7 +82,15 @@ public class FinishSceneLoader : MonoBehaviour
     {
         if (_levelConfig.CurrentLevelName == _fifthLevelName)
         {
-            //Level5.Load();
+            Level5.Load();
+        }
+    }
+
+    private void ReloadSixthLevel()
+    {
+        if (_levelConfig.CurrentLevelName == _sixthLevelName)
+        {
+            Level6.Load();
         }
     }
 }

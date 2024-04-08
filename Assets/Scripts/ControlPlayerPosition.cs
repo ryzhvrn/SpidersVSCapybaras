@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ControlPlayerPosition : MonoBehaviour
 {
     [SerializeField] private Transform _playerTransform;
-    private float _initialYPosition; 
+    private float _initialYPosition;
+    private float _acceptableDistance = 0.01f;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class ControlPlayerPosition : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
 
-            if (Mathf.Abs(_playerTransform.position.y - _initialYPosition) > 0.01f) 
+            if (Mathf.Abs(_playerTransform.position.y - _initialYPosition) > _acceptableDistance)
             {
                 Vector3 newPosition = _playerTransform.position; 
                 newPosition.y = _initialYPosition;

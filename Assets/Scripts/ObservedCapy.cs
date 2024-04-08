@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,10 +7,11 @@ using UnityEngine.ProBuilder.Shapes;
 
 public class ObservedCapy : MonoBehaviour
 {
-    public static event Action CapyOnFinish;
-
     [SerializeField] private Transform _player;
     private List<Capy> _childCapybaras = new List<Capy>();
+    private int _distanceMultiplier = 2;
+
+    public static event Action CapyOnFinish;
 
     private void Update()
     {
@@ -42,7 +42,7 @@ public class ObservedCapy : MonoBehaviour
             {
                 if (capy != null)
                 {
-                    capy.GetComponent<NavMeshAgent>().stoppingDistance = 2 * distanceBetweenObjects;
+                    capy.GetComponent<NavMeshAgent>().stoppingDistance = _distanceMultiplier * distanceBetweenObjects;
                     distanceBetweenObjects++;
                 }
             }

@@ -1,6 +1,4 @@
 using IJunior.TypedScenes;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -142,7 +140,7 @@ public class LevelsMenuLoader : MonoBehaviour
 
                     if (nextLevelLocked != null)
                     {
-                        nextLevelLocked.gameObject.SetActive(false);
+                        nextLevelLocked.gameObject.SetActive(true);
                     }
 
                     break;
@@ -170,15 +168,10 @@ public class LevelsMenuLoader : MonoBehaviour
                     }
 
                     break;
-                default:
-                    Debug.Log("LevelName " + levelName + " levelStarsReached: " + levelStarsReached + " Wrong!!!");
-                    break;
             }
         }
         else
         {
-            Debug.Log("No info about: " + levelName);
-
             return;
         }
     }

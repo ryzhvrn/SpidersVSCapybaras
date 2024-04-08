@@ -1,5 +1,3 @@
-using IJunior.TypedScenes;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -21,6 +19,9 @@ public class SetLeaderboardProgress : MonoBehaviour
         _levelNames.Add("Level1");
         _levelNames.Add("Level2");
         _levelNames.Add("Level3");
+        _levelNames.Add("Level4");
+        _levelNames.Add("Level5");
+        _levelNames.Add("Level6");
     }
 
     private void SetPlayerScore()

@@ -6,12 +6,13 @@ using UnityEngine.AI;
 
 public class CatchCapy : MonoBehaviour
 {
-    public List<Capy> allCapybaras = new List<Capy>();
-
     [SerializeField] private Transform _target;
     [SerializeField] private NavMeshAgent _navMeshAgent;
     [SerializeField] private bool _isAttackAllowed = false;
+
+    private List<Capy> _allCapybaras = new List<Capy>();
     private Transform _possibleTarget;
+    private float _attackDistance = 1.5f;
 
     public static event Action CapyCatched;
     public static event Action EnemyAttacking;
@@ -32,7 +33,6 @@ public class CatchCapy : MonoBehaviour
             return;
         }
 
-        Debug.Log("Обнаружили цель");
         CalculatePath();
     }
 
@@ -54,11 +54,10 @@ public class CatchCapy : MonoBehaviour
 
     private void ChooseNextTarget()
     {
-        if (allCapybaras != null && allCapybaras.Count > 0)
+        if (_allCapybaras != null && _allCapybaras.Count > 0)
         {
-            _possibleTarget = allCapybaras.FirstOrDefault().transform;
+            _possibleTarget = _allCapybaras.FirstOrDefault().transform;
             CapybarasDetected?.Invoke(true);
-            Debug.Log("Текущая цель: " + _possibleTarget.name);
         }
         else
         {
@@ -67,7 +66,7 @@ public class CatchCapy : MonoBehaviour
             _navMeshAgent.ResetPath();
         }
 
-        if (allCapybaras.Count == 0)
+        if (_allCapybaras.Count == 0)
         {
             _possibleTarget = null;
         }
@@ -78,37 +77,31 @@ public class CatchCapy : MonoBehaviour
         if (_possibleTarget != null)
         {
             _navMeshAgent.SetDestination(_possibleTarget.position);
-            Debug.Log("Имя обнаруженной цели: " + _possibleTarget.name);
         }
         if (_possibleTarget == null)
         {
             _navMeshAgent.isStopped = true;
             _navMeshAgent.ResetPath();
-            Debug.Log("_navMeshAgent.ResetPath()");
         }
     }
 
     private float DistanceChecker(Transform object1, Transform object2)
     {
         float distance = Vector3.Distance(object1.position, object2.position);
-        Debug.Log("Расстояние = " + distance);
 
         return distance;
     }
 
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("AttackAbilityStatus: " + _isAttackAllowed);
-
         if (collision.gameObject.TryGetComponent(out Capy capy))
         {
-            if (DistanceChecker(collision.transform, gameObject.transform) < 1.5f)
+            if (DistanceChecker(collision.transform, gameObject.transform) < _attackDistance)
             {
                 EnemyAttacking?.Invoke();
 
                 if (_isAttackAllowed == true)
                 {
-                    Debug.Log("Capy поймана!");
                     OnTriggerZoneLeft(capy);
                     Destroy(collision.gameObject);
                     CapyCatched?.Invoke();
@@ -122,34 +115,17 @@ public class CatchCapy : MonoBehaviour
     }
     private void OnTriggerZoneEntered(Capy capy)
     {
-        allCapybaras.Add(capy);
-        Debug.Log("В сферу обнаружения всего попало: " + allCapybaras.Count + " капибар!");
-
-        Debug.Log("Список объектов в allcapyes после добавления объекта:");
-
-        foreach (var capyElement in allCapybaras)
-        {
-
-            Debug.Log(capyElement.name);
-        }
+        _allCapybaras.Add(capy);
     }
 
     private void OnTriggerZoneLeft(Capy capy)
     {
-        allCapybaras.Remove(capy);
-        Debug.Log("Капибара покинула сферу, теперь их: " + allCapybaras.Count + " штук!");
+        _allCapybaras.Remove(capy);
         _possibleTarget = null;
-        Debug.Log("Список объектов в allcapyes после удаления объекта:");
-
-        foreach (var capyElement in allCapybaras)
-        {
-
-            Debug.Log(capyElement.name);
-        }
     }
 
     private void OnCapyFinishedForEnemy()
     {
-        allCapybaras.Clear();
+        _allCapybaras.Clear();
     }
 }

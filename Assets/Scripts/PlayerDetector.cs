@@ -12,7 +12,6 @@ public class PlayerDetector : MonoBehaviour
         if (other.gameObject.GetComponent<Player>())
         {
             PlayerDetected?.Invoke();
-            Debug.Log("Игрок обнаружен!");
         }
     }
 }

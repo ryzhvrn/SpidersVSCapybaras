@@ -1,8 +1,5 @@
 using Agava.YandexGames;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using IJunior.TypedScenes;
 
 public class OpenLeaderboard : MonoBehaviour
 {
@@ -22,8 +19,6 @@ public class OpenLeaderboard : MonoBehaviour
 
     public void LeaderboardButtonPressed()
     {
-        string currentLanguage = YandexGamesSdk.Environment.i18n.lang;
-        Debug.Log("currentLanguageCode: " + currentLanguage);
         TryOpenLeaderboard();
     }
 
@@ -32,7 +27,6 @@ public class OpenLeaderboard : MonoBehaviour
         if (PlayerAccount.IsAuthorized)
         {
             PlayerAccount.RequestPersonalProfileDataPermission();
-            Debug.Log("ѕытаемс€ открыть лидерборд!");
             IJunior.TypedScenes.Leaderboard.Load();
         }
 
@@ -49,13 +43,11 @@ public class OpenLeaderboard : MonoBehaviour
             PlayerAccount.Authorize();
             PlayerAccount.RequestPersonalProfileDataPermission();
             _authView.SetActive(false);
-            Debug.Log("ќстаемс€ на сцене и ждем авторизации игрока!");
         }
 
         if (PlayerAccount.IsAuthorized)
         {
             PlayerAccount.RequestPersonalProfileDataPermission();
-            Debug.Log("ѕытаемс€ открыть лидерборд!");
             IJunior.TypedScenes.Leaderboard.Load();
         }
     }

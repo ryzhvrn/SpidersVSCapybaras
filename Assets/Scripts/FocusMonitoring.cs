@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Agava.WebUtility;
-using System;
-using UnityEngine.UIElements;
 
 public class FocusMonitoring : MonoBehaviour
 {
@@ -40,14 +36,12 @@ public class FocusMonitoring : MonoBehaviour
 
     private void OnInBackgroundChangeWeb(bool inApp)
     {
-        Debug.Log("OnInBackgroundChangeWeb: " + inApp);
         MuteAudio(!inApp);
         PauseGame(!inApp);
     }
 
     private void OnInBackgroundChangeApp(bool isBackground)
     {
-        Debug.Log("OnInBackgroundChangeApp: " + isBackground);
         MuteAudio(!isBackground);
         PauseGame(isBackground);
     }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using IJunior.TypedScenes;
 using UnityEngine.UI;
@@ -19,9 +17,11 @@ public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
 
     private void Awake()
     {
+#if UNITY_WEBGL && !UNITY_EDITOR
         _restartButton.gameObject.SetActive(false);
         _levelsMenuButton.gameObject.SetActive(false);
         Invoke("ShowInterstitialAd", 2f);
+#endif
     }
 
     private void OnEnable()
