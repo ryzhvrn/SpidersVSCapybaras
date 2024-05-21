@@ -10,6 +10,7 @@ public class Waypoint : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private Text _distanceToWaypoint;
     [SerializeField] private Vector3 _offset;
+    private int _errorValue = 10;
 
     private void Update()
     {
@@ -34,7 +35,7 @@ public class Waypoint : MonoBehaviour
         position.x = Mathf.Clamp(position.x, minX, maxX);
         position.y = Mathf.Clamp(position.y, minY, maxY);
         _waypointMarkerImage.transform.position = position;
-        int distance = (int)Vector3.Distance(_target.position, transform.position) - 10;
+        int distance = (int)Vector3.Distance(_target.position, transform.position) - _errorValue;
         int absoluteDistance = Math.Abs(distance);
         _distanceToWaypoint.text = absoluteDistance.ToString() + " ì";
     }

@@ -5,13 +5,13 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.ProBuilder.Shapes;
 
-public class ObservedCapy : MonoBehaviour
+public class ObservableSpawnedLittleCapy : MonoBehaviour
 {
     [SerializeField] private Transform _player;
     private List<Capy> _childCapybaras = new List<Capy>();
     private int _distanceMultiplier = 2;
 
-    public static event Action CapyOnFinish;
+    public static event Action Finished;
 
     private void Update()
     {
@@ -52,11 +52,12 @@ public class ObservedCapy : MonoBehaviour
             return;
         }
     }
+
     private void OnPlayerFinished()
     {
         foreach (Capy capy in _childCapybaras)
         {
-            CapyOnFinish?.Invoke();
+            Finished?.Invoke();
         }
     }
 

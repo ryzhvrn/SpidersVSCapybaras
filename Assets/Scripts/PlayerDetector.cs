@@ -7,7 +7,7 @@ public class PlayerDetector : MonoBehaviour
 {
     public static event Action PlayerDetected;
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Player>())
         {

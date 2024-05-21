@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc45d9426c1b82e4886bcb71565a2789, type: 3}
   m_Name: LevelConfig
   m_EditorClassIdentifier: 
-  _starsAmountEarned: 0
-  _currentLevelName: 
+  _starsAmountEarned: 3
+  _currentLevelName: Level1

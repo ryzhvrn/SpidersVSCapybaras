@@ -1,7 +1,7 @@
-using IJunior.TypedScenes;
 using System;
-using UnityEngine;
+using IJunior.TypedScenes;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
@@ -42,17 +42,17 @@ public class LevelManager : MonoBehaviour
     private void OnEnable()
     {
         Spawner.ChildCapybarasSpawned += OnChildCapybarasSpawned;
-        CheckRemainingCapybarasOnLevel.ChildCapybarasEnded += OnChildCapybarasEnded;
+        RemainingCapybarasDetector.ChildCapybarasEnded += OnChildCapybarasEnded;
         Finish.AmountOfChildCapybarasSaved += OnAmountOfChildCapybarasSaved;
-        LevelsButtonPressed.LevelsSceneActivated += OnLevelsSceneActivated;
+        OpenLevelsScene.LevelsSceneActivated += OnLevelsSceneActivated;
     }
 
     private void OnDisable()
     {
         Spawner.ChildCapybarasSpawned -= OnChildCapybarasSpawned;
-        CheckRemainingCapybarasOnLevel.ChildCapybarasEnded -= OnChildCapybarasEnded;
+        RemainingCapybarasDetector.ChildCapybarasEnded -= OnChildCapybarasEnded;
         Finish.AmountOfChildCapybarasSaved -= OnAmountOfChildCapybarasSaved;
-        LevelsButtonPressed.LevelsSceneActivated -= OnLevelsSceneActivated;
+        OpenLevelsScene.LevelsSceneActivated -= OnLevelsSceneActivated;
     }
 
     private void OnLevelsSceneActivated()
@@ -62,32 +62,29 @@ public class LevelManager : MonoBehaviour
 
     private void CalculateMaximumChildCapybarasForSpawn()
     {
-        StartPoolChildCapybara[] ChildCapybarasOnStartPools = FindObjectsOfType<StartPoolChildCapybara>();
-        _maxChildCapybarasAmount = ChildCapybarasOnStartPools.Length;
+        StartPoolChildCapybara[] childCapybarasOnStartPools = FindObjectsOfType<StartPoolChildCapybara>();
+        _maxChildCapybarasAmount = childCapybarasOnStartPools.Length;
     }
 
     private void CalculateFinishedLevelProgress()
     {
         if (_currentAmountCapybarasSaved != 0)
         {
-            float percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn = (float)_currentAmountCapybarasSaved / _maxChildCapybarasAmount * 100;
+            float value = (float)_currentAmountCapybarasSaved / _maxChildCapybarasAmount * 100;
 
-            if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn == 100)
+            if (value == 100)
             {
                 _amountOfEarnedStars = 3;
             }
-            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 66
-                && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 99)
+            else if (value >= 66 && value <= 99)
             {
                 _amountOfEarnedStars = 2;
             }
-            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 33 
-                && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 65)
+            else if (value >= 33 && value <= 65)
             {
                 _amountOfEarnedStars = 1;
             }
-            else if (percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn >= 1 
-                && percentsRatioCurrentAmountFinishedCapybarasWithMaxAmountCapybarasForSpawn <= 32)
+            else if (value >= 1 && value <= 32)
             {
                 _amountOfEarnedStars = 0;
             }

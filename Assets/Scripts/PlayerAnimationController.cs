@@ -12,12 +12,12 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void OnEnable()
     {
-        ThirdPersonMovement.PlayerMoving += OnPlayerMoving;
+        ThirdPersonMovementController.PlayerMoving += OnPlayerMoving;
     }
 
     private void OnDisable()
     {
-        ThirdPersonMovement.PlayerMoving -= OnPlayerMoving;
+        ThirdPersonMovementController.PlayerMoving -= OnPlayerMoving;
     }
 
     private void OnPlayerMoving(bool moving)

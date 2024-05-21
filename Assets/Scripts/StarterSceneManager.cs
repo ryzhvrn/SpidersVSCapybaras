@@ -1,5 +1,5 @@
-using UnityEngine;
 using IJunior.TypedScenes;
+using UnityEngine;
 
 public class StarterSceneManager : MonoBehaviour
 {

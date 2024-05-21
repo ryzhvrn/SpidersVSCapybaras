@@ -6,25 +6,19 @@ public class ChildCapybarasSoundManager : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
 
     private bool _isChildCapybaraDetected = false;
+    private int _repeatRateForCheckChildCapybaras = 5;
+    private int _repeatRateForPlayingSound = 20;
+    private int _timeToStartRepeating = 0;
 
     private void Start()
     {
-        InvokeRepeating("CheckChildCapybaraOnLevel", 0, 5);
-        InvokeRepeating("PlayAudioClip", 0, 20);
+        InvokeRepeating("CheckChildCapybaraOnLevel", _timeToStartRepeating, _repeatRateForCheckChildCapybaras);
+        InvokeRepeating("PlayAudioClip", _timeToStartRepeating, _repeatRateForPlayingSound);
     }
 
     private void CheckChildCapybaraOnLevel()
     {
-        ChildCapybara[] foundChildCapybara = FindObjectsOfType<ChildCapybara>();
-
-        if (foundChildCapybara.Length > 0)
-        {
-            _isChildCapybaraDetected = true;
-        }
-        else
-        {
-            _isChildCapybaraDetected = false;
-        }
+        _isChildCapybaraDetected = FindObjectsOfType<ChildCapybara>().Length > 0;
     }
 
     private void PlayAudioClip()

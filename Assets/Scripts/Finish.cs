@@ -17,16 +17,15 @@ public class Finish : MonoBehaviour
     public static event Action ChildCapybarasFinishReached;
     public static event Action<int> AmountOfChildCapybarasSaved;
 
-
     private void OnEnable()
     {
-        ObservedCapy.CapyOnFinish += OnCapyOnFinish;
+        ObservableSpawnedLittleCapy.Finished += OnCapyOnFinish;
         LevelManager.NotifyFinishAboutLevelFinished += GetAmountOfSavedChildCapybaras;
     }
 
     private void OnDisable()
     {
-        ObservedCapy.CapyOnFinish -= OnCapyOnFinish;
+        ObservableSpawnedLittleCapy.Finished -= OnCapyOnFinish;
         LevelManager.NotifyFinishAboutLevelFinished -= GetAmountOfSavedChildCapybaras;
     }
 

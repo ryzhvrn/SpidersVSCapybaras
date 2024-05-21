@@ -1,7 +1,7 @@
-using Agava.YandexGames;
 using System.Collections;
-using UnityEngine;
+using Agava.YandexGames;
 using IJunior.TypedScenes;
+using UnityEngine;
 
 public sealed class ZeroSceneLoader : MonoBehaviour
 {

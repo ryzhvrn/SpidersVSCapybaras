@@ -1,16 +1,16 @@
 using IJunior.TypedScenes;
 using UnityEngine;
 
-public class LevelFunManager : MonoBehaviour
+public class FunLevelLoader : MonoBehaviour
 {
     private void OnEnable()
     {
-        LevelsButtonPressed.LevelsSceneActivated += OnLevelsSceneActivated;
+        OpenLevelsScene.LevelsSceneActivated += OnLevelsSceneActivated;
     }
 
     private void OnDisable()
     {
-        LevelsButtonPressed.LevelsSceneActivated -= OnLevelsSceneActivated;
+        OpenLevelsScene.LevelsSceneActivated -= OnLevelsSceneActivated;
     }
 
     private void OnLevelsSceneActivated()

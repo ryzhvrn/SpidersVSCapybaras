@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeclineButton : MonoBehaviour
+public class Decline : MonoBehaviour
 {
     public static event Action DeclineButtonPressed;
 

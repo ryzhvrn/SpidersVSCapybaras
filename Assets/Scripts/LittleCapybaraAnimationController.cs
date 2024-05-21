@@ -5,6 +5,7 @@ public class LittleCapybaraAnimationController : MonoBehaviour
     private const string IsMoving = nameof(IsMoving);
     private Animator _animator;
     private Vector3 _lastPosition;
+    private float _differenceValue = 0.1f;
 
     private void Start()
     {
@@ -14,21 +15,12 @@ public class LittleCapybaraAnimationController : MonoBehaviour
 
     private void Update()
     {
-        Vector3 direction = transform.position - _lastPosition;
-
-        if (direction.magnitude >= 0.1f)
-        {
-            OnLittleCapyMoving(true);
-        }
-        else
-        {
-            OnLittleCapyMoving(false);
-        }
-
+        bool isMoving = (transform.position - _lastPosition).magnitude >= _differenceValue;
+        SetLittleCapybaraAnimatorStatus(isMoving);
         _lastPosition = transform.position;
     }
 
-    private void OnLittleCapyMoving(bool moving)
+    private void SetLittleCapybaraAnimatorStatus(bool moving)
     {
         _animator.SetBool(IsMoving, moving);
     }

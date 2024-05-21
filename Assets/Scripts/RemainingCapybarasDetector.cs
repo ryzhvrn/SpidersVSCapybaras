@@ -1,9 +1,8 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckRemainingCapybarasOnLevel : MonoBehaviour
+public class RemainingCapybarasDetector : MonoBehaviour
 {
     private bool _isAllChildCapybarasSpawned = false;
     private bool _isChildCapybarasFinishReached = false;

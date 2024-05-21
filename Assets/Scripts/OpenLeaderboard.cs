@@ -7,14 +7,14 @@ public class OpenLeaderboard : MonoBehaviour
 
     private void OnEnable()
     {
-        AcceptButton.AcceptButtonPressed += OnAccessButtonClicked;
-        DeclineButton.DeclineButtonPressed += OnDeclineButtonClicked;
+        Accept.AcceptButtonPressed += OnAccessButtonClicked;
+        Decline.DeclineButtonPressed += OnDeclineButtonClicked;
     }
 
     private void OnDisable()
     {
-        AcceptButton.AcceptButtonPressed -= OnAccessButtonClicked;
-        DeclineButton.DeclineButtonPressed -= OnDeclineButtonClicked;
+        Accept.AcceptButtonPressed -= OnAccessButtonClicked;
+        Decline.DeclineButtonPressed -= OnDeclineButtonClicked;
     }
 
     public void LeaderboardButtonPressed()

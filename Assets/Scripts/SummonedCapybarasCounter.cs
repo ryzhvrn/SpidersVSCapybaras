@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeCountOfSummonedChildCapybaras : MonoBehaviour
+public class SummonedCapybarasCounter : MonoBehaviour
 {
     [SerializeField] private Text _scoreText;
     [SerializeField] private int _maxCount;

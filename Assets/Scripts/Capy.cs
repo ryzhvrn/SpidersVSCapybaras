@@ -9,12 +9,12 @@ public class Capy : MonoBehaviour
 
     private void OnEnable()
     {
-        ObservedCapy.CapyOnFinish += OnFinish;
+        ObservableSpawnedLittleCapy.Finished += OnFinish;
     }
 
     private void OnDisable()
     {
-        ObservedCapy.CapyOnFinish -= OnFinish;
+        ObservableSpawnedLittleCapy.Finished -= OnFinish;
     }
 
     private void OnDestroy()

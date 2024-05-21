@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ControlPlayerPosition : MonoBehaviour
+public class CorrectPlayerPosition : MonoBehaviour
 {
     [SerializeField] private Transform _playerTransform;
     private float _initialYPosition;
@@ -10,10 +10,10 @@ public class ControlPlayerPosition : MonoBehaviour
     private void Start()
     {
         _initialYPosition = _playerTransform.position.y;
-        StartCoroutine(CorrectPlayerPosition());
+        StartCoroutine(CorrectPlayerPositionCoroutine());
     }
 
-    private IEnumerator CorrectPlayerPosition()
+    private IEnumerator CorrectPlayerPositionCoroutine()
     {
         while (true)
         {

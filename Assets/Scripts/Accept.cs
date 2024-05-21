@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AcceptButton : MonoBehaviour
+public class Accept : MonoBehaviour
 {
     public static event Action AcceptButtonPressed;
 

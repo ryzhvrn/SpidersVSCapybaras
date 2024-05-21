@@ -78,6 +78,7 @@ public class CatchCapy : MonoBehaviour
         {
             _navMeshAgent.SetDestination(_possibleTarget.position);
         }
+
         if (_possibleTarget == null)
         {
             _navMeshAgent.isStopped = true;
@@ -109,10 +110,12 @@ public class CatchCapy : MonoBehaviour
             }
         }
     }
+
     private void OnAttackReloadCompleted(bool isAttackAllowed)
     {
         _isAttackAllowed = isAttackAllowed;
     }
+
     private void OnTriggerZoneEntered(Capy capy)
     {
         _allCapybaras.Add(capy);

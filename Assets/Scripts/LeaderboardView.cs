@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class LeaderboardView : MonoBehaviour
 {
+    private List<LeaderboardElement> _spawnedElements = new ();
+
     [SerializeField] private Transform _container;
     [SerializeField] private LeaderboardElement _leaderboardElementPrefab;
 
-    private List<LeaderboardElement> _spawnedElements = new();
-
     private void ClearLeaderboard()
     {
-        foreach(var element in _spawnedElements) 
+        foreach (var element in _spawnedElements)
         {
             Destroy(element);
         }

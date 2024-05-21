@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class LevelsButtonPressed : MonoBehaviour
+public class OpenLevelsScene : MonoBehaviour
 {
     public static event Action LevelsSceneActivated;
 

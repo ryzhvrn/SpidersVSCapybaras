@@ -1,19 +1,13 @@
-using Agava.YandexGames;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class AdService
 {
-    public static event Action CollectVideoAdReward;
-    public static event Action ShowInteractiveElements;
+    public static event Action CollectingVideoAdReward;
+    public static event Action ShowingInteractiveElements;
 
-    public void ShowVideoAd() => Agava.YandexGames.VideoAd.Show(OnOpenAdCallback, OnRewardedCallback,
-        OnCloseAdCallback);
-    public void ShowInterstitialAd() => Agava.YandexGames.InterstitialAd.Show(OnOpenAdCallback,
-        OnCloseInterstitialAdCallback);
+    public void ShowVideoAd() => Agava.YandexGames.VideoAd.Show(OnOpenAdCallback, OnRewardedCallback, OnCloseAdCallback);
+    public void ShowInterstitialAd() => Agava.YandexGames.InterstitialAd.Show(OnOpenAdCallback, OnCloseInterstitialAdCallback);
 
     private void OnOpenAdCallback()
     {
@@ -25,18 +19,18 @@ public class AdService
     {
         Time.timeScale = 1;
         AudioListener.volume = 1f;
-        ShowInteractiveElements?.Invoke();
+        ShowingInteractiveElements?.Invoke();
     }
 
     private void OnRewardedCallback()
     {
-        CollectVideoAdReward?.Invoke();
+        CollectingVideoAdReward?.Invoke();
     }
 
     private void OnCloseInterstitialAdCallback(bool result)
     {
         Time.timeScale = 1;
         AudioListener.volume = 1f;
-        ShowInteractiveElements?.Invoke();
+        ShowingInteractiveElements?.Invoke();
     }
 }

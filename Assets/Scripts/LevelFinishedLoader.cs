@@ -1,14 +1,15 @@
-using UnityEngine;
+using System;
 using IJunior.TypedScenes;
 using UnityEngine.UI;
-using System;
+using UnityEngine;
 
 public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
 {
-    [SerializeField] private Image ThreeStarsEarned;
+    [SerializeField] private Image[] _starsEarnedImages;
+    /*[SerializeField] private Image ThreeStarsEarned;
     [SerializeField] private Image TwoStarsEarned;
-    [SerializeField] private Image OneStarsEarned;
-    [SerializeField] private Text ZeroStarsEarnedWarning;
+    [SerializeField] private Image OneStarsEarned;*/
+    [SerializeField] private Text _zeroStarsEarnedWarning;
     [SerializeField] private Button _restartButton;
     [SerializeField] private Button _levelsMenuButton;
     private AdService _ads = new AdService();
@@ -26,18 +27,18 @@ public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
 
     private void OnEnable()
     {
-        AdService.ShowInteractiveElements += OnShowInteractiveElements;
+        AdService.ShowingInteractiveElements += OnShowInteractiveElements;
     }
 
     private void OnDisable()
     {
-        AdService.ShowInteractiveElements -= OnShowInteractiveElements;
+        AdService.ShowingInteractiveElements -= OnShowInteractiveElements;
     }
 
     public void OnSceneLoaded(LevelConfig argument)
     {
         int starsEarnedAmount = argument.StarsEarned;
-        SetCurrentLevelResul(starsEarnedAmount);
+        SetCurrentLevelResult(starsEarnedAmount);
         SetPlayerScore?.Invoke();
     }
 
@@ -52,7 +53,7 @@ public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
         _levelsMenuButton.gameObject.SetActive(true);
     }
 
-    private void SetCurrentLevelResul(int starsEarnedAmount)
+    /*private void SetCurrentLevelResult(int starsEarnedAmount)
     {
         if (starsEarnedAmount == 3)
         {
@@ -73,5 +74,15 @@ public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
         {
             ZeroStarsEarnedWarning.gameObject.SetActive(true);
         }
+    }*/
+
+    private void SetCurrentLevelResult(int starsEarnedAmount)
+    {
+        for (int i = 0; i < _starsEarnedImages.Length; i++)
+        {
+            _starsEarnedImages[i].gameObject.SetActive(i < starsEarnedAmount);
+        }
+
+        _zeroStarsEarnedWarning.gameObject.SetActive(starsEarnedAmount == 0);
     }
 }

@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class EnemyAnimator : MonoBehaviour
 {
+    private const string IsWalking = nameof(IsWalking);
+    private const string IsAttacking = nameof(IsAttacking);
+    private const string IsAttackingTrigger = nameof(IsAttackingTrigger);
     [SerializeField] private Animator _animator;
-    private const string isWalking = nameof(isWalking);
-    private const string isAttacking = nameof(isAttacking);
-    private const string isAttackingTrigger = nameof(isAttackingTrigger);
 
     public static event Action<bool> AttackReloadCompleted;
 
@@ -17,20 +17,20 @@ public class EnemyAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        EnemyMovementController.EnemyMoving += OnEnemyMoving;
+        EnemyMovementNotifier.EnemyMoving += OnEnemyMoving;
         CatchCapy.EnemyAttacking += OnEnemyAttacking;
     }
 
     private void OnDisable()
     {
-        EnemyMovementController.EnemyMoving -= OnEnemyMoving;
+        EnemyMovementNotifier.EnemyMoving -= OnEnemyMoving;
         CatchCapy.EnemyAttacking -= OnEnemyAttacking;
     }
 
     public void BlockAttackAbility()
     {
         AttackReloadCompleted?.Invoke(false);
-        _animator.ResetTrigger(isAttackingTrigger);
+        _animator.ResetTrigger(IsAttackingTrigger);
     }
 
     public void ReturnAttackAbility()
@@ -40,11 +40,11 @@ public class EnemyAnimator : MonoBehaviour
 
     private void OnEnemyMoving(bool moving)
     {
-        _animator.SetBool(isWalking, moving);
+        _animator.SetBool(IsWalking, moving);
     }
 
     private void OnEnemyAttacking()
     {
-        _animator.SetTrigger(isAttackingTrigger);
+        _animator.SetTrigger(IsAttackingTrigger);
     }
 }

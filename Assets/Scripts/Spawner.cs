@@ -57,8 +57,8 @@ public class Spawner : MonoBehaviour
         if (_spawnedCapybarasAmount == _maximumChildCapybarasForSpawnAmount)
         {
             NotifyLevelManagerAboutSpawnedCapybarasAmount();
-            _waypointScript.enabled= false;
-            _waypointImage.enabled= false;
+            _waypointScript.enabled = false;
+            _waypointImage.enabled = false;
             _waypointText.enabled = false;
             enabled = false;
         }

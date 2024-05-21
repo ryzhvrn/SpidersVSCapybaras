@@ -1,39 +1,41 @@
-using UnityEngine;
+using System;
+using System.Collections.Generic;
 using IJunior.TypedScenes;
+using UnityEngine;
 
 public class FinishSceneLoader : MonoBehaviour
 {
     [SerializeField] private LevelConfig _levelConfig;
 
-    private string _firstLevelName = "Level1";
-    private string _secondLevelName = "Level2";
-    private string _thirdLevelName = "Level3";
-    private string _fourthLevelName = "Level4";
-    private string _fifthLevelName = "Level5";
-    private string _sixthLevelName = "Level6";
+    private Dictionary<string, Action> _levelReloadActions = new Dictionary<string, Action>();
 
     private void OnEnable()
     {
         LevelManager.CurrentLevelFinished += LoadLevelFinishedScene;
-        LevelsButtonPressed.LevelsSceneActivated += LoadLevelsMenuScene;
-        RestartButtonPressed.RestartCurrentLevelScene += ReloadFirstLevel;
-        RestartButtonPressed.RestartCurrentLevelScene += ReloadSecondLevel;
-        RestartButtonPressed.RestartCurrentLevelScene += ReloadThirdLevel;
-        RestartButtonPressed.RestartCurrentLevelScene += ReloadFourthLevel;
-        RestartButtonPressed.RestartCurrentLevelScene += ReloadFifthLevel;
-        RestartButtonPressed.RestartCurrentLevelScene += ReloadSixthLevel;
+        OpenLevelsScene.LevelsSceneActivated += LoadLevelsMenuScene;
+        Restart.RestartCurrentLevelScene += ReloadLevel;
     }
 
     private void OnDisable()
     {
         LevelManager.CurrentLevelFinished -= LoadLevelFinishedScene;
-        LevelsButtonPressed.LevelsSceneActivated -= LoadLevelsMenuScene;
-        RestartButtonPressed.RestartCurrentLevelScene -= ReloadFirstLevel;
-        RestartButtonPressed.RestartCurrentLevelScene -= ReloadSecondLevel;
-        RestartButtonPressed.RestartCurrentLevelScene -= ReloadThirdLevel;
-        RestartButtonPressed.RestartCurrentLevelScene -= ReloadFourthLevel;
-        RestartButtonPressed.RestartCurrentLevelScene -= ReloadFifthLevel;
-        RestartButtonPressed.RestartCurrentLevelScene -= ReloadSixthLevel;
+        OpenLevelsScene.LevelsSceneActivated -= LoadLevelsMenuScene;
+        Restart.RestartCurrentLevelScene -= ReloadLevel;
+    }
+
+    private void Start()
+    {
+        InitializeLevelReloadActions();
+    }
+
+    private void InitializeLevelReloadActions()
+    {
+        _levelReloadActions.Add("Level1", () => Level1.Load());
+        _levelReloadActions.Add("Level2", () => Level2.Load());
+        _levelReloadActions.Add("Level3", () => Level3.Load());
+        _levelReloadActions.Add("Level4", () => Level4.Load());
+        _levelReloadActions.Add("Level5", () => Level5.Load());
+        _levelReloadActions.Add("Level6", () => Level6.Load());
     }
 
     private void LoadLevelFinishedScene()
@@ -46,51 +48,11 @@ public class FinishSceneLoader : MonoBehaviour
         LevelsMenu.Load();
     }
 
-    private void ReloadFirstLevel()
+    private void ReloadLevel()
     {
-        if (_levelConfig.CurrentLevelName == _firstLevelName)
+        if (_levelReloadActions.ContainsKey(_levelConfig.CurrentLevelName))
         {
-            Level1.Load();
-        }
-    }
-
-    private void ReloadSecondLevel()
-    {
-        if (_levelConfig.CurrentLevelName == _secondLevelName)
-        {
-            Level2.Load();
-        }
-    }
-
-    private void ReloadThirdLevel()
-    {
-        if (_levelConfig.CurrentLevelName == _thirdLevelName)
-        {
-            Level3.Load();
-        }
-    }
-
-    private void ReloadFourthLevel()
-    {
-        if (_levelConfig.CurrentLevelName == _fourthLevelName)
-        {
-            Level4.Load();
-        }
-    }
-
-    private void ReloadFifthLevel()
-    {
-        if (_levelConfig.CurrentLevelName == _fifthLevelName)
-        {
-            Level5.Load();
-        }
-    }
-
-    private void ReloadSixthLevel()
-    {
-        if (_levelConfig.CurrentLevelName == _sixthLevelName)
-        {
-            Level6.Load();
+            _levelReloadActions[_levelConfig.CurrentLevelName]();
         }
     }
 }

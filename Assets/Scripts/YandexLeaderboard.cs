@@ -1,7 +1,5 @@
-using Agava.YandexGames;
-using Lean.Localization;
-using System.Collections;
 using System.Collections.Generic;
+using Agava.YandexGames;
 using UnityEngine;
 
 public class YandexLeaderboard : MonoBehaviour
@@ -12,7 +10,7 @@ public class YandexLeaderboard : MonoBehaviour
     private const string RussianAnonymousName = "Аноним";
     private const string TurkishAnonymousName = "Anonim";
     private const string LeaderboardName = "Leaderboard";
-    private readonly List<LeaderboardPlayer> _leaderboardPlayers = new();
+    private readonly List<LeaderboardPlayer> _leaderboardPlayers = new ();
 
     public void SetPlayerScore(int score)
     {
@@ -51,17 +49,19 @@ public class YandexLeaderboard : MonoBehaviour
                 {
                     string currentLanguage = YandexGamesSdk.Environment.i18n.lang;
 
-                    if (currentLanguage == "Russian")
+                    switch (currentLanguage)
                     {
-                        name = RussianAnonymousName;
-                    }
-                    else if (currentLanguage == "English")
-                    {
-                        name = EnglishAnonymousName;
-                    }
-                    else if (currentLanguage == "Turkish")
-                    {
-                        name = TurkishAnonymousName;
+                        case "Russian":
+                            name = RussianAnonymousName;
+                            break;
+
+                        case "English":
+                            name = EnglishAnonymousName;
+                            break;
+
+                        case "Turkish":
+                            name = TurkishAnonymousName;
+                            break;
                     }
                 }
 

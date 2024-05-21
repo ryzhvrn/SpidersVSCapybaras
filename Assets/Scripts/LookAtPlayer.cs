@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LookAtTarger : MonoBehaviour
+public class LookAtPlayer : MonoBehaviour
 {
     [SerializeField] private Transform _target;
 

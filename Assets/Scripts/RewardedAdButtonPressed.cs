@@ -9,33 +9,34 @@ public class RewardedAdButtonPressed : MonoBehaviour
     [SerializeField] private Button _adButton;
     private AdService _ads = new AdService();
     private int _adViewedCount;
+    private const string _keyAdViewedCount = "adViewedCount";
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("adViewedCount") == false)
+        if (PlayerPrefs.HasKey(_keyAdViewedCount) == false)
         {
-            PlayerPrefs.SetInt("adViewedCount", 0);
+            PlayerPrefs.SetInt(_keyAdViewedCount, 0);
         }
 
-        _adViewedCount = PlayerPrefs.GetInt("adViewedCount");
-        int currentAdViewedCount = PlayerPrefs.GetInt("adViewedCount");
+        _adViewedCount = PlayerPrefs.GetInt(_keyAdViewedCount);
+        int currentAdViewedCount = PlayerPrefs.GetInt(_keyAdViewedCount);
         ShowFunCapybaraView(currentAdViewedCount);
     }
 
     private void OnEnable()
     {
-        AdService.CollectVideoAdReward += OnCollectVideoAdReward;
+        AdService.CollectingVideoAdReward += OnCollectVideoAdReward;
     }
 
     private void OnDisable()
     {
-        AdService.CollectVideoAdReward -= OnCollectVideoAdReward;
+        AdService.CollectingVideoAdReward -= OnCollectVideoAdReward;
     }
 
     private void OnCollectVideoAdReward()
     {
         _adViewedCount++;
-        PlayerPrefs.SetInt("adViewedCount", _adViewedCount);
+        PlayerPrefs.SetInt(_keyAdViewedCount, _adViewedCount);
         ShowFunCapybaraView(_adViewedCount);
         PlayerPrefs.Save();
     }

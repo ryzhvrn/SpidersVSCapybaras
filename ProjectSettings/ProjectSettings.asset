@@ -353,7 +353,7 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
   m_TemplateCustomTags:
-    METRICA_COUNTER_ID: 94038553
+    METRICA_COUNTER_ID: 
     MOBILE_RENDER_SCALE: 
     RENDER_SCALE: 
   mobileMTRendering:
@@ -649,7 +649,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    WebGL: ENABLE_CODEDOM
+    WebGL: 
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
