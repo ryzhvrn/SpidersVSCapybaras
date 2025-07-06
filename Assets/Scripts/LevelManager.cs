@@ -1,7 +1,7 @@
 using System;
 using IJunior.TypedScenes;
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {

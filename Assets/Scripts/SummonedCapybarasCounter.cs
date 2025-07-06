@@ -31,7 +31,7 @@ public class SummonedCapybarasCounter : MonoBehaviour
             _scoreText.text = _currentCount + "/" + _maxCount;
         }
 
-        if(_currentCount==0)
+        if (_currentCount == 0)
         {
             _scoreText.gameObject.SetActive(false);
         }

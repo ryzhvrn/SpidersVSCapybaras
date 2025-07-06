@@ -31,7 +31,7 @@ public class RemainingCapybarasDetector : MonoBehaviour
     {
         do
         {
-            if (_isAllChildCapybarasSpawned == true && _isChildCapybarasFinishReached == true)
+            if (_isAllChildCapybarasSpawned && _isChildCapybarasFinishReached)
             {
                 yield return new WaitForSeconds(1f);
 

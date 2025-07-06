@@ -101,7 +101,7 @@ public class CatchCapy : MonoBehaviour
             {
                 EnemyAttacking?.Invoke();
 
-                if (_isAttackAllowed == true)
+                if (_isAttackAllowed)
                 {
                     OnTriggerZoneLeft(capy);
                     Destroy(collision.gameObject);

@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class YandexLeaderboard : MonoBehaviour
 {
-    [SerializeField] private LeaderboardView _leaderboardView;
-
     private const string EnglishAnonymousName = "Anonymous";
-    private const string RussianAnonymousName = "Аноним";
+    private const string RussianAnonymousName = "РђРЅРѕРЅРёРјРЅС‹Р№";
     private const string TurkishAnonymousName = "Anonim";
     private const string LeaderboardName = "Leaderboard";
-    private readonly List<LeaderboardPlayer> _leaderboardPlayers = new ();
+    [SerializeField] private LeaderboardView _leaderboardView;
+    private readonly List<LeaderboardPlayer> _leaderboardPlayers = new List<LeaderboardPlayer>();
 
     public void SetPlayerScore(int score)
     {

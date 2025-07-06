@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +18,7 @@ public class Waypoint : MonoBehaviour
         float maxY = Screen.width - minY;
         Vector2 position = Camera.main.WorldToScreenPoint(_target.position + _offset);
 
-        if (Vector3.Dot((_target.position - transform.position), transform.forward) < 0)
+        if (Vector3.Dot(_target.position - transform.position, transform.forward) < 0)
         {
             if (position.x < Screen.width / 2)
             {
@@ -37,7 +35,6 @@ public class Waypoint : MonoBehaviour
         _waypointMarkerImage.transform.position = position;
         int distance = (int)Vector3.Distance(_target.position, transform.position) - _errorValue;
         int absoluteDistance = Math.Abs(distance);
-        _distanceToWaypoint.text = absoluteDistance.ToString() + " ì";
+        _distanceToWaypoint.text = absoluteDistance.ToString() + " Ð¼";
     }
-
 }

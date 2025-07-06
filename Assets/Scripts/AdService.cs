@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class AdService
 {
-    public static event Action CollectingVideoAdReward;
-    public static event Action ShowingInteractiveElements;
+    public event Action CollectingVideoAdReward;
+    public event Action ShowingInteractiveElements;
 
     public void ShowVideoAd() => Agava.YandexGames.VideoAd.Show(OnOpenAdCallback, OnRewardedCallback, OnCloseAdCallback);
     public void ShowInterstitialAd() => Agava.YandexGames.InterstitialAd.Show(OnOpenAdCallback, OnCloseInterstitialAdCallback);

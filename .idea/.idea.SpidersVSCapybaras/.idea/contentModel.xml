@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Professional\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Professional\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SpidersVSCapybaras.-1935149256.00" t="ExcludeRecursive" />
+    <e p="D:\Files\Unity3D projects\Capytrain\SpidersVSCapybaras" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Animation" t="Include" />
+        <e p="Animations" t="Include" />
+        <e p="Configs" t="Include">
+          <e p="LevelConfigs" t="Include" />
+        </e>
+        <e p="Fonts" t="Include" />
+        <e p="GameLogos" t="Include" />
+        <e p="Materials" t="Include" />
+        <e p="Models" t="Include" />
+        <e p="Packages" t="Include">
+          <e p="TextMesh Pro" t="Include">
+            <e p="Fonts" t="Include" />
+          </e>
+        </e>
+        <e p="PlayerPrefsEditor" t="Include">
+          <e p="Documentation" t="Include">
+            <e p="Images" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="Dialogs" t="Include">
+              <e p="TextFieldDialog.cs" t="Include" />
+              <e p="TextValidator.cs" t="Include" />
+            </e>
+            <e p="Extensions" t="Include">
+              <e p="CenterOnWindow.cs" t="Include" />
+            </e>
+            <e p="PreferencesEditor" t="Include">
+              <e p="PreferenceEntry.cs" t="Include" />
+              <e p="PreferenceEntryHolder.cs" t="Include" />
+              <e p="PreferencesEditorWindow.cs" t="Include" />
+              <e p="PreferenceStorageAccessor.cs" t="Include" />
+              <e p="RegistryMonitor.cs" t="Include" />
+            </e>
+            <e p="Styles.cs" t="Include" />
+            <e p="Unity.PlayerPrefsEditor.Editor.asmdef" t="Include" />
+          </e>
+          <e p="Editor Resources" t="Include">
+            <e p="ImageManager.cs" t="Include" />
+            <e p="Unity.PlayerPrefsEditor.EditorResources.asmdef" t="Include" />
+          </e>
+          <e p="Samples" t="Include">
+            <e p="SampleScene" t="Include">
+              <e p="PlayerPrefsController.cs" t="Include" />
+              <e p="Unity.PlayerPrefsEditor.Samples.SampleScene.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="CW" t="Include">
+            <e p="LeanCommon" t="Include">
+              <e p="Examples" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Meshes" t="Include" />
+                <e p="Prefabs" t="Include" />
+                <e p="Textures" t="Include" />
+              </e>
+              <e p="Extras" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="LeanDestroy.cs" t="Include" />
+                  <e p="LeanFormatString.cs" t="Include" />
+                  <e p="LeanPath.cs" t="Include" />
+                  <e p="LeanPlane.cs" t="Include" />
+                  <e p="LeanRoll.cs" t="Include" />
+                  <e p="LeanSelect.cs" t="Include" />
+                  <e p="LeanSelectable.cs" t="Include" />
+                  <e p="LeanSelectableBehaviour.cs" t="Include" />
+                  <e p="LeanSelectableGraphicColor.cs" t="Include" />
+                  <e p="LeanSelectableRendererColor.cs" t="Include" />
+                  <e p="LeanSelectableSpriteRendererColor.cs" t="Include" />
+                  <e p="LeanSpawn.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LeanCommon.asmdef" t="Include" />
+              <e p="package.json" t="Include" />
+              <e p="Required" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="LeanCommon.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="LeanLocalization" t="Include">
+              <e p="Examples" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Texts" t="Include">
+                  <e p="English.txt" t="Include" />
+                  <e p="Japanese.txt" t="Include" />
+                  <e p="Spanish.txt" t="Include" />
+                </e>
+                <e p="Textures" t="Include" />
+              </e>
+              <e p="Extras" t="Include">
+                <e p="Languages" t="Include" />
+                <e p="Phrases" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="LeanDebugLocalization.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LeanLocalization.asmdef" t="Include" />
+              <e p="package.json" t="Include" />
+              <e p="Required" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Behaviours" t="Include">
+                    <e p="LeanLocalizedAudioSource.cs" t="Include" />
+                    <e p="LeanLocalizedDropdown.cs" t="Include" />
+                    <e p="LeanLocalizedImage.cs" t="Include" />
+                    <e p="LeanLocalizedRenderer.cs" t="Include" />
+                    <e p="LeanLocalizedSpriteRenderer.cs" t="Include" />
+                    <e p="LeanLocalizedText.cs" t="Include" />
+                    <e p="LeanLocalizedTextFont.cs" t="Include" />
+                    <e p="LeanLocalizedTextMesh.cs" t="Include" />
+                    <e p="LeanLocalizedTextMeshFont.cs" t="Include" />
+                  </e>
+                  <e p="Editor" t="Include">
+                    <e p="csc.rsp" t="Include" />
+                    <e p="LeanLocalizationEditor.asmdef" t="Include" />
+                    <e p="LeanPhrase_Editor.cs" t="Include" />
+                  </e>
+                  <e p="ILocalizationHandler.cs" t="Include" />
+                  <e p="LeanLanguage.cs" t="Include" />
+                  <e p="LeanLanguageCSV.cs" t="Include" />
+                  <e p="LeanLanguageNameAttribute.cs" t="Include" />
+                  <e p="LeanLocalization.cs" t="Include" />
+                  <e p="LeanLocalizedBehaviour.cs" t="Include" />
+                  <e p="LeanLocalToken.cs" t="Include" />
+                  <e p="LeanPhrase.cs" t="Include" />
+                  <e p="LeanPrefab.cs" t="Include" />
+                  <e p="LeanSource.cs" t="Include" />
+                  <e p="LeanToken.cs" t="Include" />
+                  <e p="LeanTranslation.cs" t="Include" />
+                  <e p="LeanTranslationNameAttribute.cs" t="Include" />
+                  <e p="TMP" t="Include">
+                    <e p="LeanLocalization.TMP.asmdef" t="Include" />
+                    <e p="LeanLocalizedTextMeshPro.cs" t="Include" />
+                    <e p="LeanLocalizedTextMeshProFont.cs" t="Include" />
+                    <e p="LeanLocalizedTextMeshProUGUI.cs" t="Include" />
+                    <e p="LeanLocalizedTextMeshProUGUIFont.cs" t="Include" />
+                    <e p="LeanLocalizedTMP_Dropdown.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="READ ME.txt" t="Include" />
+            <e p="Shared" t="Include">
+              <e p="Common" t="Include">
+                <e p="CW.Common.asmdef" t="Include" />
+                <e p="Examples" t="Include">
+                  <e p="Fonts" t="Include">
+                    <e p="VarelaRound-Regular.txt" t="Include" />
+                  </e>
+                  <e p="Materials" t="Include" />
+                  <e p="Scripts" t="Include">
+                    <e p="CwCameraLook.cs" t="Include" />
+                    <e p="CwCameraMove.cs" t="Include" />
+                    <e p="CwCameraPivot.cs" t="Include" />
+                    <e p="CwDemo.cs" t="Include" />
+                    <e p="CwDemoButton.cs" t="Include" />
+                    <e p="CwDemoButtonBuilder.cs" t="Include" />
+                    <e p="CwLightIntensity.cs" t="Include" />
+                    <e p="CwRotate.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="RimAlpha.shader" t="Include" />
+                    <e p="RimOpaque.shader" t="Include" />
+                    <e p="Skybox.shader" t="Include" />
+                  </e>
+                  <e p="Textures" t="Include" />
+                </e>
+                <e p="Extras" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="CwChild.cs" t="Include" />
+                    <e p="CwDepthTextureMode.cs" t="Include" />
+                    <e p="CwFollow.cs" t="Include" />
+                    <e p="CwInputManager.cs" t="Include" />
+                    <e p="CwRenderTextureManager.cs" t="Include" />
+                    <e p="CwSeedAttribute.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include" />
+                </e>
+                <e p="package.json" t="Include" />
+                <e p="Required" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="CwCommon.cs" t="Include" />
+                    <e p="CwEditor.cs" t="Include" />
+                    <e p="CwGuide.cs" t="Include" />
+                    <e p="CwHelper.cs" t="Include" />
+                    <e p="CwInput.cs" t="Include" />
+                    <e p="CwShaderBundle.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="ShapeOutline.shader" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Third-Party Notices.txt" t="Include" />
+          </e>
+          <e p="TypedScenes" t="Include">
+            <e p="Core" t="Include">
+              <e p="AnalyzableScene.cs" t="Include" />
+              <e p="ISceneLoadHandler.cs" t="Include" />
+              <e p="ITypedAwakeHandler.cs" t="Include" />
+              <e p="LoadingProcessor.cs" t="Include" />
+              <e p="SceneAnalyzer.cs" t="Include" />
+              <e p="ScenePostprocessor.cs" t="Include" />
+              <e p="TypedProcessor.cs" t="Include" />
+              <e p="TypedScene.cs" t="Include" />
+              <e p="TypedSceneGenerator.cs" t="Include" />
+              <e p="TypedSceneSettings.cs" t="Include" />
+              <e p="TypedSceneStorage.cs" t="Include" />
+              <e p="TypedSceneValidator.cs" t="Include" />
+            </e>
+            <e p="Samples" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="CustomClassHandler.cs" t="Include" />
+                <e p="ExampleSceneLoadModel.cs" t="Include" />
+                <e p="IntHandler.cs" t="Include" />
+                <e p="MultiHandler.cs" t="Include" />
+                <e p="StringHandler.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Polybrush Data" t="Include">
+          <e p="Brush Settings" t="Include" />
+          <e p="Color Palette" t="Include" />
+          <e p="Prefab Palette" t="Include" />
+        </e>
+        <e p="polyperfect" t="Include">
+          <e p="Common" t="Include">
+            <e p="Common_AnimationControl.cs" t="Include" />
+            <e p="Common_AnimSpeed.cs" t="Include" />
+            <e p="Common_KillSwitch.cs" t="Include" />
+            <e p="Common_PlaySound.cs" t="Include" />
+            <e p="Common_RandomInt.cs" t="Include" />
+            <e p="Polyperfect.Common.asmdef" t="Include" />
+            <e p="RandomCharacterPlacer.cs" t="Include" />
+            <e p="Wander Script" t="Include">
+              <e p="AIState.cs" t="Include" />
+              <e p="AIStats.cs" t="Include" />
+              <e p="CheckDistanceToPlayer.cs" t="Include" />
+              <e p="Common_AudioManager.cs" t="Include" />
+              <e p="Common_SurfaceRotation.cs" t="Include" />
+              <e p="Common_WanderManager.cs" t="Include" />
+              <e p="Common_WanderScript.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="Common_StatsTable.cs" t="Include" />
+                <e p="Common_WanderManagerEditor.cs" t="Include" />
+                <e p="Common_WanderScriptEditor.cs" t="Include" />
+              </e>
+              <e p="IdleState.cs" t="Include" />
+              <e p="MovementState.cs" t="Include" />
+              <e p="Resources" t="Include" />
+            </e>
+          </e>
+          <e p="Low Poly Animated Animals" t="Include">
+            <e p="- Animator Controllers" t="Include">
+              <e p="DEMO" t="Include" />
+            </e>
+            <e p="- Materials" t="Include">
+              <e p="Animals" t="Include" />
+              <e p="Colors" t="Include">
+                <e p="Emission" t="Include" />
+                <e p="Transparent" t="Include" />
+              </e>
+              <e p="Environments" t="Include" />
+            </e>
+            <e p="- Meshes" t="Include">
+              <e p="Animals" t="Include">
+                <e p="Anteater" t="Include" />
+                <e p="Bear" t="Include" />
+                <e p="Beaver" t="Include" />
+                <e p="Boar" t="Include" />
+                <e p="Buffolo" t="Include" />
+                <e p="Cat" t="Include" />
+                <e p="Chick" t="Include" />
+                <e p="Chimpanzee" t="Include" />
+                <e p="Cow" t="Include" />
+                <e p="Crocodile" t="Include" />
+                <e p="Deer" t="Include" />
+                <e p="Dog-Chihauhau" t="Include" />
+                <e p="Dog-GoldenRetriever" t="Include" />
+                <e p="Dog-GreatDane" t="Include" />
+                <e p="Dove" t="Include" />
+                <e p="Eagle" t="Include" />
+                <e p="Elephant" t="Include" />
+                <e p="Fish" t="Include" />
+                <e p="Giraffe" t="Include" />
+                <e p="Goat" t="Include" />
+                <e p="Goos" t="Include" />
+                <e p="Gorilla" t="Include" />
+                <e p="Hen" t="Include" />
+                <e p="Horse" t="Include">
+                  <e p="Horse_Rig.fbm" t="Include" />
+                </e>
+                <e p="JellyFish" t="Include" />
+                <e p="Lion" t="Include" />
+                <e p="Octopus" t="Include" />
+                <e p="Orca" t="Include" />
+                <e p="Ostrich" t="Include" />
+                <e p="Penguin" t="Include" />
+                <e p="Pig" t="Include" />
+                <e p="Rabbit" t="Include" />
+                <e p="Rhino" t="Include" />
+                <e p="Roaster" t="Include" />
+                <e p="Seagull" t="Include" />
+                <e p="Seal" t="Include" />
+                <e p="Shark" t="Include" />
+                <e p="Sheep" t="Include" />
+                <e p="Snake" t="Include" />
+                <e p="Spider" t="Include" />
+                <e p="Squid" t="Include" />
+                <e p="Squirrel" t="Include" />
+                <e p="StarFish" t="Include" />
+                <e p="Tiger" t="Include" />
+                <e p="Tucan" t="Include" />
+                <e p="Vulture" t="Include" />
+                <e p="Walrus" t="Include" />
+                <e p="Wolf" t="Include" />
+              </e>
+              <e p="Furniture" t="Include" />
+              <e p="Nature" t="Include" />
+              <e p="Props" t="Include" />
+              <e p="Terrains" t="Include" />
+            </e>
+            <e p="- Navmesh" t="Include" />
+            <e p="- Prefabs" t="Include">
+              <e p="Animals" t="Include">
+                <e p="DEMO" t="Include" />
+              </e>
+              <e p="Environments" t="Include" />
+              <e p="Nature" t="Include" />
+              <e p="Props" t="Include" />
+              <e p="UI" t="Include" />
+            </e>
+            <e p="- Scenes" t="Include" />
+            <e p="- Scripts" t="Include">
+              <e p="AnimalAudioManager.cs" t="Include" />
+              <e p="AnimalPlaySound.cs" t="Include" />
+              <e p="AnimalWanderManager.cs" t="Include" />
+              <e p="Character Viewer" t="Include">
+                <e p="AnimalViewerManager.cs" t="Include" />
+                <e p="Polyperfect_CameraController.cs" t="Include" />
+              </e>
+              <e p="Polyperfect.Animals.asmdef" t="Include" />
+              <e p="SceneAnimatorController.cs" t="Include" />
+              <e p="ToggleEvent.cs" t="Include" />
+              <e p="Wander Script" t="Include">
+                <e p="Animal_AIStats.cs" t="Include" />
+                <e p="Animal_SurfaceRotation.cs" t="Include" />
+                <e p="Animal_WanderScript.cs" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="Animals_WanderScriptEditor.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="- Sounds" t="Include" />
+            <e p="- Stats" t="Include" />
+            <e p="- Terrains" t="Include" />
+            <e p="- Textures" t="Include">
+              <e p="Animals" t="Include" />
+              <e p="Brushes" t="Include" />
+              <e p="Environments" t="Include" />
+              <e p="Terrain" t="Include" />
+            </e>
+            <e p="- UI" t="Include">
+              <e p="Gizmos" t="Include" />
+              <e p="TextShader.shader" t="Include" />
+            </e>
+            <e p="01 - Main Scene" t="Include" />
+          </e>
+        </e>
+        <e p="Prefabs" t="Include">
+          <e p="LeveslPrefabs" t="Include" />
+        </e>
+        <e p="Samples" t="Include">
+          <e p="Polybrush" t="Include">
+            <e p="1.1.5" t="Include">
+              <e p="Shader Examples (Standard)" t="Include">
+                <e p="Shader" t="Include">
+                  <e p="SimpleTextureBlend.shader" t="Include" />
+                  <e p="StandardTextureBlend.shader" t="Include" />
+                  <e p="StandardVertexColor.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Yandex Metrica" t="Include">
+            <e p="1.2.0" t="Include" />
+          </e>
+        </e>
+        <e p="Scenes" t="Include">
+          <e p="Level1" t="Include" />
+          <e p="Level2" t="Include" />
+          <e p="Level3" t="Include" />
+          <e p="Level4" t="Include" />
+          <e p="Level5" t="Include" />
+          <e p="Level6" t="Include" />
+          <e p="SampleScene" t="Include" />
+          <e p="Typed" t="Include">
+            <e p="_01_Localization.cs" t="Include" />
+            <e p="_02_Phrase.cs" t="Include" />
+            <e p="_03_Text.cs" t="Include" />
+            <e p="_04_Change_Language.cs" t="Include" />
+            <e p="_05_Image.cs" t="Include" />
+            <e p="_06_Renderer.cs" t="Include" />
+            <e p="_07_Token__Formatted_Text_.cs" t="Include" />
+            <e p="_08____Local_Token.cs" t="Include" />
+            <e p="_09_CSV.cs" t="Include" />
+            <e p="_10_Organization.cs" t="Include" />
+            <e p="_11_Prefabs.cs" t="Include" />
+            <e p="_12_Dropdown.cs" t="Include" />
+            <e p="_13_Debug.cs" t="Include" />
+            <e p="Leaderboard.cs" t="Include" />
+            <e p="Level1.cs" t="Include" />
+            <e p="Level2.cs" t="Include" />
+            <e p="Level3.cs" t="Include" />
+            <e p="Level4.cs" t="Include" />
+            <e p="Level5.cs" t="Include" />
+            <e p="Level6.cs" t="Include" />
+            <e p="LevelFinished.cs" t="Include" />
+            <e p="LevelFun.cs" t="Include" />
+            <e p="LevelsMenu.cs" t="Include" />
+            <e p="SampleScene.cs" t="Include" />
+            <e p="StarterScene.cs" t="Include" />
+            <e p="ZeroScene.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Accept.cs" t="Include" />
+          <e p="AdService.cs" t="Include" />
+          <e p="Capy.cs" t="Include" />
+          <e p="CatchCapy.cs" t="Include" />
+          <e p="ChildCapybara.cs" t="Include" />
+          <e p="ChildCapybarasSoundManager.cs" t="Include" />
+          <e p="CorrectPlayerPosition.cs" t="Include" />
+          <e p="Decline.cs" t="Include" />
+          <e p="EnemyAnimator.cs" t="Include" />
+          <e p="EnemyMovementNotifier.cs" t="Include" />
+          <e p="EnemyPatrolManager.cs" t="Include" />
+          <e p="Finish.cs" t="Include" />
+          <e p="FinishSceneLoader.cs" t="Include" />
+          <e p="FocusMonitoring.cs" t="Include" />
+          <e p="FollowToTarget.cs" t="Include" />
+          <e p="FunLevelLoader.cs" t="Include" />
+          <e p="InitializeYandexGamesMetrics.cs" t="Include" />
+          <e p="LeaderboardElement.cs" t="Include" />
+          <e p="LeaderboardLoader.cs" t="Include" />
+          <e p="LeaderboardPlayer.cs" t="Include" />
+          <e p="LeaderboardView.cs" t="Include" />
+          <e p="LevelFinishedLoader.cs" t="Include" />
+          <e p="LevelManager.cs" t="Include" />
+          <e p="LevelsMenuLoader.cs" t="Include" />
+          <e p="LittleCapybaraAnimationController.cs" t="Include" />
+          <e p="Localization.cs" t="Include" />
+          <e p="LookAtPlayer.cs" t="Include" />
+          <e p="ObservableSpawnedLittleCapy.cs" t="Include" />
+          <e p="OpenLeaderboard.cs" t="Include" />
+          <e p="OpenLevelsMenu.cs" t="Include" />
+          <e p="OpenLevelsScene.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerAnimationController.cs" t="Include" />
+          <e p="PlayerAudioController.cs" t="Include" />
+          <e p="PlayerDetector.cs" t="Include" />
+          <e p="RemainingCapybarasDetector.cs" t="Include" />
+          <e p="Restart.cs" t="Include" />
+          <e p="RewardedAdButtonPressed.cs" t="Include" />
+          <e p="ScoreChanger.cs" t="Include" />
+          <e p="SecretLevelButtonPressed.cs" t="Include" />
+          <e p="SetLeaderboardProgress.cs" t="Include" />
+          <e p="SO" t="Include">
+            <e p="LevelConfig.cs" t="Include" />
+          </e>
+          <e p="SoundManager.cs" t="Include" />
+          <e p="Spawner.cs" t="Include" />
+          <e p="StartChoosenLevel.cs" t="Include" />
+          <e p="StarterSceneManager.cs" t="Include" />
+          <e p="StartPoolChildCapybara.cs" t="Include" />
+          <e p="SummonedCapybarasCounter.cs" t="Include" />
+          <e p="ThirdPersonMovementController.cs" t="Include" />
+          <e p="TipsButtonsController.cs" t="Include" />
+          <e p="TriggerZone.cs" t="Include" />
+          <e p="Waypoint.cs" t="Include" />
+          <e p="YandexLeaderboard.cs" t="Include" />
+          <e p="ZeroSceneLoader.cs" t="Include" />
+        </e>
+        <e p="SimpleNaturePack" t="Include">
+          <e p="Materials" t="Include" />
+          <e p="Models" t="Include" />
+          <e p="Prefabs" t="Include" />
+          <e p="Scenes" t="Include" />
+          <e p="Textures" t="Include" />
+        </e>
+        <e p="Sounds" t="Include" />
+        <e p="Stylize Water Texture" t="Include">
+          <e p="Materials" t="Include" />
+          <e p="Textures" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Documentation" t="Include" />
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="Fonts &amp; Materials" t="Include" />
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Sprite Assets" t="Include" />
+            <e p="Style Sheets" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+            <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+        <e p="Tree_Textures" t="Include" />
+        <e p="UI" t="Include">
+          <e p="Buttons" t="Include" />
+          <e p="Leaderboard" t="Include" />
+        </e>
+        <e p="WebGamesTemplate" t="Include">
+          <e p="Audio" t="Include" />
+          <e p="Fonts" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="MenuDisplay" t="Include">
+              <e p="InviteFriendsButton.cs" t="Include" />
+              <e p="LanguagesChanger.cs" t="Include" />
+              <e p="LeaderBoardButton.cs" t="Include" />
+              <e p="LeaderBoardDisplay.cs" t="Include" />
+              <e p="MenuDisplay.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include" />
+        </e>
+        <e p="WebGLTemplates" t="Include">
+          <e p="FullscreenWindow" t="Include" />
+        </e>
+      </e>
+      <e p="CW.Common.csproj" t="IncludeRecursive" />
+      <e p="LeanCommon.csproj" t="IncludeRecursive" />
+      <e p="LeanLocalization.csproj" t="IncludeRecursive" />
+      <e p="LeanLocalization.TMP.csproj" t="IncludeRecursive" />
+      <e p="LeanLocalizationEditor.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Polyperfect.Animals.csproj" t="IncludeRecursive" />
+      <e p="Polyperfect.Common.csproj" t="IncludeRecursive" />
+      <e p="SpidersVSCapybaras.sln" t="IncludeFlat" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+      <e p="Unity.PlayerPrefsEditor.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.PlayerPrefsEditor.EditorResources.csproj" t="IncludeRecursive" />
+      <e p="Unity.PlayerPrefsEditor.Samples.SampleScene.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>

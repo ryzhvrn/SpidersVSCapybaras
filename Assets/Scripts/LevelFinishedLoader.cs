@@ -1,17 +1,15 @@
 using System;
 using IJunior.TypedScenes;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
 {
     [SerializeField] private Image[] _starsEarnedImages;
-    /*[SerializeField] private Image ThreeStarsEarned;
-    [SerializeField] private Image TwoStarsEarned;
-    [SerializeField] private Image OneStarsEarned;*/
     [SerializeField] private Text _zeroStarsEarnedWarning;
     [SerializeField] private Button _restartButton;
     [SerializeField] private Button _levelsMenuButton;
+    
     private AdService _ads = new AdService();
 
     public static event Action SetPlayerScore;
@@ -27,12 +25,12 @@ public class LevelFinishedLoader : MonoBehaviour, ISceneLoadHandler<LevelConfig>
 
     private void OnEnable()
     {
-        AdService.ShowingInteractiveElements += OnShowInteractiveElements;
+        _ads.ShowingInteractiveElements += OnShowInteractiveElements;
     }
 
     private void OnDisable()
     {
-        AdService.ShowingInteractiveElements -= OnShowInteractiveElements;
+        _ads.ShowingInteractiveElements -= OnShowInteractiveElements;
     }
 
     public void OnSceneLoaded(LevelConfig argument)

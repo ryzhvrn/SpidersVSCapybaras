@@ -3,13 +3,19 @@ using UnityEngine.UI;
 
 public class RewardedAdButtonPressed : MonoBehaviour
 {
+    private const string _keyAdViewedCount = "adViewedCount";
     [SerializeField] private Image _dress;
     [SerializeField] private Image _top;
     [SerializeField] private Image _pants;
     [SerializeField] private Button _adButton;
+    
     private AdService _ads = new AdService();
     private int _adViewedCount;
-    private const string _keyAdViewedCount = "adViewedCount";
+
+    public void OnRewardAdButtonPressed()
+    {
+        _ads.ShowVideoAd();
+    }
 
     private void Start()
     {
@@ -25,12 +31,12 @@ public class RewardedAdButtonPressed : MonoBehaviour
 
     private void OnEnable()
     {
-        AdService.CollectingVideoAdReward += OnCollectVideoAdReward;
+        _ads.CollectingVideoAdReward += OnCollectVideoAdReward;
     }
 
     private void OnDisable()
     {
-        AdService.CollectingVideoAdReward -= OnCollectVideoAdReward;
+        _ads.CollectingVideoAdReward -= OnCollectVideoAdReward;
     }
 
     private void OnCollectVideoAdReward()
@@ -64,10 +70,5 @@ public class RewardedAdButtonPressed : MonoBehaviour
                 _pants.gameObject.SetActive(false);
                 break;
         }
-    }
-
-    public void OnRewardAdButtonPressed()
-    {
-        _ads.ShowVideoAd();
     }
 }

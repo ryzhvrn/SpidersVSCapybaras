@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,14 +32,14 @@ public class Finish : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Player>())
         {
-            if (IsChildCapybarasRemaining() == true)
+            if (IsChildCapybarasRemaining())
             {
                 PlayerFinished?.Invoke();
                 ChildCapybarasFinishReached?.Invoke();
                 NotifyEnemyAboutFinish();
             }
 
-            if (IsStartPoolChildCapybarasRemaining() == true)
+            if (IsStartPoolChildCapybarasRemaining())
             {
                 ChildCapybarasFinishReached?.Invoke();
             }

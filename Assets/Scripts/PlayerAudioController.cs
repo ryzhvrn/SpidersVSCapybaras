@@ -19,7 +19,7 @@ public class PlayerAudioController : MonoBehaviour
 
     private void OnPlayerMoving(bool isRunning)
     {
-        if (isRunning == true && _isPlaying == false)
+        if (isRunning && _isPlaying == false)
         {
             _audioSource.clip = _playerRunningSound;
             _audioSource.Play();

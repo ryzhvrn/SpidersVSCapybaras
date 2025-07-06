@@ -32,7 +32,7 @@ public class ThirdPersonMovementController : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if (_isKeyboardEnabled == true)
+        if (_isKeyboardEnabled)
         {
             if (direction.magnitude >= 0.1f)
             {

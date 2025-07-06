@@ -149,8 +149,7 @@ public class LevelsMenuLoader : MonoBehaviour
         }
     }
 
-    private void SetLevelsProgress(string levelName, Image zeroStars, Image OneStar,
-        Image twoStars, Image threeStars, Image nextLevelLocked)
+    private void SetLevelsProgress(string levelName, Image zeroStars, Image oneStar, Image twoStars, Image threeStars, Image nextLevelLocked)
     {
         if (PlayerPrefs.HasKey(levelName))
         {
@@ -160,7 +159,7 @@ public class LevelsMenuLoader : MonoBehaviour
             {
                 case 0:
                     zeroStars.gameObject.SetActive(true);
-                    OneStar.gameObject.SetActive(false);
+                    oneStar.gameObject.SetActive(false);
                     twoStars.gameObject.SetActive(false);
                     threeStars.gameObject.SetActive(false);
 
@@ -172,7 +171,7 @@ public class LevelsMenuLoader : MonoBehaviour
                     break;
                 case 1:
                     zeroStars.gameObject.SetActive(false);
-                    OneStar.gameObject.SetActive(true);
+                    oneStar.gameObject.SetActive(true);
                     twoStars.gameObject.SetActive(false);
                     threeStars.gameObject.SetActive(false);
 
@@ -184,7 +183,7 @@ public class LevelsMenuLoader : MonoBehaviour
                     break;
                 case 2:
                     zeroStars.gameObject.SetActive(false);
-                    OneStar.gameObject.SetActive(false);
+                    oneStar.gameObject.SetActive(false);
                     twoStars.gameObject.SetActive(true);
                     threeStars.gameObject.SetActive(false);
 
@@ -196,7 +195,7 @@ public class LevelsMenuLoader : MonoBehaviour
                     break;
                 case 3:
                     zeroStars.gameObject.SetActive(false);
-                    OneStar.gameObject.SetActive(false);
+                    oneStar.gameObject.SetActive(false);
                     twoStars.gameObject.SetActive(false);
                     threeStars.gameObject.SetActive(true);
 

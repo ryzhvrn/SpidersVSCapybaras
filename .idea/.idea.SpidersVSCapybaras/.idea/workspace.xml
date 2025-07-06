@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="15feb0d9-c993-40d5-973f-3daa4ae1cf44" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelFinished.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelFinished.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Capy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Decline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Decline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeaderboardPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelsMenuLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelsMenuLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SecretLevelButtonPressed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SecretLevelButtonPressed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Finish.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AdService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Capy.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2zVlWGQ6ZyAhpPCA2CZMuvpjPyj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15feb0d9-c993-40d5-973f-3daa4ae1cf44" name="Default Changelist" comment="" />
+      <created>1751824171093</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751824171093</updated>
+      <workItem from="1751824207655" duration="3386000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="295" y="97" width="776" height="534" key="find.popup" timestamp="1751824529822">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="295" y="97" width="776" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1751824529822" />
+  </component>
+</project>
