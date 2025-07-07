@@ -4,6 +4,7 @@ using UnityEngine;
 public class CorrectPlayerPosition : MonoBehaviour
 {
     [SerializeField] private Transform _playerTransform;
+    
     private float _initialYPosition;
     private float _acceptableDistance = 0.01f;
 

@@ -451,11 +451,13 @@
           <e p="FocusMonitoring.cs" t="Include" />
           <e p="FollowToTarget.cs" t="Include" />
           <e p="FunLevelLoader.cs" t="Include" />
+          <e p="GameEventBus.cs" t="Include" />
           <e p="InitializeYandexGamesMetrics.cs" t="Include" />
           <e p="LeaderboardElement.cs" t="Include" />
           <e p="LeaderboardLoader.cs" t="Include" />
           <e p="LeaderboardPlayer.cs" t="Include" />
           <e p="LeaderboardView.cs" t="Include" />
+          <e p="LevelConfigUpdater.cs" t="Include" />
           <e p="LevelFinishedLoader.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
           <e p="LevelsMenuLoader.cs" t="Include" />

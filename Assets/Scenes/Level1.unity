@@ -975,6 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4572b6ee9f40e58468da3a2d3b9e7459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventBus: {fileID: 514314787}
 --- !u!4 &71110207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
@@ -1263,6 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd115e5aa9ccd24fa773364212bee46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventBus: {fileID: 514314787}
 --- !u!54 &104351848
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5690,6 +5692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7ce5adb7e5bdf4d8c7f458501938d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventBus: {fileID: 514314787}
   _capyFinishPrefab: {fileID: 1562224547252656944, guid: d7555ea9ecd14c747bc58af712364f52, type: 3}
   _spawnPointsList:
   - {fileID: 604107585}
@@ -8521,6 +8524,65 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+--- !u!1 &514314786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 514314788}
+  - component: {fileID: 514314787}
+  - component: {fileID: 514314789}
+  m_Layer: 0
+  m_Name: Logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &514314787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514314786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce77a3d2064645f29e0df80d5f3ca3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &514314788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514314786}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -34.922657, y: -7.5616913, z: 110.741325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &514314789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514314786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abfb63ea9bd24dcdbc64160099db9b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventBus: {fileID: 514314787}
+  _levelConfig: {fileID: 11400000, guid: 88639d2b1b33ffa469686e6fc1d4bbcc, type: 2}
 --- !u!1001 &516452204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16146,9 +16208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 560ef63b317bd5f48bd5d0ecdda6634e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
+  _eventBus: {fileID: 514314787}
   _navMeshAgent: {fileID: 1077159063}
-  _isAttackAllowed: 0
+  _attackDistance: 1.5
 --- !u!114 &1077159065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16192,6 +16254,7 @@ MonoBehaviour:
   - {fileID: 2012044481}
   - {fileID: 328865476}
   _enemyNavMeshAgent: {fileID: 1077159063}
+  _eventBus: {fileID: 514314787}
 --- !u!4 &1079072059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
@@ -17435,6 +17498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 124309216}
+  _eventBus: {fileID: 514314787}
 --- !u!4 &1262692624
 Transform:
   m_ObjectHideFlags: 0
@@ -21718,6 +21782,7 @@ MonoBehaviour:
   - {fileID: 118393213}
   - {fileID: 1642871506}
   _radius: 5
+  _eventBus: {fileID: 514314787}
 --- !u!4 &1535273373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2222111361405018444, guid: 88f2fd29f58b9734683512546acec310, type: 3}
@@ -23818,7 +23883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17df8727acbcd414da41b8d825051b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxChildCapybarasAmount: 3
+  _eventBus: {fileID: 514314787}
 --- !u!114 &1744874478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23831,6 +23896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c781e96318eed874492883c91d7e58d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventBus: {fileID: 514314787}
 --- !u!4 &1744874479
 Transform:
   m_ObjectHideFlags: 0
@@ -23884,6 +23950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelConfig: {fileID: 11400000, guid: 88639d2b1b33ffa469686e6fc1d4bbcc, type: 2}
+  _eventBus: {fileID: 514314787}
 --- !u!1 &1752539926
 GameObject:
   m_ObjectHideFlags: 0
@@ -26698,6 +26765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 1953601297}
   _maxCapybarasCount: 3
+  _eventBus: {fileID: 514314787}
 --- !u!1001 &1954220438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30535,6 +30603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 2146601987}
+  _eventBus: {fileID: 514314787}
 --- !u!114 &2146601989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32534,3 +32603,4 @@ SceneRoots:
   - {fileID: 1744874479}
   - {fileID: 1922650496}
   - {fileID: 1270850002}
+  - {fileID: 514314788}

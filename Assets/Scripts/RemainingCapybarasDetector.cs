@@ -1,60 +1,58 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 public class RemainingCapybarasDetector : MonoBehaviour
 {
-    private bool _isAllChildCapybarasSpawned = false;
-    private bool _isChildCapybarasFinishReached = false;
-    private bool _isCoroutineWorking = true;
+    [SerializeField] private GameEventBus _eventBus;
 
-    public static event Action ChildCapybarasEnded;
+    private bool _isAllCapybarasSpawned = false;
+    private bool _isAllCapybarasReachedFinish = false;
+    private bool _coroutineRunning = true;
 
     private void Start()
     {
-        StartCoroutine(CheckLevelForRemainingChildCapybaras());
+        StartCoroutine(CheckRemainingCapybaras());
     }
 
     private void OnEnable()
     {
-        Finish.ChildCapybarasFinishReached += OnChildCapybarasFinishReached;
-        LevelManager.AllChildCapybarasSpawned += OnAllChildCapybarasSpawned;
+        _eventBus.OnAllCapybarasSpawned += HandleAllCapybarasSpawned;
+        _eventBus.OnAllCapybarasReachedFinish += HandleAllCapybarasReachedFinish;
     }
 
     private void OnDisable()
     {
-        Finish.ChildCapybarasFinishReached -= OnChildCapybarasFinishReached;
-        LevelManager.AllChildCapybarasSpawned -= OnAllChildCapybarasSpawned;
+        _eventBus.OnAllCapybarasSpawned -= HandleAllCapybarasSpawned;
+        _eventBus.OnAllCapybarasReachedFinish -= HandleAllCapybarasReachedFinish;
     }
 
-    private IEnumerator CheckLevelForRemainingChildCapybaras()
+    private IEnumerator CheckRemainingCapybaras()
     {
-        do
+        while (_coroutineRunning)
         {
-            if (_isAllChildCapybarasSpawned && _isChildCapybarasFinishReached)
+            if (_isAllCapybarasSpawned && _isAllCapybarasReachedFinish)
             {
                 yield return new WaitForSeconds(1f);
 
                 ChildCapybara[] capybaras = FindObjectsOfType<ChildCapybara>();
-
                 if (capybaras.Length == 0)
                 {
-                    ChildCapybarasEnded?.Invoke();
-                    _isCoroutineWorking = false;
+                    _eventBus.ChildCapybarasEnded();
+                    _coroutineRunning = false;
                 }
             }
+
             yield return null;
         }
-        while (_isCoroutineWorking);
     }
 
-    private void OnChildCapybarasFinishReached()
+    private void HandleAllCapybarasSpawned()
     {
-        _isAllChildCapybarasSpawned = true;
+        _isAllCapybarasSpawned = true;
     }
 
-    private void OnAllChildCapybarasSpawned()
+    private void HandleAllCapybarasReachedFinish()
     {
-        _isChildCapybarasFinishReached = true;
+        _isAllCapybarasReachedFinish = true;
     }
 }

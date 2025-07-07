@@ -9,17 +9,7 @@ public class LevelConfig : ScriptableObject
     public int StarsEarned => _starsAmountEarned;
     public string CurrentLevelName => _currentLevelName;
 
-    private void OnEnable()
-    {
-        LevelManager.NotifyLevelConfigAboutAmountOfEarnedStars += SetConfigInfo;
-    }
-
-    private void OnDisable()
-    {
-        LevelManager.NotifyLevelConfigAboutAmountOfEarnedStars -= SetConfigInfo;
-    }
-
-    private void SetConfigInfo(int amount, string name)
+    public void SetConfigInfo(int amount, string name)
     {
         _starsAmountEarned = amount;
         _currentLevelName = name;

@@ -1,26 +1,27 @@
 using System;
 using System.Collections.Generic;
-using IJunior.TypedScenes;
 using UnityEngine;
+using IJunior.TypedScenes;
 
 public class FinishSceneLoader : MonoBehaviour
 {
     [SerializeField] private LevelConfig _levelConfig;
+    [SerializeField] private GameEventBus _eventBus;
 
     private Dictionary<string, Action> _levelReloadActions = new Dictionary<string, Action>();
 
     private void OnEnable()
     {
-        LevelManager.CurrentLevelFinished += LoadLevelFinishedScene;
-        OpenLevelsScene.LevelsSceneActivated += LoadLevelsMenuScene;
-        Restart.RestartCurrentLevelScene += ReloadLevel;
+        _eventBus.OnCurrentLevelFinished += LoadLevelFinishedScene;
+        _eventBus.OnLevelsSceneActivated += LoadLevelsMenuScene;
+        _eventBus.OnNotifyFinishAboutLevelFinished += ReloadLevel;
     }
 
     private void OnDisable()
     {
-        LevelManager.CurrentLevelFinished -= LoadLevelFinishedScene;
-        OpenLevelsScene.LevelsSceneActivated -= LoadLevelsMenuScene;
-        Restart.RestartCurrentLevelScene -= ReloadLevel;
+        _eventBus.OnCurrentLevelFinished -= LoadLevelFinishedScene;
+        _eventBus.OnLevelsSceneActivated -= LoadLevelsMenuScene;
+        _eventBus.OnNotifyFinishAboutLevelFinished -= ReloadLevel;
     }
 
     private void Start()

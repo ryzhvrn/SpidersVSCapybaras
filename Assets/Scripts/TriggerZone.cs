@@ -1,16 +1,14 @@
-using System;
 using UnityEngine;
 
 public class TriggerZone : MonoBehaviour
 {
-    public static event Action<Capy> TriggerZoneEntered;
-    public static event Action<Capy> TriggerZoneLeft;
+    [SerializeField] private GameEventBus _eventBus;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out Capy capy))
         {
-            TriggerZoneEntered?.Invoke(capy);
+            _eventBus.TriggerZoneEntered(capy);
         }
     }
 
@@ -18,7 +16,7 @@ public class TriggerZone : MonoBehaviour
     {
         if (other.TryGetComponent(out Capy capy))
         {
-            TriggerZoneLeft?.Invoke(capy);
+            _eventBus.TriggerZoneLeft(capy);
         }
     }
 }

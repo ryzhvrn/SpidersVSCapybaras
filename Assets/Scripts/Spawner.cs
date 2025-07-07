@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,52 +10,46 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Text _waypointText;
     [SerializeField] private List<GameObject> _childCapybarasForSpawnList = new List<GameObject>();
     [SerializeField] private float _radius = 5f;
+    [SerializeField] private GameEventBus _eventBus;
 
     private int _spawnedCapybaraIndex = 0;
-    private int _maximumChildCapybarasForSpawnAmount;
-    private int _spawnedCapybarasAmount = 0;
+    private int _maxCapybaraCount;
+    private int _spawnedCapybaraCount = 0;
     private Vector3 _center;
 
-    public static event Action<Capy> ChildCapybaraSpawned;
-    public static event Action<int> ChildCapybarasSpawned;
-
-    private void Start()
+    private void Awake()
     {
-        _maximumChildCapybarasForSpawnAmount = _childCapybarasForSpawnList.Count;
+        _maxCapybaraCount = _childCapybarasForSpawnList.Count;
         _center = transform.position;
     }
 
     private void OnEnable()
     {
-        PlayerDetector.PlayerDetected += OnPlayerDetected;
+        _eventBus.OnPlayerDetected += HandlePlayerDetected;
     }
 
     private void OnDisable()
     {
-        PlayerDetector.PlayerDetected -= OnPlayerDetected;
+        _eventBus.OnPlayerDetected -= HandlePlayerDetected;
     }
 
-    private void NotifyLevelManagerAboutSpawnedCapybarasAmount()
+    private void HandlePlayerDetected()
     {
-        ChildCapybarasSpawned?.Invoke(_maximumChildCapybarasForSpawnAmount);
-    }
-
-    private void OnPlayerDetected()
-    {
-        if (_spawnedCapybarasAmount < _maximumChildCapybarasForSpawnAmount)
+        if (_spawnedCapybaraCount < _maxCapybaraCount)
         {
-            Vector3 position = RandomCircle(_center, _radius);
+            Vector3 spawnPosition = RandomCircle(_center, _radius);
+            Capy spawnedCapy = Instantiate(_capybaraChildPrefab, spawnPosition, transform.rotation);
 
-            Capy spawnedCapy = Instantiate(_capybaraChildPrefab, position, transform.rotation);
-            ChildCapybaraSpawned?.Invoke(spawnedCapy);
-            _spawnedCapybarasAmount++;
+            _eventBus.CapySpawned(spawnedCapy);
+            _spawnedCapybaraCount++;
+
             Destroy(_childCapybarasForSpawnList[_spawnedCapybaraIndex]);
             _spawnedCapybaraIndex++;
         }
 
-        if (_spawnedCapybarasAmount == _maximumChildCapybarasForSpawnAmount)
+        if (_spawnedCapybaraCount == _maxCapybaraCount)
         {
-            NotifyLevelManagerAboutSpawnedCapybarasAmount();
+            _eventBus.ChildCapybarasSpawned(_maxCapybaraCount);
             _waypointScript.enabled = false;
             _waypointImage.enabled = false;
             _waypointText.enabled = false;
@@ -66,11 +59,9 @@ public class Spawner : MonoBehaviour
 
     private Vector3 RandomCircle(Vector3 center, float radius)
     {
-        float angle = UnityEngine.Random.Range(0f, Mathf.PI * 2);
-
+        float angle = Random.Range(0f, Mathf.PI * 2f);
         float x = center.x + radius * Mathf.Cos(angle);
         float z = center.z + radius * Mathf.Sin(angle);
-
         return new Vector3(x, center.y, z);
     }
 }

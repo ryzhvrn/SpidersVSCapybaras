@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,125 +5,94 @@ using UnityEngine.AI;
 
 public class CatchCapy : MonoBehaviour
 {
-    [SerializeField] private Transform _target;
+    [Header("References")]
+    [SerializeField] private GameEventBus _eventBus;
     [SerializeField] private NavMeshAgent _navMeshAgent;
-    [SerializeField] private bool _isAttackAllowed = false;
+
+    [Header("Settings")]
+    [SerializeField] private float _attackDistance = 1.5f;
 
     private List<Capy> _allCapybaras = new List<Capy>();
-    private Transform _possibleTarget;
-    private float _attackDistance = 1.5f;
-
-    public static event Action CapyCatched;
-    public static event Action EnemyAttacking;
-    public static event Action<bool> CapybarasDetected;
-
-    private void FixedUpdate()
-    {
-        if (_possibleTarget == null)
-        {
-            ChooseNextTarget();
-
-            if (_possibleTarget == null)
-            {
-                _navMeshAgent.isStopped = true;
-                _navMeshAgent.ResetPath();
-            }
-
-            return;
-        }
-
-        CalculatePath();
-    }
+    private Transform _currentTarget;
+    private bool _isAttackAllowed = false;
 
     private void OnEnable()
     {
-        TriggerZone.TriggerZoneEntered += OnTriggerZoneEntered;
-        TriggerZone.TriggerZoneLeft += OnTriggerZoneLeft;
-        EnemyAnimator.AttackReloadCompleted += OnAttackReloadCompleted;
-        Finish.CapyFinishedForEnemy += OnCapyFinishedForEnemy;
+        _eventBus.OnTriggerZoneEntered += OnCapyEnteredZone;
+        _eventBus.OnTriggerZoneLeft += OnCapyLeftZone;
+        _eventBus.OnAttackReloadCompleted += OnAttackReloadCompleted;
+        _eventBus.OnCapyFinishedForEnemy += OnCapyFinishedForEnemy;
     }
 
     private void OnDisable()
     {
-        TriggerZone.TriggerZoneEntered -= OnTriggerZoneEntered;
-        TriggerZone.TriggerZoneLeft -= OnTriggerZoneLeft;
-        EnemyAnimator.AttackReloadCompleted -= OnAttackReloadCompleted;
-        Finish.CapyFinishedForEnemy -= OnCapyFinishedForEnemy;
+        _eventBus.OnTriggerZoneEntered -= OnCapyEnteredZone;
+        _eventBus.OnTriggerZoneLeft -= OnCapyLeftZone;
+        _eventBus.OnAttackReloadCompleted -= OnAttackReloadCompleted;
+        _eventBus.OnCapyFinishedForEnemy -= OnCapyFinishedForEnemy;
     }
 
-    private void ChooseNextTarget()
+    private void FixedUpdate()
     {
-        if (_allCapybaras != null && _allCapybaras.Count > 0)
+        if (_currentTarget == null)
         {
-            _possibleTarget = _allCapybaras.FirstOrDefault().transform;
-            CapybarasDetected?.Invoke(true);
-        }
-        else
-        {
-            CapybarasDetected?.Invoke(false);
-            _navMeshAgent.isStopped = true;
-            _navMeshAgent.ResetPath();
+            ChooseNextTarget();
+            return;
         }
 
-        if (_allCapybaras.Count == 0)
-        {
-            _possibleTarget = null;
-        }
-    }
-
-    private void CalculatePath()
-    {
-        if (_possibleTarget != null)
-        {
-            _navMeshAgent.SetDestination(_possibleTarget.position);
-        }
-
-        if (_possibleTarget == null)
-        {
-            _navMeshAgent.isStopped = true;
-            _navMeshAgent.ResetPath();
-        }
-    }
-
-    private float DistanceChecker(Transform object1, Transform object2)
-    {
-        float distance = Vector3.Distance(object1.position, object2.position);
-
-        return distance;
+        _navMeshAgent.SetDestination(_currentTarget.position);
     }
 
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out Capy capy))
         {
-            if (DistanceChecker(collision.transform, gameObject.transform) < _attackDistance)
+            float distance = Vector3.Distance(transform.position, capy.transform.position);
+
+            if (distance < _attackDistance)
             {
-                EnemyAttacking?.Invoke();
+                _eventBus.EnemyAttacking();
 
                 if (_isAttackAllowed)
                 {
-                    OnTriggerZoneLeft(capy);
-                    Destroy(collision.gameObject);
-                    CapyCatched?.Invoke();
+                    OnCapyLeftZone(capy);
+                    Destroy(capy.gameObject);
+                    _eventBus.CapyCatched();
                 }
             }
         }
     }
 
-    private void OnAttackReloadCompleted(bool isAttackAllowed)
+    private void ChooseNextTarget()
     {
-        _isAttackAllowed = isAttackAllowed;
+        if (_allCapybaras.Count > 0)
+        {
+            _currentTarget = _allCapybaras.FirstOrDefault()?.transform;
+            _eventBus.CapybarasDetected(true);
+        }
+        else
+        {
+            _currentTarget = null;
+            _eventBus.CapybarasDetected(false);
+            _navMeshAgent.ResetPath();
+        }
     }
 
-    private void OnTriggerZoneEntered(Capy capy)
+    private void OnAttackReloadCompleted(bool canAttack)
     {
-        _allCapybaras.Add(capy);
+        _isAttackAllowed = canAttack;
     }
 
-    private void OnTriggerZoneLeft(Capy capy)
+    private void OnCapyEnteredZone(Capy capy)
+    {
+        if (!_allCapybaras.Contains(capy))
+            _allCapybaras.Add(capy);
+    }
+
+    private void OnCapyLeftZone(Capy capy)
     {
         _allCapybaras.Remove(capy);
-        _possibleTarget = null;
+        _currentTarget = null;
     }
 
     private void OnCapyFinishedForEnemy()

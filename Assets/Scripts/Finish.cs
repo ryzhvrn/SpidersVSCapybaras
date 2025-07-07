@@ -4,28 +4,34 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
+    [SerializeField] private GameEventBus _eventBus;
     [SerializeField] private GameObject _capyFinishPrefab;
     [SerializeField] private List<GameObject> _spawnPointsList;
     [SerializeField] private List<GameObject> _finishedCapys;
+    
     private int _savedChildCapybarasAmount = 0;
     private int _currentChildCapybaraIndex = 0;
 
-    public static event Action PlayerFinished;
+    /*public static event Action PlayerFinished;
     public static event Action CapyFinishedForUI;
     public static event Action CapyFinishedForEnemy;
     public static event Action ChildCapybarasFinishReached;
-    public static event Action<int> AmountOfChildCapybarasSaved;
+    public static event Action<int> AmountOfChildCapybarasSaved;*/
 
     private void OnEnable()
     {
-        ObservableSpawnedLittleCapy.Finished += OnCapyOnFinish;
-        LevelManager.NotifyFinishAboutLevelFinished += GetAmountOfSavedChildCapybaras;
+        //ObservableSpawnedLittleCapy.Finished += OnCapyOnFinish;
+        //LevelManager.NotifyFinishAboutLevelFinished += GetAmountOfSavedChildCapybaras;
+        _eventBus.OnFinished += OnCapyOnFinish;
+        _eventBus.OnNotifyFinishAboutLevelFinished += ReportSavedCapybarasAmount;
     }
 
     private void OnDisable()
     {
-        ObservableSpawnedLittleCapy.Finished -= OnCapyOnFinish;
-        LevelManager.NotifyFinishAboutLevelFinished -= GetAmountOfSavedChildCapybaras;
+        //ObservableSpawnedLittleCapy.Finished -= OnCapyOnFinish;
+        //LevelManager.NotifyFinishAboutLevelFinished -= GetAmountOfSavedChildCapybaras;
+        _eventBus.OnFinished -= OnCapyOnFinish;
+        _eventBus.OnNotifyFinishAboutLevelFinished -= ReportSavedCapybarasAmount;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,14 +40,18 @@ public class Finish : MonoBehaviour
         {
             if (IsChildCapybarasRemaining())
             {
-                PlayerFinished?.Invoke();
+                /*PlayerFinished?.Invoke();
                 ChildCapybarasFinishReached?.Invoke();
-                NotifyEnemyAboutFinish();
+                NotifyEnemyAboutFinish();*/
+                _eventBus.PlayerFinished();
+                _eventBus.AllCapybarasReachedFinish();
+                _eventBus.CapyFinishedForEnemy();
             }
 
             if (IsStartPoolChildCapybarasRemaining())
             {
-                ChildCapybarasFinishReached?.Invoke();
+                /*ChildCapybarasFinishReached?.Invoke();*/
+                _eventBus.AllCapybarasReachedFinish();
             }
         }
     }
@@ -59,6 +69,11 @@ public class Finish : MonoBehaviour
             return true;
         }
     }
+    
+    private void ReportSavedCapybarasAmount()
+    {
+        _eventBus.AmountOfCapybarasSaved(_savedChildCapybarasAmount);
+    }
 
     private bool IsStartPoolChildCapybarasRemaining()
     {
@@ -74,7 +89,7 @@ public class Finish : MonoBehaviour
         }
     }
 
-    private void NotifyEnemyAboutFinish()
+    /*private void NotifyEnemyAboutFinish()
     {
         CapyFinishedForEnemy?.Invoke();
     }
@@ -82,6 +97,16 @@ public class Finish : MonoBehaviour
     private void GetAmountOfSavedChildCapybaras()
     {
         AmountOfChildCapybarasSaved?.Invoke(_savedChildCapybarasAmount);
+    }*/
+    
+    private bool IsAnyChildCapybaraRemaining()
+    {
+        return FindObjectsOfType<ChildCapybara>().Length > 0;
+    }
+
+    private bool IsStartPoolCapybarasFinished()
+    {
+        return FindObjectsOfType<StartPoolChildCapybara>().Length == 0;
     }
 
     private void OnCapyOnFinish()
@@ -92,7 +117,8 @@ public class Finish : MonoBehaviour
             GameObject finishCapy = Instantiate(_capyFinishPrefab, spawnPoint, transform.rotation);
             finishCapy.transform.rotation = Quaternion.Euler(0, 180, 0);
             _finishedCapys.Add(finishCapy);
-            CapyFinishedForUI?.Invoke();
+            //CapyFinishedForUI?.Invoke();
+            _eventBus.CapyFinishedForUI();
             _currentChildCapybaraIndex++;
             _savedChildCapybarasAmount++;
         }

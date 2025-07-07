@@ -7,12 +7,9 @@ public class FollowToTarget : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private NavMeshAgent _navMeshAgent;
 
-    public static event Action CapyFollowed;
-
     private void Start()
     {
         _target = FindObjectOfType<Player>().gameObject.transform;
-        CapyFollowed?.Invoke();
         CalculatePath();
     }
 

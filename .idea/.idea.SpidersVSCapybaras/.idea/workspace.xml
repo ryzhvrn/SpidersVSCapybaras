@@ -1,30 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="15feb0d9-c993-40d5-973f-3daa4ae1cf44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelFinished.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelFinished.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpidersVSCapybaras/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpidersVSCapybaras/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpidersVSCapybaras/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpidersVSCapybaras/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Capy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Decline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Decline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyPatrolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyPatrolManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeaderboardPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowToTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowToTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelsMenuLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelsMenuLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SecretLevelButtonPressed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SecretLevelButtonPressed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SO/LevelConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SO/LevelConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/polyperfect/Low Poly Animated Animals/- Animator Controllers/Spider.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/polyperfect/Low Poly Animated Animals/- Animator Controllers/Spider.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,23 +55,40 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Decline.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Finish.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AdService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FollowToTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CapyEventBus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Capy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Finish.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameEventBus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyPatrolManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelConfigUpdater.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SO/LevelConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAnimator.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="2zVlWGQ6ZyAhpPCA2CZMuvpjPyj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -94,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1751824171093</updated>
-      <workItem from="1751824207655" duration="3386000" />
+      <workItem from="1751824207655" duration="16049000" />
     </task>
     <servers />
   </component>
@@ -103,13 +136,28 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="295" y="97" width="776" height="534" key="find.popup" timestamp="1751824529822">
+    <state x="295" y="97" width="776" height="534" key="find.popup" timestamp="1751830878804">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="97" width="776" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1751824529822" />
+    <state x="295" y="97" width="776" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1751830878804" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1751842020610">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1751842020610" />
   </component>
 </project>

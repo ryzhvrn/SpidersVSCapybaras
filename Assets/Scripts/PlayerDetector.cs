@@ -1,15 +1,14 @@
-using System;
 using UnityEngine;
 
 public class PlayerDetector : MonoBehaviour
 {
-    public static event Action PlayerDetected;
+    [SerializeField] private GameEventBus _eventBus;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Player>())
+        if (other.GetComponent<Player>())
         {
-            PlayerDetected?.Invoke();
+            _eventBus.PlayerDetected();
         }
     }
 }

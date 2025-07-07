@@ -6,10 +6,12 @@ using UnityEngine.AI;
 public class ObservableSpawnedLittleCapy : MonoBehaviour
 {
     [SerializeField] private Transform _player;
+    [SerializeField] private GameEventBus _eventBus;
+
     private List<Capy> _childCapybaras = new List<Capy>();
     private int _distanceMultiplier = 2;
 
-    public static event Action Finished;
+    //public static event Action Finished;
 
     private void Update()
     {
@@ -18,16 +20,22 @@ public class ObservableSpawnedLittleCapy : MonoBehaviour
 
     private void OnEnable()
     {
-        Spawner.ChildCapybaraSpawned += OnChildCapybaraSpawned;
+        /*Spawner.ChildCapybaraSpawned += OnChildCapybaraSpawned;
         Capy.Died += OnChildCapybaraDied;
-        Finish.PlayerFinished += OnPlayerFinished;
+        Finish.PlayerFinished += OnPlayerFinished;*/
+        _eventBus.OnCapySpawned += OnCapySpawned;
+        _eventBus.OnCapyDied += OnCapyDied;
+        _eventBus.OnPlayerFinished += OnPlayerFinished;
     }
 
     private void OnDisable()
     {
-        Spawner.ChildCapybaraSpawned -= OnChildCapybaraSpawned;
+        /*Spawner.ChildCapybaraSpawned -= OnChildCapybaraSpawned;
         Capy.Died -= OnChildCapybaraDied;
-        Finish.PlayerFinished -= OnPlayerFinished;
+        Finish.PlayerFinished -= OnPlayerFinished;*/
+        _eventBus.OnCapySpawned -= OnCapySpawned;
+        _eventBus.OnCapyDied -= OnCapyDied;
+        _eventBus.OnPlayerFinished -= OnPlayerFinished;
     }
 
     private void CorrectChildCapybaraPosition()
@@ -55,11 +63,22 @@ public class ObservableSpawnedLittleCapy : MonoBehaviour
     {
         foreach (Capy capy in _childCapybaras)
         {
-            Finished?.Invoke();
+            //Finished?.Invoke();
+            _eventBus.Finished();
         }
     }
 
-    private void OnChildCapybaraSpawned(Capy capy)
+    private void OnCapySpawned(Capy capy)
+    {
+        _childCapybaras.Add(capy);
+    }
+
+    private void OnCapyDied(Capy capy)
+    {
+        _childCapybaras.Remove(capy);
+    }
+    
+    /*private void OnChildCapybaraSpawned(Capy capy)
     {
         _childCapybaras.Add(capy);
     }
@@ -67,5 +86,5 @@ public class ObservableSpawnedLittleCapy : MonoBehaviour
     private void OnChildCapybaraDied(Capy capy)
     {
         _childCapybaras.Remove(capy);
-    }
+    }*/
 }

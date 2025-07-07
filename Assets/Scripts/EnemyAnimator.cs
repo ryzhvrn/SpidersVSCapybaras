@@ -4,11 +4,10 @@ using UnityEngine;
 public class EnemyAnimator : MonoBehaviour
 {
     private const string IsWalking = nameof(IsWalking);
-    private const string IsAttacking = nameof(IsAttacking);
-    private const string IsAttackingTrigger = nameof(IsAttackingTrigger);
-    [SerializeField] private Animator _animator;
+    private const string IsAttacking  = nameof(IsAttacking);
 
-    public static event Action<bool> AttackReloadCompleted;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private GameEventBus _eventBus;
 
     private void Start()
     {
@@ -17,34 +16,34 @@ public class EnemyAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        EnemyMovementNotifier.EnemyMoving += OnEnemyMoving;
-        CatchCapy.EnemyAttacking += OnEnemyAttacking;
+        _eventBus.OnEnemyAttacking += OnEnemyAttacking;
+        _eventBus.OnCapybarasDetected += OnCapybarasDetected;
     }
 
     private void OnDisable()
     {
-        EnemyMovementNotifier.EnemyMoving -= OnEnemyMoving;
-        CatchCapy.EnemyAttacking -= OnEnemyAttacking;
+        _eventBus.OnEnemyAttacking -= OnEnemyAttacking;
+        _eventBus.OnCapybarasDetected -= OnCapybarasDetected;
     }
 
     public void BlockAttackAbility()
     {
-        AttackReloadCompleted?.Invoke(false);
-        _animator.ResetTrigger(IsAttackingTrigger);
+        _eventBus.AttackReloadCompleted(false);
+        _animator.ResetTrigger(IsAttacking);
     }
 
     public void ReturnAttackAbility()
     {
-        AttackReloadCompleted?.Invoke(true);
+        _eventBus.AttackReloadCompleted(true);
     }
 
-    private void OnEnemyMoving(bool moving)
+    private void OnCapybarasDetected(bool moving)
     {
         _animator.SetBool(IsWalking, moving);
     }
 
     private void OnEnemyAttacking()
     {
-        _animator.SetTrigger(IsAttackingTrigger);
+        _animator.SetTrigger(IsAttacking);
     }
 }

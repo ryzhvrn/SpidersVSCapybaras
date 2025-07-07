@@ -1,58 +1,47 @@
-using System;
-using IJunior.TypedScenes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using IJunior.TypedScenes;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private int _maxChildCapybarasAmount;
-    private int _currentSpawnedChildCapybarasAmount = 0;
-    private int _currentAmountCapybarasSaved = 0;
-    private int _amountOfEarnedStars = 0;
-    private bool _isEventActivated = false;
-    private string _currentSceneName;
+    [SerializeField] private GameEventBus _eventBus;
 
-    public static event Action AllChildCapybarasSpawned;
-    public static event Action CurrentLevelFinished;
-    public static event Action NotifyFinishAboutLevelFinished;
-    public static event Action<int, string> NotifyLevelConfigAboutAmountOfEarnedStars;
+    private int _maxChildCapybarasAmount;
+    private int _currentSpawnedCapybaras;
+    private int _savedCapybaras;
+    private bool _hasFiredAllSpawned = false;
+    private string _sceneName;
+    private int _earnedStars;
 
     private void Start()
     {
-        _currentSceneName = SceneManager.GetActiveScene().name;
-        CalculateMaximumChildCapybarasForSpawn();
-    }
-
-    private void Update()
-    {
-        if (_currentSpawnedChildCapybarasAmount == _maxChildCapybarasAmount)
-        {
-            if (_isEventActivated == false)
-            {
-                AllChildCapybarasSpawned?.Invoke();
-                _isEventActivated = true;
-            }
-            else
-            {
-                return;
-            }
-        }
+        _sceneName = SceneManager.GetActiveScene().name;
+        CalculateMaxCapybarasFromScene();
     }
 
     private void OnEnable()
     {
-        Spawner.ChildCapybarasSpawned += OnChildCapybarasSpawned;
-        RemainingCapybarasDetector.ChildCapybarasEnded += OnChildCapybarasEnded;
-        Finish.AmountOfChildCapybarasSaved += OnAmountOfChildCapybarasSaved;
-        OpenLevelsScene.LevelsSceneActivated += OnLevelsSceneActivated;
+        _eventBus.OnChildCapybarasSpawned += OnCapybarasSpawned;
+        _eventBus.OnChildCapybarasEnded += OnCapybarasEnded;
+        _eventBus.OnAmountOfCapybarasSaved += OnCapybarasSaved;
+        _eventBus.OnLevelsSceneActivated += OnLevelsSceneActivated;
     }
 
     private void OnDisable()
     {
-        Spawner.ChildCapybarasSpawned -= OnChildCapybarasSpawned;
-        RemainingCapybarasDetector.ChildCapybarasEnded -= OnChildCapybarasEnded;
-        Finish.AmountOfChildCapybarasSaved -= OnAmountOfChildCapybarasSaved;
-        OpenLevelsScene.LevelsSceneActivated -= OnLevelsSceneActivated;
+        _eventBus.OnChildCapybarasSpawned -= OnCapybarasSpawned;
+        _eventBus.OnChildCapybarasEnded -= OnCapybarasEnded;
+        _eventBus.OnAmountOfCapybarasSaved -= OnCapybarasSaved;
+        _eventBus.OnLevelsSceneActivated -= OnLevelsSceneActivated;
+    }
+
+    private void Update()
+    {
+        if (!_hasFiredAllSpawned && _currentSpawnedCapybaras == _maxChildCapybarasAmount)
+        {
+            _eventBus.AllCapybarasSpawned();
+            _hasFiredAllSpawned = true;
+        }
     }
 
     private void OnLevelsSceneActivated()
@@ -60,61 +49,43 @@ public class LevelManager : MonoBehaviour
         LevelsMenu.Load();
     }
 
-    private void CalculateMaximumChildCapybarasForSpawn()
+    private void OnCapybarasSpawned(int amount)
     {
-        StartPoolChildCapybara[] childCapybarasOnStartPools = FindObjectsOfType<StartPoolChildCapybara>();
-        _maxChildCapybarasAmount = childCapybarasOnStartPools.Length;
+        _currentSpawnedCapybaras += amount;
     }
 
-    private void CalculateFinishedLevelProgress()
+    private void OnCapybarasSaved(int amount)
     {
-        if (_currentAmountCapybarasSaved != 0)
-        {
-            float value = (float)_currentAmountCapybarasSaved / _maxChildCapybarasAmount * 100;
+        _savedCapybaras = amount;
+    }
 
-            if (value == 100)
-            {
-                _amountOfEarnedStars = 3;
-            }
-            else if (value >= 66 && value <= 99)
-            {
-                _amountOfEarnedStars = 2;
-            }
-            else if (value >= 33 && value <= 65)
-            {
-                _amountOfEarnedStars = 1;
-            }
-            else if (value >= 1 && value <= 32)
-            {
-                _amountOfEarnedStars = 0;
-            }
-        }
+    private void OnCapybarasEnded()
+    {
+        _eventBus.NotifyFinishAboutLevelFinished();
+        CalculateStars();
+        _eventBus.NotifyLevelConfigAboutAmountOfEarnedStars(_earnedStars, _sceneName);
+        _eventBus.CurrentLevelFinished();
+    }
+
+    private void CalculateMaxCapybarasFromScene()
+    {
+        var capyPools = FindObjectsOfType<StartPoolChildCapybara>();
+        _maxChildCapybarasAmount = capyPools.Length;
+    }
+
+    private void CalculateStars()
+    {
+        float percent = (_maxChildCapybarasAmount > 0)
+            ? ((float)_savedCapybaras / _maxChildCapybarasAmount) * 100f
+            : 0f;
+
+        if (percent == 100)
+            _earnedStars = 3;
+        else if (percent >= 66)
+            _earnedStars = 2;
+        else if (percent >= 33)
+            _earnedStars = 1;
         else
-        {
-            _amountOfEarnedStars = 0;
-        }
-    }
-
-    private void CreateConfig()
-    {
-        NotifyLevelConfigAboutAmountOfEarnedStars?.Invoke(_amountOfEarnedStars, _currentSceneName);
-    }
-
-    private void OnAmountOfChildCapybarasSaved(int amount)
-    {
-        _currentAmountCapybarasSaved = amount;
-    }
-
-    private void OnChildCapybarasEnded()
-    {
-        NotifyFinishAboutLevelFinished?.Invoke();
-        CalculateFinishedLevelProgress();
-        CreateConfig();
-        CurrentLevelFinished?.Invoke();
-    }
-
-    private void OnChildCapybarasSpawned(int amount)
-    {
-        _currentSpawnedChildCapybarasAmount += amount;
+            _earnedStars = 0;
     }
 }
