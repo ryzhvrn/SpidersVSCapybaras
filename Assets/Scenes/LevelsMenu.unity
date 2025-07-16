@@ -1100,7 +1100,6 @@ GameObject:
   - component: {fileID: 286310498}
   - component: {fileID: 286310500}
   - component: {fileID: 286310499}
-  - component: {fileID: 286310501}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -1136,30 +1135,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelConfig: {fileID: 11400000, guid: 88639d2b1b33ffa469686e6fc1d4bbcc, type: 2}
-  _ZeroStarsEarnedFirstLevel: {fileID: 991686048}
-  _OneStarsEarnedFirstLevel: {fileID: 1699615016}
-  _TwoStarsEarnedFirstLevel: {fileID: 1213132355}
-  _ThreeStarsEarnedFirstLevel: {fileID: 1770068888}
-  _ZeroStarsEarnedSecondLevel: {fileID: 246702887}
-  _OneStarsEarnedSecondLevel: {fileID: 1771638499}
-  _TwoStarsEarnedSecondLevel: {fileID: 1048644828}
-  _ThreeStarsEarnedSecondLevel: {fileID: 1133663463}
-  _ZeroStarsEarnedThirdLevel: {fileID: 486097792}
-  _OneStarsEarnedThirdLevel: {fileID: 1632913660}
-  _TwoStarsEarnedThirdLevel: {fileID: 1778592621}
-  _ThreeStarsEarnedThirdLevel: {fileID: 436168660}
-  _ZeroStarsEarnedFourthLevel: {fileID: 1847597447}
-  _OneStarsEarnedFourthLevel: {fileID: 1369633979}
-  _TwoStarsEarnedFourthLevel: {fileID: 419459101}
-  _ThreeStarsEarnedFourthLevel: {fileID: 1346099452}
-  _ZeroStarsEarnedFifthLevel: {fileID: 1132079950}
-  _OneStarsEarnedFifthLevel: {fileID: 984693112}
-  _TwoStarsEarnedFifthLevel: {fileID: 1058207021}
-  _ThreeStarsEarnedFifthLevel: {fileID: 1217158706}
-  _ZeroStarsEarnedSixthLevel: {fileID: 1755866908}
-  _OneStarsEarnedSixthLevel: {fileID: 1485831578}
-  _TwoStarsEarnedSixthLevel: {fileID: 196829845}
-  _ThreeStarsEarnedSixthLevel: {fileID: 1126347289}
+  _zeroStarsEarnedFirstLevel: {fileID: 991686048}
+  _oneStarsEarnedFirstLevel: {fileID: 1699615016}
+  _twoStarsEarnedFirstLevel: {fileID: 1213132355}
+  _threeStarsEarnedFirstLevel: {fileID: 1770068888}
+  _zeroStarsEarnedSecondLevel: {fileID: 246702887}
+  _oneStarsEarnedSecondLevel: {fileID: 1771638499}
+  _twoStarsEarnedSecondLevel: {fileID: 1048644828}
+  _threeStarsEarnedSecondLevel: {fileID: 1133663463}
+  _zeroStarsEarnedThirdLevel: {fileID: 486097792}
+  _oneStarsEarnedThirdLevel: {fileID: 1632913660}
+  _twoStarsEarnedThirdLevel: {fileID: 1778592621}
+  _threeStarsEarnedThirdLevel: {fileID: 436168660}
+  _zeroStarsEarnedFourthLevel: {fileID: 1847597447}
+  _oneStarsEarnedFourthLevel: {fileID: 1369633979}
+  _twoStarsEarnedFourthLevel: {fileID: 419459101}
+  _threeStarsEarnedFourthLevel: {fileID: 1346099452}
+  _zeroStarsEarnedFifthLevel: {fileID: 1132079950}
+  _oneStarsEarnedFifthLevel: {fileID: 984693112}
+  _twoStarsEarnedFifthLevel: {fileID: 1058207021}
+  _threeStarsEarnedFifthLevel: {fileID: 1217158706}
+  _zeroStarsEarnedSixthLevel: {fileID: 1755866908}
+  _oneStarsEarnedSixthLevel: {fileID: 1485831578}
+  _twoStarsEarnedSixthLevel: {fileID: 196829845}
+  _threeStarsEarnedSixthLevel: {fileID: 1126347289}
   _lockedLevelSecondLevelImage: {fileID: 1268373581}
   _lockedLevelThirdLevelImage: {fileID: 1376463589}
   _lockedLevelFourthLevelImage: {fileID: 1615140337}
@@ -1190,6 +1189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _authView: {fileID: 370277025}
+  _acceptButton: {fileID: 286310500}
+  _declineButton: {fileID: 286310499}
 --- !u!114 &286310499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,18 +1213,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abba9090e40c37449b17e3cebf3dcf41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &286310501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286310494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb933b0d7d58d9429a4f79390b58af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &350041699
@@ -6561,8 +6550,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 286310500}
-        m_TargetAssemblyTypeName: AcceptButton, Assembly-CSharp
-        m_MethodName: AcceptButtonPressedNotice
+        m_TargetAssemblyTypeName: Accept, Assembly-CSharp
+        m_MethodName: Pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7041,8 +7030,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 286310499}
-        m_TargetAssemblyTypeName: DeclineButton, Assembly-CSharp
-        m_MethodName: DeclineButtonPressedNotice
+        m_TargetAssemblyTypeName: Decline, Assembly-CSharp
+        m_MethodName: Pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8449,9 +8438,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 286310501}
-        m_TargetAssemblyTypeName: SecretLevelButtonPressed, Assembly-CSharp
-        m_MethodName: OnSecretLevelButtonPressed
+      - m_Target: {fileID: 286310496}
+        m_TargetAssemblyTypeName: LevelsMenuLoader, Assembly-CSharp
+        m_MethodName: OnSecretLevelActivated
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

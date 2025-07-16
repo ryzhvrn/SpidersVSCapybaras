@@ -13,7 +13,7 @@ public class LeaderBoardDisplay : MonoBehaviour
     [SerializeField] private string _leaderboardName = "Leaderboard";
 
     private const string EnglishAnonymousName = "Anonymous";
-    private const string RussianAnonymousName = "¿ÌÓÌËÏ";
+    private const string RussianAnonymousName = "–ê–Ω–æ–Ω–∏–º–Ω—ã–π";
     private const string TurkishAnonymousName = "Anonim";
 
     private List<string> _levelNames = new List<string>();
@@ -28,12 +28,12 @@ public class LeaderBoardDisplay : MonoBehaviour
 
     private void OnEnable()
     {
-        LevelFinishedLoader.SetPlayerScore += SetLeaderboardScore;
+        //LevelFinishedLoader.SetPlayerScore += SetLeaderboardScore;
     }
 
     private void OnDisable()
     {
-        LevelFinishedLoader.SetPlayerScore -= SetLeaderboardScore;
+        //LevelFinishedLoader.SetPlayerScore -= SetLeaderboardScore;
     }
 
     private void SetLevelNames()

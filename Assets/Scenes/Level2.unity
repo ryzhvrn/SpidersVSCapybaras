@@ -318,7 +318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10498065}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22082546, y: -0.000000018762414, z: 0.0000000042480894, w: 0.97531337}
+  m_LocalRotation: {x: 0.22082546, y: 0.00000001876241, z: -0.0000000042480885, w: 0.97531337}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1037,7 +1037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96986183}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14613228, y: -0.0000000085108365, z: 0.0000000012572041, w: 0.9892651}
+  m_LocalRotation: {x: 0.14613228, y: 0.000000008510835, z: -0.0000000012572038, w: 0.9892651}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2111,6 +2111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd115e5aa9ccd24fa773364212bee46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventBus: {fileID: 444340489}
 --- !u!65 &292417135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4449,6 +4450,8 @@ GameObject:
   - component: {fileID: 444340485}
   - component: {fileID: 444340486}
   - component: {fileID: 444340487}
+  - component: {fileID: 444340489}
+  - component: {fileID: 444340488}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -4468,7 +4471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17df8727acbcd414da41b8d825051b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxChildCapybarasAmount: 3
+  _eventBus: {fileID: 444340489}
 --- !u!114 &444340483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4481,6 +4484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c781e96318eed874492883c91d7e58d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventBus: {fileID: 444340489}
 --- !u!4 &444340484
 Transform:
   m_ObjectHideFlags: 0
@@ -4534,6 +4538,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelConfig: {fileID: 11400000, guid: 88639d2b1b33ffa469686e6fc1d4bbcc, type: 2}
+  _eventBus: {fileID: 444340489}
+--- !u!114 &444340488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444340479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abfb63ea9bd24dcdbc64160099db9b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventBus: {fileID: 444340489}
+  _levelConfig: {fileID: 11400000, guid: 88639d2b1b33ffa469686e6fc1d4bbcc, type: 2}
+--- !u!114 &444340489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444340479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce77a3d2064645f29e0df80d5f3ca3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &450238572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4698,6 +4729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1863231397}
+  _eventBus: {fileID: 444340489}
 --- !u!4 &457273064
 Transform:
   m_ObjectHideFlags: 0
@@ -12675,6 +12707,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 161061477034587255, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
+      propertyPath: _eventBus
+      value: 
+      objectReference: {fileID: 444340489}
     - target: {fileID: 1689441276664217339, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -12683,6 +12719,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1863231391}
+    - target: {fileID: 2607694828366136273, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
+      propertyPath: _eventBus
+      value: 
+      objectReference: {fileID: 444340489}
     - target: {fileID: 2607694828366136273, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
       propertyPath: _patrolPoints.Array.size
       value: 4
@@ -12747,10 +12787,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5550200932611081792, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
+      propertyPath: _eventBus
+      value: 
+      objectReference: {fileID: 444340489}
     - target: {fileID: 7327962416814304073, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 1863231397}
+    - target: {fileID: 7483448960661920255, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
+      propertyPath: _eventBus
+      value: 
+      objectReference: {fileID: 444340489}
+    - target: {fileID: 7641830455343180725, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
+      propertyPath: _eventBus
+      value: 
+      objectReference: {fileID: 444340489}
     - target: {fileID: 7794290880163896145, guid: 0bf2917ef4929ab469722668dce1236d, type: 3}
       propertyPath: m_CastShadows
       value: 2
@@ -15152,6 +15204,7 @@ MonoBehaviour:
   - {fileID: 1233409998}
   - {fileID: 227902998}
   _radius: 5
+  _eventBus: {fileID: 444340489}
 --- !u!1001 &1148660463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16860,6 +16913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 1354928540}
   _maxCapybarasCount: 6
+  _eventBus: {fileID: 444340489}
 --- !u!114 &1354928540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19164,6 +19218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 622254353}
   _maxCount: 6
+  _eventBus: {fileID: 444340489}
 --- !u!114 &1556491117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21223,6 +21278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c3cb88ccc8a224fbea42417ecd33d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controller: {fileID: 1863231395}
 --- !u!136 &1819254533
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21436,6 +21492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7ce5adb7e5bdf4d8c7f458501938d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventBus: {fileID: 444340489}
   _capyFinishPrefab: {fileID: 1562224547252656944, guid: d7555ea9ecd14c747bc58af712364f52, type: 3}
   _spawnPointsList:
   - {fileID: 822463959}
@@ -22143,6 +22200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerRunningSound: {fileID: 8300000, guid: 642ec2538c37a384e99c9a8374e09480, type: 3}
   _audioSource: {fileID: 1863231393}
+  _controller: {fileID: 1863231395}
 --- !u!82 &1863231393
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22282,6 +22340,7 @@ MonoBehaviour:
   _camera: {fileID: 622696768}
   _speed: 7
   _turnSmoothTime: 0.1
+  _tipsController: {fileID: 0}
 --- !u!143 &1863231396
 CharacterController:
   m_ObjectHideFlags: 0
@@ -25025,8 +25084,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 444340486}
-        m_TargetAssemblyTypeName: LevelsButtonPressed, Assembly-CSharp
-        m_MethodName: OnLevelsMenuButtonPressed
+        m_TargetAssemblyTypeName: OpenLevelsScene, Assembly-CSharp
+        m_MethodName: LoadLevelsMenuScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

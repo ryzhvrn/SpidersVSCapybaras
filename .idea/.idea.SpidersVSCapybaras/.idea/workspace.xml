@@ -20,27 +20,129 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15feb0d9-c993-40d5-973f-3daa4ae1cf44" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OpenLevelsScene.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpidersVSCapybaras/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpidersVSCapybaras/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpidersVSCapybaras/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpidersVSCapybaras/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Capy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyPatrolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyPatrolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowToTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowToTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SO/LevelConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SO/LevelConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/polyperfect/Low Poly Animated Animals/- Animator Controllers/Spider.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/polyperfect/Low Poly Animated Animals/- Animator Controllers/Spider.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelFinished.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelFinished.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelFun.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelFun.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Accept.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Accept.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Accept.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Accept.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/AdService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/AdService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Capy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/Capy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Capy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/Capy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChildCapybara.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/ChildCapybara.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChildCapybara.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/ChildCapybara.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChildCapybarasSoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/ChildCapybarasSoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChildCapybarasSoundManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/ChildCapybarasSoundManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CorrectPlayerPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CorrectPlayerPosition.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Decline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Decline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Decline.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Decline.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMovementNotifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovementNotifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMovementNotifier.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovementNotifier.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyPatrolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyPatrolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyPatrolManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyPatrolManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/Finish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Finish.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/Finish.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/FinishSceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/FinishSceneLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FocusMonitoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/FocusMonitoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FocusMonitoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/FocusMonitoring.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowToTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/FollowToTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowToTarget.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/FollowToTarget.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FunLevelLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FunLevelLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/GameEventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEventBus.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/GameEventBus.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InitializeYandexGamesMetrics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/InitializeYandexGamesMetrics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InitializeYandexGamesMetrics.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/InitializeYandexGamesMetrics.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/LeaderboardElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/LeaderboardElement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/LeaderboardLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/LeaderboardLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/LeaderboardPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/LeaderboardPlayer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/LeaderboardView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/LeaderboardView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelConfigUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LevelConfigUpdater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelConfigUpdater.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LevelConfigUpdater.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LevelFinishedLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LevelFinishedLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LevelManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelsMenuLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LevelsMenuLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelsMenuLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LevelsMenuLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LittleCapybaraAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/LittleCapybaraAnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LittleCapybaraAnimationController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/LittleCapybaraAnimationController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Localization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Localization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Localization.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Localization.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LookAtPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/LookAtPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LookAtPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/LookAtPlayer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/ObservableSpawnedLittleCapy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/ObservableSpawnedLittleCapy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenLeaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OpenLeaderboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenLeaderboard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OpenLeaderboard.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenLevelsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OpenLevelsMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenLevelsMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OpenLevelsMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenLevelsScene.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OpenLevelsScene.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OpenLevelsScene.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimationController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAudioController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAudioController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerDetector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/RemainingCapybarasDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/RemainingCapybarasDetector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Restart.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Restart.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/RewardedAdButtonPressed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/RewardedAdButtonPressed.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreChanger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreChanger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SecretLevelButtonPressed.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SecretLevelButtonPressed.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetLeaderboardProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SetLeaderboardProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetLeaderboardProgress.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SetLeaderboardProgress.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/SoundManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/Spawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartChoosenLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StartChoosenLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartChoosenLevel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StartChoosenLevel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartPoolChildCapybara.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/StartPoolChildCapybara.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartPoolChildCapybara.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Capybaras/StartPoolChildCapybara.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StarterSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/StarterSceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StarterSceneManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/StarterSceneManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SummonedCapybarasCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SummonedCapybarasCounter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ThirdPersonMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ThirdPersonMovementController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TipsButtonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TipsButtonsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TipsButtonsController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TipsButtonsController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerZone.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/Waypoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/Waypoint.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/YandexLeaderboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/YandexLeaderboard.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZeroSceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ZeroSceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZeroSceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ZeroSceneLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WebGamesTemplate/Scripts/MenuDisplay/LeaderBoardDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WebGamesTemplate/Scripts/MenuDisplay/LeaderBoardDisplay.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,33 +157,53 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/LeaderboardView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/YandexLeaderboard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Decline.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AdService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RewardedAdButtonPressed.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowToTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CorrectPlayerPosition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CapyEventBus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Capy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Finish.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CatchCapy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SummonedCapybarasCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameEventBus.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyPatrolManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelConfigUpdater.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SO/LevelConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FinishSceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OpenLevelsScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FunLevelLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/WebGamesTemplate/Scripts/MenuDisplay/LeaderBoardDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelFinishedLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Typed/LevelFinished.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RemainingCapybarasDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelsMenuLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameEventBus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scriptsz/CustomPlugins/FindUnassignedFields.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scriptsz/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scriptsz/LevelsMenuLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scriptsz/Capy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scriptsz/Finish.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObservableSpawnedLittleCapy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Accept.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OpenLeaderboard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovementNotifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TipsButtonsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonMovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAudioController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OpenLevelsMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LeaderboardLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/ScriptsZ/CustomPlugins/FindUnassignedFields.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CustomPlugins/FindUnassignedFields.cs" />
       </list>
     </option>
   </component>
@@ -128,6 +250,7 @@
       <option name="presentableId" value="Default" />
       <updated>1751824171093</updated>
       <workItem from="1751824207655" duration="16049000" />
+      <workItem from="1752675870959" duration="10867000" />
     </task>
     <servers />
   </component>
@@ -146,15 +269,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="295" y="97" width="776" height="534" key="find.popup" timestamp="1751830878804">
+    <state x="295" y="97" width="841" height="534" key="find.popup" timestamp="1752685605030">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="97" width="776" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1751830878804" />
+    <state x="295" y="97" width="841" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1752685605030" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1751842020610">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

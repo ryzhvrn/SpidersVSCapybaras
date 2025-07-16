@@ -435,64 +435,78 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Accept.cs" t="Include" />
-          <e p="AdService.cs" t="Include" />
-          <e p="Capy.cs" t="Include" />
-          <e p="CatchCapy.cs" t="Include" />
-          <e p="ChildCapybara.cs" t="Include" />
-          <e p="ChildCapybarasSoundManager.cs" t="Include" />
-          <e p="CorrectPlayerPosition.cs" t="Include" />
-          <e p="Decline.cs" t="Include" />
-          <e p="EnemyAnimator.cs" t="Include" />
-          <e p="EnemyMovementNotifier.cs" t="Include" />
-          <e p="EnemyPatrolManager.cs" t="Include" />
-          <e p="Finish.cs" t="Include" />
-          <e p="FinishSceneLoader.cs" t="Include" />
-          <e p="FocusMonitoring.cs" t="Include" />
-          <e p="FollowToTarget.cs" t="Include" />
-          <e p="FunLevelLoader.cs" t="Include" />
-          <e p="GameEventBus.cs" t="Include" />
-          <e p="InitializeYandexGamesMetrics.cs" t="Include" />
-          <e p="LeaderboardElement.cs" t="Include" />
-          <e p="LeaderboardLoader.cs" t="Include" />
-          <e p="LeaderboardPlayer.cs" t="Include" />
-          <e p="LeaderboardView.cs" t="Include" />
-          <e p="LevelConfigUpdater.cs" t="Include" />
-          <e p="LevelFinishedLoader.cs" t="Include" />
-          <e p="LevelManager.cs" t="Include" />
-          <e p="LevelsMenuLoader.cs" t="Include" />
-          <e p="LittleCapybaraAnimationController.cs" t="Include" />
-          <e p="Localization.cs" t="Include" />
-          <e p="LookAtPlayer.cs" t="Include" />
-          <e p="ObservableSpawnedLittleCapy.cs" t="Include" />
-          <e p="OpenLeaderboard.cs" t="Include" />
-          <e p="OpenLevelsMenu.cs" t="Include" />
-          <e p="OpenLevelsScene.cs" t="Include" />
-          <e p="Player.cs" t="Include" />
-          <e p="PlayerAnimationController.cs" t="Include" />
-          <e p="PlayerAudioController.cs" t="Include" />
-          <e p="PlayerDetector.cs" t="Include" />
-          <e p="RemainingCapybarasDetector.cs" t="Include" />
-          <e p="Restart.cs" t="Include" />
-          <e p="RewardedAdButtonPressed.cs" t="Include" />
-          <e p="ScoreChanger.cs" t="Include" />
-          <e p="SecretLevelButtonPressed.cs" t="Include" />
-          <e p="SetLeaderboardProgress.cs" t="Include" />
+          <e p="Capybaras" t="Include">
+            <e p="Capy.cs" t="Include" />
+            <e p="ChildCapybara.cs" t="Include" />
+            <e p="ChildCapybarasSoundManager.cs" t="Include" />
+            <e p="FollowToTarget.cs" t="Include" />
+            <e p="LittleCapybaraAnimationController.cs" t="Include" />
+            <e p="ObservableSpawnedLittleCapy.cs" t="Include" />
+            <e p="RemainingCapybarasDetector.cs" t="Include" />
+            <e p="StartPoolChildCapybara.cs" t="Include" />
+          </e>
+          <e p="CustomPlugins" t="Include">
+            <e p="FindUnassignedFields.cs" t="Include" />
+          </e>
+          <e p="Enemy" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="EnemyAnimator.cs" t="Include" />
+            <e p="EnemyMovementNotifier.cs" t="Include" />
+            <e p="EnemyPatrolManager.cs" t="Include" />
+            <e p="TriggerZone.cs" t="Include" />
+          </e>
+          <e p="Environment" t="Include">
+            <e p="Finish.cs" t="Include" />
+            <e p="Spawner.cs" t="Include" />
+            <e p="Waypoint.cs" t="Include" />
+          </e>
+          <e p="Leaderboard" t="Include">
+            <e p="LeaderboardElement.cs" t="Include" />
+            <e p="LeaderboardLoader.cs" t="Include" />
+            <e p="LeaderboardPlayer.cs" t="Include" />
+            <e p="LeaderboardView.cs" t="Include" />
+            <e p="YandexLeaderboard.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="CorrectPlayerPosition.cs" t="Include" />
+            <e p="LookAtPlayer.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="PlayerAnimationController.cs" t="Include" />
+            <e p="PlayerAudioController.cs" t="Include" />
+            <e p="PlayerDetector.cs" t="Include" />
+            <e p="ThirdPersonMovementController.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="AdService.cs" t="Include" />
+            <e p="FinishSceneLoader.cs" t="Include" />
+            <e p="FocusMonitoring.cs" t="Include" />
+            <e p="GameEventBus.cs" t="Include" />
+            <e p="InitializeYandexGamesMetrics.cs" t="Include" />
+            <e p="LevelConfigUpdater.cs" t="Include" />
+            <e p="LevelFinishedLoader.cs" t="Include" />
+            <e p="LevelManager.cs" t="Include" />
+            <e p="LevelsMenuLoader.cs" t="Include" />
+            <e p="Localization.cs" t="Include" />
+            <e p="SoundManager.cs" t="Include" />
+            <e p="StarterSceneManager.cs" t="Include" />
+            <e p="ZeroSceneLoader.cs" t="Include" />
+          </e>
           <e p="SO" t="Include">
             <e p="LevelConfig.cs" t="Include" />
           </e>
-          <e p="SoundManager.cs" t="Include" />
-          <e p="Spawner.cs" t="Include" />
-          <e p="StartChoosenLevel.cs" t="Include" />
-          <e p="StarterSceneManager.cs" t="Include" />
-          <e p="StartPoolChildCapybara.cs" t="Include" />
-          <e p="SummonedCapybarasCounter.cs" t="Include" />
-          <e p="ThirdPersonMovementController.cs" t="Include" />
-          <e p="TipsButtonsController.cs" t="Include" />
-          <e p="TriggerZone.cs" t="Include" />
-          <e p="Waypoint.cs" t="Include" />
-          <e p="YandexLeaderboard.cs" t="Include" />
-          <e p="ZeroSceneLoader.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="Accept.cs" t="Include" />
+            <e p="Decline.cs" t="Include" />
+            <e p="OpenLeaderboard.cs" t="Include" />
+            <e p="OpenLevelsMenu.cs" t="Include" />
+            <e p="OpenLevelsScene.cs" t="Include" />
+            <e p="RewardedAdButtonPressed.cs" t="Include" />
+            <e p="ScoreChanger.cs" t="Include" />
+            <e p="SetLeaderboardProgress.cs" t="Include" />
+            <e p="StartChoosenLevel.cs" t="Include" />
+            <e p="SummonedCapybarasCounter.cs" t="Include" />
+            <e p="TipsButtonsController.cs" t="Include" />
+          </e>
         </e>
         <e p="SimpleNaturePack" t="Include">
           <e p="Materials" t="Include" />

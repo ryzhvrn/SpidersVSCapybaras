@@ -1538,6 +1538,7 @@ MonoBehaviour:
   _camera: {fileID: 963194228}
   _speed: 7
   _turnSmoothTime: 0.1
+  _tipsController: {fileID: 1451579914}
 --- !u!143 &124309218
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1605,6 +1606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerRunningSound: {fileID: 8300000, guid: 642ec2538c37a384e99c9a8374e09480, type: 3}
   _audioSource: {fileID: 124309222}
+  _controller: {fileID: 124309217}
 --- !u!82 &124309222
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9626,7 +9628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616947311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11126461, y: 0.0000000034745304, z: -3.890073e-10, w: 0.99379086}
+  m_LocalRotation: {x: 0.11126461, y: 0.000000003474534, z: -3.8900763e-10, w: 0.99379086}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14767,7 +14769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.073207445, y: 0.000000034864556, z: -0.0000000025592117, w: 0.9973168}
+  m_LocalRotation: {x: 0.07320745, y: -0.000000034864556, z: 0.0000000025592122, w: 0.9973168}
   m_LocalPosition: {x: 147.29, y: 9.15, z: -67.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15962,7 +15964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068673372}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.03548471, y: 1e-45, z: -0, w: 0.9993702}
+  m_LocalRotation: {x: 0.035484713, y: 1e-45, z: -0, w: 0.9993702}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16223,6 +16225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a897b99535e05947ab2ef8422b47255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventBus: {fileID: 514314787}
 --- !u!114 &1077159066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21373,7 +21376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511371615}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07320746, y: 0.000000016640447, z: -0.0000000012214824, w: 0.9973168}
+  m_LocalRotation: {x: 0.07320747, y: -0.000000018224107, z: 0.0000000013377301, w: 0.9973168}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -32187,8 +32190,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1744874483}
-        m_TargetAssemblyTypeName: LevelsButtonPressed, Assembly-CSharp
-        m_MethodName: OnLevelsMenuButtonPressed
+        m_TargetAssemblyTypeName: OpenLevelsScene, Assembly-CSharp
+        m_MethodName: LoadLevelsMenuScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32406,6 +32409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c3cb88ccc8a224fbea42417ecd33d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controller: {fileID: 124309217}
 --- !u!1 &8208692088784142515
 GameObject:
   m_ObjectHideFlags: 0

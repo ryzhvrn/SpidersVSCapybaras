@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 286310495}
   - component: {fileID: 286310496}
   - component: {fileID: 286310497}
-  - component: {fileID: 286310498}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -185,18 +184,6 @@ MonoBehaviour:
   _top: {fileID: 492172568}
   _pants: {fileID: 991632234}
   _adButton: {fileID: 689489892}
---- !u!114 &286310498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286310494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d76dcceef2785174aa1cab624cc25113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &363276600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1770,8 +1757,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 286310496}
-        m_TargetAssemblyTypeName: LevelsButtonPressed, Assembly-CSharp
-        m_MethodName: OnLevelsMenuButtonPressed
+        m_TargetAssemblyTypeName: OpenLevelsScene, Assembly-CSharp
+        m_MethodName: LoadLevelsMenuScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
