@@ -2,17 +2,20 @@ using System;
 using IJunior.TypedScenes;
 using UnityEngine;
 
-public class OpenLevelsMenu : MonoBehaviour
+namespace Scripts.UI
 {
-    public event Action SceneLoaded;
-
-    private void Start()
+    public class OpenLevelsMenu : MonoBehaviour
     {
-        SceneLoaded?.Invoke();
-    }
+        public event Action SceneLoaded;
 
-    public void OnLevelsMenuButtonPressed()
-    {
-        LevelsMenu.Load();
+        private void Start()
+        {
+            SceneLoaded?.Invoke();
+        }
+
+        public void OnLevelsMenuButtonPressed()
+        {
+            LevelsMenu.Load();
+        }
     }
 }

@@ -1,27 +1,31 @@
+using Scripts.Services;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreChanger : MonoBehaviour
+namespace Scripts.UI
 {
-    [SerializeField] private Text _scoreText;
-    [SerializeField] private int _maxCapybarasCount;
-    [SerializeField] private GameEventBus _eventBus;
-
-    private int _score = 0;
-
-    private void OnEnable()
+    public class ScoreChanger : MonoBehaviour
     {
-        _eventBus.OnCapyFinishedForUI += OnPlayerLevelReached;
-    }
+        [SerializeField] private Text _scoreText;
+        [SerializeField] private int _maxCapybarasCount;
+        [SerializeField] private GameEventBus _eventBus;
 
-    private void OnDisable()
-    {
-        _eventBus.OnCapyFinishedForUI -= OnPlayerLevelReached;
-    }
+        private int _score = 0;
 
-    private void OnPlayerLevelReached()
-    {
-        _score++;
-        _scoreText.text = _score + "/" + _maxCapybarasCount;
+        private void OnEnable()
+        {
+            _eventBus.OnCapyFinishedForUI += OnPlayerLevelReached;
+        }
+
+        private void OnDisable()
+        {
+            _eventBus.OnCapyFinishedForUI -= OnPlayerLevelReached;
+        }
+
+        private void OnPlayerLevelReached()
+        {
+            _score++;
+            _scoreText.text = _score + "/" + _maxCapybarasCount;
+        }
     }
 }

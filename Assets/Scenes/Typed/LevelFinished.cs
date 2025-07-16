@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Scripts.SO;
+
 namespace IJunior.TypedScenes
 {
     using UnityEngine.SceneManagement;

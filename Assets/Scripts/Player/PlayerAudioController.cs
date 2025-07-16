@@ -1,36 +1,39 @@
 using UnityEngine;
 
-public class PlayerAudioController : MonoBehaviour
+namespace Scripts.Player
 {
-    [SerializeField] private AudioClip _playerRunningSound;
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private ThirdPersonMovementController _controller;
-
-    private bool _isPlaying = false;
-
-    private void OnEnable()
+    public class PlayerAudioController : MonoBehaviour
     {
-        _controller.PlayerMoving += OnPlayerMoving;
-    }
+        [SerializeField] private AudioClip _playerRunningSound;
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private ThirdPersonMovementController _controller;
 
-    private void OnDisable()
-    {
-        _controller.PlayerMoving -= OnPlayerMoving;
-    }
+        private bool _isPlaying = false;
 
-    private void OnPlayerMoving(bool isRunning)
-    {
-        if (isRunning && _isPlaying == false)
+        private void OnEnable()
         {
-            _audioSource.clip = _playerRunningSound;
-            _audioSource.Play();
-            _isPlaying = _audioSource.isPlaying;
+            _controller.PlayerMoving += OnPlayerMoving;
         }
 
-        if (isRunning == false)
+        private void OnDisable()
         {
-            _audioSource.Stop();
-            _isPlaying = false;
+            _controller.PlayerMoving -= OnPlayerMoving;
+        }
+
+        private void OnPlayerMoving(bool isRunning)
+        {
+            if (isRunning && _isPlaying == false)
+            {
+                _audioSource.clip = _playerRunningSound;
+                _audioSource.Play();
+                _isPlaying = _audioSource.isPlaying;
+            }
+
+            if (isRunning == false)
+            {
+                _audioSource.Stop();
+                _isPlaying = false;
+            }
         }
     }
 }

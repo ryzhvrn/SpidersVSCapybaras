@@ -2,72 +2,75 @@ using System.Collections.Generic;
 using Agava.YandexGames;
 using UnityEngine;
 
-public class YandexLeaderboard : MonoBehaviour
+namespace Scripts.Leaderboard
 {
-    private const string EnglishAnonymousName = "Anonymous";
-    private const string RussianAnonymousName = "Анонимный";
-    private const string TurkishAnonymousName = "Anonim";
-    private const string LeaderboardName = "Leaderboard";
-    [SerializeField] private LeaderboardView _leaderboardView;
-    private readonly List<LeaderboardPlayer> _leaderboardPlayers = new List<LeaderboardPlayer>();
-
-    public void SetPlayerScore(int score)
+    public class YandexLeaderboard : MonoBehaviour
     {
-        if (PlayerAccount.IsAuthorized == false)
-        {
-            return;
-        }
+        private const string EnglishAnonymousName = "Anonymous";
+        private const string RussianAnonymousName = "Анонимный";
+        private const string TurkishAnonymousName = "Anonim";
+        private const string LeaderboardName = "Leaderboard";
+        [SerializeField] private LeaderboardView _leaderboardView;
+        private readonly List<LeaderboardPlayer> _leaderboardPlayers = new List<LeaderboardPlayer>();
 
-        Leaderboard.GetPlayerEntry(LeaderboardName, (result) =>
+        public void SetPlayerScore(int score)
         {
-            if (result.score < score)
+            if (PlayerAccount.IsAuthorized == false)
             {
-                Leaderboard.SetScore(LeaderboardName, score);
+                return;
             }
-        });
-    }
 
-    public void Fill()
-    {
-        _leaderboardPlayers.Clear();
-
-        if (PlayerAccount.IsAuthorized == false)
-        {
-            return;
+            Agava.YandexGames.Leaderboard.GetPlayerEntry(LeaderboardName, (result) =>
+            {
+                if (result.score < score)
+                {
+                    Agava.YandexGames.Leaderboard.SetScore(LeaderboardName, score);
+                }
+            });
         }
 
-        Leaderboard.GetEntries(LeaderboardName, result =>
+        public void Fill()
         {
-            foreach (var entry in result.entries)
+            _leaderboardPlayers.Clear();
+
+            if (PlayerAccount.IsAuthorized == false)
             {
-                var rank = entry.rank;
-                var score = entry.score;
-                var name = entry.player.publicName;
+                return;
+            }
 
-                if (string.IsNullOrEmpty(name))
+            Agava.YandexGames.Leaderboard.GetEntries(LeaderboardName, result =>
+            {
+                foreach (var entry in result.entries)
                 {
-                    string currentLanguage = YandexGamesSdk.Environment.i18n.lang;
+                    var rank = entry.rank;
+                    var score = entry.score;
+                    var name = entry.player.publicName;
 
-                    switch (currentLanguage)
+                    if (string.IsNullOrEmpty(name))
                     {
-                        case "Russian":
-                            name = RussianAnonymousName;
-                            break;
+                        string currentLanguage = YandexGamesSdk.Environment.i18n.lang;
 
-                        case "English":
-                            name = EnglishAnonymousName;
-                            break;
+                        switch (currentLanguage)
+                        {
+                            case "Russian":
+                                name = RussianAnonymousName;
+                                break;
 
-                        case "Turkish":
-                            name = TurkishAnonymousName;
-                            break;
+                            case "English":
+                                name = EnglishAnonymousName;
+                                break;
+
+                            case "Turkish":
+                                name = TurkishAnonymousName;
+                                break;
+                        }
                     }
+
+                    _leaderboardPlayers.Add(new LeaderboardPlayer(rank, name, score));
                 }
 
-                _leaderboardPlayers.Add(new LeaderboardPlayer(rank, name, score));
-            }
-
-            _leaderboardView.ConstructLeaderboard(_leaderboardPlayers);
-        });
+                _leaderboardView.ConstructLeaderboard(_leaderboardPlayers);
+            });
+        }
     }
 }

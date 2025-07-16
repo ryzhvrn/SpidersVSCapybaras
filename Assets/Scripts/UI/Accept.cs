@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
 
-public class Accept : MonoBehaviour
+namespace Scripts.UI
 {
-    public event Action AcceptButtonPressed;
-
-    public void Pressed()
+    public class Accept : MonoBehaviour
     {
-        AcceptButtonPressed?.Invoke();
+        public event Action AcceptButtonPressed;
+
+        public void Pressed()
+        {
+            AcceptButtonPressed?.Invoke();
+        }
     }
 }

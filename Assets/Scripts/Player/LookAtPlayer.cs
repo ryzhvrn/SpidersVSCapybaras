@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class LookAtPlayer : MonoBehaviour
+namespace Scripts.Player
 {
-    [SerializeField] private Transform _target;
-
-    private void Update()
+    public class LookAtPlayer : MonoBehaviour
     {
-        if (_target != null)
+        [SerializeField] private Transform _target;
+
+        private void Update()
         {
-            Vector3 directionToPlayer = _target.position - transform.position;
-            float angle = Mathf.Atan2(directionToPlayer.x, directionToPlayer.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            if (_target != null)
+            {
+                Vector3 directionToPlayer = _target.position - transform.position;
+                float angle = Mathf.Atan2(directionToPlayer.x, directionToPlayer.z) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            }
         }
     }
 }

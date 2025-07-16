@@ -1,50 +1,54 @@
+using Scripts.Services;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SummonedCapybarasCounter : MonoBehaviour
+namespace Scripts.UI
 {
-    [Header("UI")]
-    [SerializeField] private Text _scoreText;
-
-    [Header("Data")]
-    [SerializeField] private int _maxCount;
-
-    [SerializeField] private GameEventBus _eventBus;
-
-    private int _currentCount;
-
-    private void Start()
+    public class SummonedCapybarasCounter : MonoBehaviour
     {
-        _currentCount = _maxCount;
-        UpdateScoreText();
-    }
+        [Header("UI")]
+        [SerializeField] private Text _scoreText;
 
-    private void OnEnable()
-    {
-        _eventBus.OnPlayerDetected += OnPlayerDetected;
-    }
+        [Header("Data")]
+        [SerializeField] private int _maxCount;
 
-    private void OnDisable()
-    {
-        _eventBus.OnPlayerDetected -= OnPlayerDetected;
-    }
+        [SerializeField] private GameEventBus _eventBus;
 
-    private void OnPlayerDetected()
-    {
-        if (_currentCount > 0)
+        private int _currentCount;
+
+        private void Start()
         {
-            _currentCount--;
+            _currentCount = _maxCount;
             UpdateScoreText();
         }
 
-        if (_currentCount == 0)
+        private void OnEnable()
         {
-            _scoreText.gameObject.SetActive(false);
+            _eventBus.OnPlayerDetected += OnPlayerDetected;
         }
-    }
 
-    private void UpdateScoreText()
-    {
-        _scoreText.text = $"{_currentCount}/{_maxCount}";
+        private void OnDisable()
+        {
+            _eventBus.OnPlayerDetected -= OnPlayerDetected;
+        }
+
+        private void OnPlayerDetected()
+        {
+            if (_currentCount > 0)
+            {
+                _currentCount--;
+                UpdateScoreText();
+            }
+
+            if (_currentCount == 0)
+            {
+                _scoreText.gameObject.SetActive(false);
+            }
+        }
+
+        private void UpdateScoreText()
+        {
+            _scoreText.text = $"{_currentCount}/{_maxCount}";
+        }
     }
 }

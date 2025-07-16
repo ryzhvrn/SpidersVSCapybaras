@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+namespace Scripts.Services
 {
-    [SerializeField] private AudioClip _sceneLevelLoadSound;
-
-    private void Start()
+    public class SoundManager : MonoBehaviour
     {
-        AudioSource.PlayClipAtPoint(_sceneLevelLoadSound, transform.position);
+        [SerializeField] private AudioClip _sceneLevelLoadSound;
+
+        private void Start()
+        {
+            AudioSource.PlayClipAtPoint(_sceneLevelLoadSound, transform.position);
+        }
     }
 }

@@ -1,54 +1,58 @@
+using Scripts.Services;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyPatrolManager : MonoBehaviour
+namespace Scripts.Enemy
 {
-    [SerializeField] private Transform[] _patrolPoints = new Transform[] { };
-    [SerializeField] private NavMeshAgent _enemyNavMeshAgent;
-    [SerializeField] private GameEventBus _eventBus;
-
-    private float _moveSpeed;
-    private int _currentPatrolIndex = 0;
-    private bool _isCapybarasDetected = false;
-    private float _transitionDistance = 1f;
-
-    private void Start()
+    public class EnemyPatrolManager : MonoBehaviour
     {
-        _moveSpeed = _enemyNavMeshAgent.speed;
-    }
+        [SerializeField] private Transform[] _patrolPoints = new Transform[] { };
+        [SerializeField] private NavMeshAgent _enemyNavMeshAgent;
+        [SerializeField] private GameEventBus _eventBus;
 
-    private void Update()
-    {
-        if (!_isCapybarasDetected)
+        private float _moveSpeed;
+        private int _currentPatrolIndex = 0;
+        private bool _isCapybarasDetected = false;
+        private float _transitionDistance = 1f;
+
+        private void Start()
         {
-            if (_patrolPoints.Length > 0)
+            _moveSpeed = _enemyNavMeshAgent.speed;
+        }
+
+        private void Update()
+        {
+            if (!_isCapybarasDetected)
             {
-                Transform currentPatrolPoint = _patrolPoints[_currentPatrolIndex];
-                transform.position = Vector3.MoveTowards(transform.position, currentPatrolPoint.position, _moveSpeed * Time.deltaTime);
-
-                Vector3 direction = currentPatrolPoint.position - transform.position;
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction.normalized), 0.1f);
-
-                if (Vector3.Distance(transform.position, currentPatrolPoint.position) < _transitionDistance)
+                if (_patrolPoints.Length > 0)
                 {
-                    _currentPatrolIndex = (_currentPatrolIndex + 1) % _patrolPoints.Length;
+                    Transform currentPatrolPoint = _patrolPoints[_currentPatrolIndex];
+                    transform.position = Vector3.MoveTowards(transform.position, currentPatrolPoint.position, _moveSpeed * Time.deltaTime);
+
+                    Vector3 direction = currentPatrolPoint.position - transform.position;
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction.normalized), 0.1f);
+
+                    if (Vector3.Distance(transform.position, currentPatrolPoint.position) < _transitionDistance)
+                    {
+                        _currentPatrolIndex = (_currentPatrolIndex + 1) % _patrolPoints.Length;
+                    }
                 }
             }
         }
-    }
 
-    private void OnEnable()
-    {
-        _eventBus.OnCapybarasDetected += OnCapybarasDetected;
-    }
+        private void OnEnable()
+        {
+            _eventBus.OnCapybarasDetected += OnCapybarasDetected;
+        }
 
-    private void OnDisable()
-    {
-        _eventBus.OnCapybarasDetected -= OnCapybarasDetected;
-    }
+        private void OnDisable()
+        {
+            _eventBus.OnCapybarasDetected -= OnCapybarasDetected;
+        }
 
-    private void OnCapybarasDetected(bool isCapybarasDetected)
-    {
-        _isCapybarasDetected = isCapybarasDetected;
+        private void OnCapybarasDetected(bool isCapybarasDetected)
+        {
+            _isCapybarasDetected = isCapybarasDetected;
+        }
     }
 }

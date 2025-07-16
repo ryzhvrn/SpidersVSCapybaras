@@ -1,36 +1,39 @@
 using System;
 using UnityEngine;
 
-public class AdService
+namespace Scripts.Services
 {
-    public event Action CollectingVideoAdReward;
-    public event Action ShowingInteractiveElements;
-
-    public void ShowVideoAd() => Agava.YandexGames.VideoAd.Show(OnOpenAdCallback, OnRewardedCallback, OnCloseAdCallback);
-    public void ShowInterstitialAd() => Agava.YandexGames.InterstitialAd.Show(OnOpenAdCallback, OnCloseInterstitialAdCallback);
-
-    private void OnOpenAdCallback()
+    public class AdService
     {
-        Time.timeScale = 0;
-        AudioListener.volume = 0f;
-    }
+        public event Action CollectingVideoAdReward;
+        public event Action ShowingInteractiveElements;
 
-    private void OnCloseAdCallback()
-    {
-        Time.timeScale = 1;
-        AudioListener.volume = 1f;
-        ShowingInteractiveElements?.Invoke();
-    }
+        public void ShowVideoAd() => Agava.YandexGames.VideoAd.Show(OnOpenAdCallback, OnRewardedCallback, OnCloseAdCallback);
+        public void ShowInterstitialAd() => Agava.YandexGames.InterstitialAd.Show(OnOpenAdCallback, OnCloseInterstitialAdCallback);
 
-    private void OnRewardedCallback()
-    {
-        CollectingVideoAdReward?.Invoke();
-    }
+        private void OnOpenAdCallback()
+        {
+            Time.timeScale = 0;
+            AudioListener.volume = 0f;
+        }
 
-    private void OnCloseInterstitialAdCallback(bool result)
-    {
-        Time.timeScale = 1;
-        AudioListener.volume = 1f;
-        ShowingInteractiveElements?.Invoke();
+        private void OnCloseAdCallback()
+        {
+            Time.timeScale = 1;
+            AudioListener.volume = 1f;
+            ShowingInteractiveElements?.Invoke();
+        }
+
+        private void OnRewardedCallback()
+        {
+            CollectingVideoAdReward?.Invoke();
+        }
+
+        private void OnCloseInterstitialAdCallback(bool result)
+        {
+            Time.timeScale = 1;
+            AudioListener.volume = 1f;
+            ShowingInteractiveElements?.Invoke();
+        }
     }
 }

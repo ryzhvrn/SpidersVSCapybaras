@@ -1,17 +1,20 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LevelConfig", menuName = "Create Level Config")]
-public class LevelConfig : ScriptableObject
+namespace Scripts.SO
 {
-    [SerializeField] private int _starsAmountEarned;
-    [SerializeField] private string _currentLevelName;
-
-    public int StarsEarned => _starsAmountEarned;
-    public string CurrentLevelName => _currentLevelName;
-
-    public void SetConfigInfo(int amount, string name)
+    [CreateAssetMenu(fileName = "LevelConfig", menuName = "Create Level Config")]
+    public class LevelConfig : ScriptableObject
     {
-        _starsAmountEarned = amount;
-        _currentLevelName = name;
+        [SerializeField] private int _starsAmountEarned;
+        [SerializeField] private string _currentLevelName;
+
+        public int StarsEarned => _starsAmountEarned;
+        public string CurrentLevelName => _currentLevelName;
+
+        public void SetConfigInfo(int amount, string name)
+        {
+            _starsAmountEarned = amount;
+            _currentLevelName = name;
+        }
     }
 }

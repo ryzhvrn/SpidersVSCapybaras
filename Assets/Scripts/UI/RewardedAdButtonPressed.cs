@@ -1,74 +1,78 @@
+using Scripts.Services;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RewardedAdButtonPressed : MonoBehaviour
+namespace Scripts.UI
 {
-    private const string _keyAdViewedCount = "adViewedCount";
-    [SerializeField] private Image _dress;
-    [SerializeField] private Image _top;
-    [SerializeField] private Image _pants;
-    [SerializeField] private Button _adButton;
+    public class RewardedAdButtonPressed : MonoBehaviour
+    {
+        private const string _keyAdViewedCount = "adViewedCount";
+        [SerializeField] private Image _dress;
+        [SerializeField] private Image _top;
+        [SerializeField] private Image _pants;
+        [SerializeField] private Button _adButton;
     
-    private AdService _ads = new AdService();
-    private int _adViewedCount;
+        private AdService _ads = new AdService();
+        private int _adViewedCount;
 
-    public void OnRewardAdButtonPressed()
-    {
-        _ads.ShowVideoAd();
-    }
-
-    private void Start()
-    {
-        if (PlayerPrefs.HasKey(_keyAdViewedCount) == false)
+        public void OnRewardAdButtonPressed()
         {
-            PlayerPrefs.SetInt(_keyAdViewedCount, 0);
+            _ads.ShowVideoAd();
         }
 
-        _adViewedCount = PlayerPrefs.GetInt(_keyAdViewedCount);
-        int currentAdViewedCount = PlayerPrefs.GetInt(_keyAdViewedCount);
-        ShowFunCapybaraView(currentAdViewedCount);
-    }
-
-    private void OnEnable()
-    {
-        _ads.CollectingVideoAdReward += OnCollectVideoAdReward;
-    }
-
-    private void OnDisable()
-    {
-        _ads.CollectingVideoAdReward -= OnCollectVideoAdReward;
-    }
-
-    private void OnCollectVideoAdReward()
-    {
-        _adViewedCount++;
-        PlayerPrefs.SetInt(_keyAdViewedCount, _adViewedCount);
-        ShowFunCapybaraView(_adViewedCount);
-        PlayerPrefs.Save();
-    }
-
-    private void ShowFunCapybaraView(int count)
-    {
-        switch (count)
+        private void Start()
         {
-            case 0:
-                _adButton.gameObject.SetActive(true);
-                _dress.gameObject.SetActive(true);
-                _top.gameObject.SetActive(true);
-                _pants.gameObject.SetActive(true);
-                break;
-            case 1:
-                _adButton.gameObject.SetActive(true);
-                _dress.gameObject.SetActive(false);
-                _top.gameObject.SetActive(true);
-                _pants.gameObject.SetActive(true);
-                break;
-            case 2:
-                _adButton.gameObject.SetActive(false);
-                _dress.gameObject.SetActive(false);
-                _top.gameObject.SetActive(false);
-                _pants.gameObject.SetActive(false);
-                break;
+            if (PlayerPrefs.HasKey(_keyAdViewedCount) == false)
+            {
+                PlayerPrefs.SetInt(_keyAdViewedCount, 0);
+            }
+
+            _adViewedCount = PlayerPrefs.GetInt(_keyAdViewedCount);
+            int currentAdViewedCount = PlayerPrefs.GetInt(_keyAdViewedCount);
+            ShowFunCapybaraView(currentAdViewedCount);
+        }
+
+        private void OnEnable()
+        {
+            _ads.CollectingVideoAdReward += OnCollectVideoAdReward;
+        }
+
+        private void OnDisable()
+        {
+            _ads.CollectingVideoAdReward -= OnCollectVideoAdReward;
+        }
+
+        private void OnCollectVideoAdReward()
+        {
+            _adViewedCount++;
+            PlayerPrefs.SetInt(_keyAdViewedCount, _adViewedCount);
+            ShowFunCapybaraView(_adViewedCount);
+            PlayerPrefs.Save();
+        }
+
+        private void ShowFunCapybaraView(int count)
+        {
+            switch (count)
+            {
+                case 0:
+                    _adButton.gameObject.SetActive(true);
+                    _dress.gameObject.SetActive(true);
+                    _top.gameObject.SetActive(true);
+                    _pants.gameObject.SetActive(true);
+                    break;
+                case 1:
+                    _adButton.gameObject.SetActive(true);
+                    _dress.gameObject.SetActive(false);
+                    _top.gameObject.SetActive(true);
+                    _pants.gameObject.SetActive(true);
+                    break;
+                case 2:
+                    _adButton.gameObject.SetActive(false);
+                    _dress.gameObject.SetActive(false);
+                    _top.gameObject.SetActive(false);
+                    _pants.gameObject.SetActive(false);
+                    break;
+            }
         }
     }
 }

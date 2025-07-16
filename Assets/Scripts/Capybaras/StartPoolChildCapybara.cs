@@ -1,5 +1,8 @@
 using UnityEngine;
 
-public class StartPoolChildCapybara : MonoBehaviour
+namespace Scripts.Capybaras
 {
+    public class StartPoolChildCapybara : MonoBehaviour
+    {
+    }
 }

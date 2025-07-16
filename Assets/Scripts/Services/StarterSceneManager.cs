@@ -1,10 +1,13 @@
 using IJunior.TypedScenes;
 using UnityEngine;
 
-public class StarterSceneManager : MonoBehaviour
+namespace Scripts.Services
 {
-    public void OnOpenLevelsMenuButtonPressed()
+    public class StarterSceneManager : MonoBehaviour
     {
-        LevelsMenu.Load();
+        public void OnOpenLevelsMenuButtonPressed()
+        {
+            LevelsMenu.Load();
+        }
     }
 }

@@ -1,22 +1,27 @@
+using Scripts.Capybaras;
+using Scripts.Services;
 using UnityEngine;
 
-public class TriggerZone : MonoBehaviour
+namespace Scripts.Enemy
 {
-    [SerializeField] private GameEventBus _eventBus;
-
-    private void OnTriggerEnter(Collider other)
+    public class TriggerZone : MonoBehaviour
     {
-        if (other.TryGetComponent(out Capy capy))
+        [SerializeField] private GameEventBus _eventBus;
+
+        private void OnTriggerEnter(Collider other)
         {
-            _eventBus.TriggerZoneEntered(capy);
+            if (other.TryGetComponent(out Capy capy))
+            {
+                _eventBus.TriggerZoneEntered(capy);
+            }
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.TryGetComponent(out Capy capy))
+        private void OnTriggerExit(Collider other)
         {
-            _eventBus.TriggerZoneLeft(capy);
+            if (other.TryGetComponent(out Capy capy))
+            {
+                _eventBus.TriggerZoneLeft(capy);
+            }
         }
     }
 }

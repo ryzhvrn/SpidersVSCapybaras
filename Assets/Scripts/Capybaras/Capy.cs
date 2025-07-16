@@ -1,32 +1,35 @@
-using System;
+using Scripts.Services;
 using UnityEngine;
 
-public class Capy : MonoBehaviour
+namespace Scripts.Capybaras
 {
-    private GameEventBus _eventBus;
-
-    private void Awake()
+    public class Capy : MonoBehaviour
     {
-        _eventBus = FindObjectOfType<GameEventBus>();
-    }
+        private GameEventBus _eventBus;
 
-    private void OnEnable()
-    {
-        _eventBus.OnFinished += OnFinish;
-    }
+        private void Awake()
+        {
+            _eventBus = FindObjectOfType<GameEventBus>();
+        }
 
-    private void OnDisable()
-    {
-        _eventBus.OnFinished -= OnFinish;
-    }
+        private void OnEnable()
+        {
+            _eventBus.OnFinished += OnFinish;
+        }
 
-    private void OnDestroy()
-    {
-        _eventBus?.CapyDied(this);
-    }
+        private void OnDisable()
+        {
+            _eventBus.OnFinished -= OnFinish;
+        }
 
-    private void OnFinish()
-    {
-        Destroy(gameObject);
+        private void OnDestroy()
+        {
+            _eventBus?.CapyDied(this);
+        }
+
+        private void OnFinish()
+        {
+            Destroy(gameObject);
+        }
     }
 }

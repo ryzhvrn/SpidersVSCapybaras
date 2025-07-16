@@ -1,22 +1,26 @@
-﻿using UnityEngine;
+﻿using Scripts.SO;
+using UnityEngine;
 
-public class LevelConfigUpdater : MonoBehaviour
+namespace Scripts.Services
 {
-    [SerializeField] private GameEventBus _eventBus;
-    [SerializeField] private LevelConfig _levelConfig;
-
-    private void OnEnable()
+    public class LevelConfigUpdater : MonoBehaviour
     {
-        _eventBus.OnNotifyLevelConfigAboutAmountOfEarnedStars += UpdateConfig;
-    }
+        [SerializeField] private GameEventBus _eventBus;
+        [SerializeField] private LevelConfig _levelConfig;
 
-    private void OnDisable()
-    {
-        _eventBus.OnNotifyLevelConfigAboutAmountOfEarnedStars -= UpdateConfig;
-    }
+        private void OnEnable()
+        {
+            _eventBus.OnNotifyLevelConfigAboutAmountOfEarnedStars += UpdateConfig;
+        }
 
-    private void UpdateConfig(int amount, string levelName)
-    {
-        _levelConfig.SetConfigInfo(amount, levelName);
+        private void OnDisable()
+        {
+            _eventBus.OnNotifyLevelConfigAboutAmountOfEarnedStars -= UpdateConfig;
+        }
+
+        private void UpdateConfig(int amount, string levelName)
+        {
+            _levelConfig.SetConfigInfo(amount, levelName);
+        }
     }
 }

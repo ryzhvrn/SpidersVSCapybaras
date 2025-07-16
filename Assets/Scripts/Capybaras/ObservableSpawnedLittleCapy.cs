@@ -1,71 +1,74 @@
-using System;
 using System.Collections.Generic;
+using Scripts.Services;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ObservableSpawnedLittleCapy : MonoBehaviour
+namespace Scripts.Capybaras
 {
-    [SerializeField] private Transform _player;
-    [SerializeField] private GameEventBus _eventBus;
-
-    private List<Capy> _childCapybaras = new List<Capy>();
-    private int _distanceMultiplier = 2;
-
-    private void Update()
+    public class ObservableSpawnedLittleCapy : MonoBehaviour
     {
-        CorrectChildCapybaraPosition();
-    }
+        [SerializeField] private Transform _player;
+        [SerializeField] private GameEventBus _eventBus;
 
-    private void OnEnable()
-    {
-        _eventBus.OnCapySpawned += OnCapySpawned;
-        _eventBus.OnCapyDied += OnCapyDied;
-        _eventBus.OnPlayerFinished += OnPlayerFinished;
-    }
+        private List<Capy> _childCapybaras = new List<Capy>();
+        private int _distanceMultiplier = 2;
 
-    private void OnDisable()
-    {
-        _eventBus.OnCapySpawned -= OnCapySpawned;
-        _eventBus.OnCapyDied -= OnCapyDied;
-        _eventBus.OnPlayerFinished -= OnPlayerFinished;
-    }
+        private void Update()
+        {
+            CorrectChildCapybaraPosition();
+        }
 
-    private void CorrectChildCapybaraPosition()
-    {
-        float distanceBetweenObjects = 4f;
+        private void OnEnable()
+        {
+            _eventBus.OnCapySpawned += OnCapySpawned;
+            _eventBus.OnCapyDied += OnCapyDied;
+            _eventBus.OnPlayerFinished += OnPlayerFinished;
+        }
 
-        if (_childCapybaras.Count > 0)
+        private void OnDisable()
+        {
+            _eventBus.OnCapySpawned -= OnCapySpawned;
+            _eventBus.OnCapyDied -= OnCapyDied;
+            _eventBus.OnPlayerFinished -= OnPlayerFinished;
+        }
+
+        private void CorrectChildCapybaraPosition()
+        {
+            float distanceBetweenObjects = 4f;
+
+            if (_childCapybaras.Count > 0)
+            {
+                foreach (Capy capy in _childCapybaras)
+                {
+                    if (capy != null)
+                    {
+                        capy.GetComponent<NavMeshAgent>().stoppingDistance = _distanceMultiplier * distanceBetweenObjects;
+                        distanceBetweenObjects++;
+                    }
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void OnPlayerFinished()
         {
             foreach (Capy capy in _childCapybaras)
             {
-                if (capy != null)
-                {
-                    capy.GetComponent<NavMeshAgent>().stoppingDistance = _distanceMultiplier * distanceBetweenObjects;
-                    distanceBetweenObjects++;
-                }
+                _eventBus.Finished();
             }
         }
-        else
+
+        private void OnCapySpawned(Capy capy)
         {
-            return;
+            _childCapybaras.Add(capy);
         }
-    }
 
-    private void OnPlayerFinished()
-    {
-        foreach (Capy capy in _childCapybaras)
+        private void OnCapyDied(Capy capy)
         {
-            _eventBus.Finished();
+            _childCapybaras.Remove(capy);
         }
-    }
-
-    private void OnCapySpawned(Capy capy)
-    {
-        _childCapybaras.Add(capy);
-    }
-
-    private void OnCapyDied(Capy capy)
-    {
-        _childCapybaras.Remove(capy);
     }
 }

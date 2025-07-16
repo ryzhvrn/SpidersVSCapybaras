@@ -1,14 +1,18 @@
+using Scripts.Services;
 using UnityEngine;
 
-public class PlayerDetector : MonoBehaviour
+namespace Scripts.Player
 {
-    [SerializeField] private GameEventBus _eventBus;
-
-    private void OnTriggerEnter(Collider other)
+    public class PlayerDetector : MonoBehaviour
     {
-        if (other.GetComponent<Player>())
+        [SerializeField] private GameEventBus _eventBus;
+
+        private void OnTriggerEnter(Collider other)
         {
-            _eventBus.PlayerDetected();
+            if (other.GetComponent<Player>())
+            {
+                _eventBus.PlayerDetected();
+            }
         }
     }
 }

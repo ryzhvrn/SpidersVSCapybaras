@@ -1,5 +1,8 @@
 using UnityEngine;
 
-public class ChildCapybara : MonoBehaviour
+namespace Scripts.Capybaras
 {
+    public class ChildCapybara : MonoBehaviour
+    {
+    }
 }

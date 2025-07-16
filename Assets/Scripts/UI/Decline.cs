@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
 
-public class Decline : MonoBehaviour
+namespace Scripts.UI
 {
-    public event Action DeclineButtonPressed;
-
-    public void Pressed()
+    public class Decline : MonoBehaviour
     {
-        DeclineButtonPressed?.Invoke();
+        public event Action DeclineButtonPressed;
+
+        public void Pressed()
+        {
+            DeclineButtonPressed?.Invoke();
+        }
     }
 }

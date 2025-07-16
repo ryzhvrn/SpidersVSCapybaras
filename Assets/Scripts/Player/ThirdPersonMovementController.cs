@@ -1,90 +1,94 @@
 using System;
+using Scripts.UI;
 using UnityEngine;
 
-public class ThirdPersonMovementController : MonoBehaviour
+namespace Scripts.Player
 {
-    [SerializeField] private CharacterController _controller;
-    [SerializeField] private Transform _camera;
-    [SerializeField] private float _speed = 6f;
-    [SerializeField] private float _turnSmoothTime = 0.1f;
-    [SerializeField] private TipsButtonsController _tipsController;
-
-    private float _turnSmoothVelocity;
-    private bool _isMoving = false;
-    private bool _isKeyboardEnabled = true;
-
-    public event Action<bool> PlayerMoving;
-
-    private void OnEnable()
+    public class ThirdPersonMovementController : MonoBehaviour
     {
-        if (_tipsController != null)
-        {
-            _tipsController.DisableInput += OnDisableInput;
-            _tipsController.EnableInput += OnEnableInput; 
-        }
-    }
+        [SerializeField] private CharacterController _controller;
+        [SerializeField] private Transform _camera;
+        [SerializeField] private float _speed = 6f;
+        [SerializeField] private float _turnSmoothTime = 0.1f;
+        [SerializeField] private TipsButtonsController _tipsController;
 
-    private void OnDisable()
-    {
-        if (_tipsController != null)
-        {
-            _tipsController.DisableInput -= OnDisableInput;
-            _tipsController.EnableInput -= OnEnableInput;
-        }
-    }
+        private float _turnSmoothVelocity;
+        private bool _isMoving = false;
+        private bool _isKeyboardEnabled = true;
 
-    private void Update()
-    {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        public event Action<bool> PlayerMoving;
 
-        if (_isKeyboardEnabled)
+        private void OnEnable()
         {
-            if (direction.magnitude >= 0.1f)
+            if (_tipsController != null)
             {
-                _isMoving = true;
-                float targetAngle = Mathf.Atan2(
-                    direction.x, direction.z) *
-                    Mathf.Rad2Deg +
-                    _camera.eulerAngles.y;
-                float angle = Mathf.SmoothDampAngle(
-                    transform.eulerAngles.y,
-                    targetAngle,
-                    ref _turnSmoothVelocity,
-                    _turnSmoothTime);
-                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+                _tipsController.DisableInput += OnDisableInput;
+                _tipsController.EnableInput += OnEnableInput; 
+            }
+        }
 
-                Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                _controller.Move(moveDirection.normalized * _speed * Time.deltaTime);
+        private void OnDisable()
+        {
+            if (_tipsController != null)
+            {
+                _tipsController.DisableInput -= OnDisableInput;
+                _tipsController.EnableInput -= OnEnableInput;
+            }
+        }
+
+        private void Update()
+        {
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
+            Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+            if (_isKeyboardEnabled)
+            {
+                if (direction.magnitude >= 0.1f)
+                {
+                    _isMoving = true;
+                    float targetAngle = Mathf.Atan2(
+                                            direction.x, direction.z) *
+                                        Mathf.Rad2Deg +
+                                        _camera.eulerAngles.y;
+                    float angle = Mathf.SmoothDampAngle(
+                        transform.eulerAngles.y,
+                        targetAngle,
+                        ref _turnSmoothVelocity,
+                        _turnSmoothTime);
+                    transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+                    Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                    _controller.Move(moveDirection.normalized * _speed * Time.deltaTime);
+                }
+                else
+                {
+                    _isMoving = false;
+                }
+
+                if (_isMoving)
+                {
+                    PlayerMoving?.Invoke(_isMoving);
+                }
+                else
+                {
+                    PlayerMoving?.Invoke(_isMoving);
+                }
             }
             else
             {
-                _isMoving = false;
-            }
-
-            if (_isMoving)
-            {
-                PlayerMoving?.Invoke(_isMoving);
-            }
-            else
-            {
-                PlayerMoving?.Invoke(_isMoving);
+                return;
             }
         }
-        else
+
+        private void OnDisableInput()
         {
-            return;
+            _isKeyboardEnabled = false;
         }
-    }
 
-    private void OnDisableInput()
-    {
-        _isKeyboardEnabled = false;
-    }
-
-    private void OnEnableInput()
-    {
-        _isKeyboardEnabled = true;
+        private void OnEnableInput()
+        {
+            _isKeyboardEnabled = true;
+        }
     }
 }

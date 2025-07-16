@@ -1,48 +1,51 @@
 using Agava.WebUtility;
 using UnityEngine;
 
-public class FocusMonitoring : MonoBehaviour
+namespace Scripts.Services
 {
-    [SerializeField] private AudioSource _audioSource;
-
-    private void OnEnable()
+    public class FocusMonitoring : MonoBehaviour
     {
-        Application.focusChanged += OnInBackgroundChangeApp;
-        WebApplication.InBackgroundChangeEvent += OnInBackgroundChangeWeb;
-    }
+        [SerializeField] private AudioSource _audioSource;
 
-    private void OnDisable()
-    {
-        Application.focusChanged -= OnInBackgroundChangeApp;
-        WebApplication.InBackgroundChangeEvent -= OnInBackgroundChangeWeb;
-    }
-
-    private void MuteAudio(bool value)
-    {
-        _audioSource.volume = value ? 0 : 1;
-        AudioListener.volume = value ? 0 : 1;
-        AudioListener.pause = value;
-
-        if (!value && !_audioSource.isPlaying)
+        private void OnEnable()
         {
-            _audioSource.Play();
+            Application.focusChanged += OnInBackgroundChangeApp;
+            WebApplication.InBackgroundChangeEvent += OnInBackgroundChangeWeb;
         }
-    }
 
-    private void PauseGame(bool value)
-    {
-        Time.timeScale = value ? 1 : 0;
-    }
+        private void OnDisable()
+        {
+            Application.focusChanged -= OnInBackgroundChangeApp;
+            WebApplication.InBackgroundChangeEvent -= OnInBackgroundChangeWeb;
+        }
 
-    private void OnInBackgroundChangeWeb(bool inApp)
-    {
-        MuteAudio(!inApp);
-        PauseGame(!inApp);
-    }
+        private void MuteAudio(bool value)
+        {
+            _audioSource.volume = value ? 0 : 1;
+            AudioListener.volume = value ? 0 : 1;
+            AudioListener.pause = value;
 
-    private void OnInBackgroundChangeApp(bool isBackground)
-    {
-        MuteAudio(!isBackground);
-        PauseGame(isBackground);
+            if (!value && !_audioSource.isPlaying)
+            {
+                _audioSource.Play();
+            }
+        }
+
+        private void PauseGame(bool value)
+        {
+            Time.timeScale = value ? 1 : 0;
+        }
+
+        private void OnInBackgroundChangeWeb(bool inApp)
+        {
+            MuteAudio(!inApp);
+            PauseGame(!inApp);
+        }
+
+        private void OnInBackgroundChangeApp(bool isBackground)
+        {
+            MuteAudio(!isBackground);
+            PauseGame(isBackground);
+        }
     }
 }

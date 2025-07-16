@@ -1,30 +1,33 @@
 using System.Collections;
 using UnityEngine;
 
-public class CorrectPlayerPosition : MonoBehaviour
+namespace Scripts.Player
 {
-    [SerializeField] private Transform _playerTransform;
+    public class CorrectPlayerPosition : MonoBehaviour
+    {
+        [SerializeField] private Transform _playerTransform;
     
-    private float _initialYPosition;
-    private float _acceptableDistance = 0.01f;
+        private float _initialYPosition;
+        private float _acceptableDistance = 0.01f;
 
-    private void Start()
-    {
-        _initialYPosition = _playerTransform.position.y;
-        StartCoroutine(CorrectPlayerPositionCoroutine());
-    }
-
-    private IEnumerator CorrectPlayerPositionCoroutine()
-    {
-        while (true)
+        private void Start()
         {
-            yield return new WaitForSeconds(0.5f);
+            _initialYPosition = _playerTransform.position.y;
+            StartCoroutine(CorrectPlayerPositionCoroutine());
+        }
 
-            if (Mathf.Abs(_playerTransform.position.y - _initialYPosition) > _acceptableDistance)
+        private IEnumerator CorrectPlayerPositionCoroutine()
+        {
+            while (true)
             {
-                Vector3 newPosition = _playerTransform.position; 
-                newPosition.y = _initialYPosition;
-                _playerTransform.position = newPosition;
+                yield return new WaitForSeconds(0.5f);
+
+                if (Mathf.Abs(_playerTransform.position.y - _initialYPosition) > _acceptableDistance)
+                {
+                    Vector3 newPosition = _playerTransform.position; 
+                    newPosition.y = _initialYPosition;
+                    _playerTransform.position = newPosition;
+                }
             }
         }
     }

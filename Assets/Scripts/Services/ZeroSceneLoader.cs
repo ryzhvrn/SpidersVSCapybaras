@@ -1,10 +1,9 @@
-using System.Collections;
-using Agava.YandexGames;
-using IJunior.TypedScenes;
 using UnityEngine;
 
-public sealed class ZeroSceneLoader : MonoBehaviour
+namespace Scripts.Services
 {
+    public sealed class ZeroSceneLoader : MonoBehaviour
+    {
 #if !UNITY_EDITOR && UNITY_WEBGL
     private void Awake()
     {
@@ -21,4 +20,5 @@ public sealed class ZeroSceneLoader : MonoBehaviour
         StarterScene.Load();
     }
 #endif
+    }
 }

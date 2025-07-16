@@ -1,22 +1,26 @@
+using Scripts.UI;
 using UnityEngine;
 
-public class LeaderboardLoader : MonoBehaviour
+namespace Scripts.Leaderboard
 {
-    [SerializeField] private YandexLeaderboard _leaderboard;
-    [SerializeField] private OpenLevelsMenu _levelsMenu;
-
-    private void OnEnable()
+    public class LeaderboardLoader : MonoBehaviour
     {
-        _levelsMenu.SceneLoaded += LeaderboardOpened;
-    }
+        [SerializeField] private YandexLeaderboard _leaderboard;
+        [SerializeField] private OpenLevelsMenu _levelsMenu;
 
-    private void OnDisable()
-    {
-        _levelsMenu.SceneLoaded -= LeaderboardOpened;
-    }
+        private void OnEnable()
+        {
+            _levelsMenu.SceneLoaded += LeaderboardOpened;
+        }
 
-    private void LeaderboardOpened()
-    {
-        _leaderboard.Fill();
+        private void OnDisable()
+        {
+            _levelsMenu.SceneLoaded -= LeaderboardOpened;
+        }
+
+        private void LeaderboardOpened()
+        {
+            _leaderboard.Fill();
+        }
     }
 }

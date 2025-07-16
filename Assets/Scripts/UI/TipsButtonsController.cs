@@ -3,78 +3,81 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TipsButtonsController : MonoBehaviour
+namespace Scripts.UI
 {
-    [SerializeField] private Image _tipsBackground;
-    [SerializeField] private Button _nextButton;
-    [SerializeField] private List<Text> _tipsList;
-    private int _counter = 0;
-
-    public event Action DisableInput;
-    public event Action EnableInput;
-
-    private void Start()
+    public class TipsButtonsController : MonoBehaviour
     {
-        DisableKeyboardInput();
-    }
+        [SerializeField] private Image _tipsBackground;
+        [SerializeField] private Button _nextButton;
+        [SerializeField] private List<Text> _tipsList;
+        private int _counter = 0;
 
-    public void OnButtonClick()
-    {
-        ShowNextTip();
-    }
+        public event Action DisableInput;
+        public event Action EnableInput;
 
-    private void ShowNextTip()
-    {
-        DisableText();
-        _counter++;
-        EnableText();
-        DisableTipsBackground();
-        DisableTipsNextButton();
-        EnableKeyboardInput();
-    }
-
-    private void EnableText()
-    {
-        if (_counter < _tipsList.Count)
+        private void Start()
         {
-            _tipsList[_counter].gameObject.SetActive(true);
+            DisableKeyboardInput();
         }
-    }
 
-    private void DisableText()
-    {
-        if (_counter < _tipsList.Count)
+        public void OnButtonClick()
         {
-            _tipsList[_counter].gameObject.SetActive(false);
+            ShowNextTip();
         }
-    }
 
-    private void DisableTipsBackground()
-    {
-        if (_counter == _tipsList.Count)
+        private void ShowNextTip()
         {
-            _tipsBackground.gameObject.SetActive(false);
+            DisableText();
+            _counter++;
+            EnableText();
+            DisableTipsBackground();
+            DisableTipsNextButton();
+            EnableKeyboardInput();
         }
-    }
 
-    private void DisableTipsNextButton()
-    {
-        if (_counter == _tipsList.Count)
+        private void EnableText()
         {
-            _nextButton.gameObject.SetActive(false);
+            if (_counter < _tipsList.Count)
+            {
+                _tipsList[_counter].gameObject.SetActive(true);
+            }
         }
-    }
 
-    private void DisableKeyboardInput()
-    {
-        DisableInput?.Invoke();
-    }
-
-    private void EnableKeyboardInput()
-    {
-        if (_counter == _tipsList.Count)
+        private void DisableText()
         {
-            EnableInput?.Invoke();
+            if (_counter < _tipsList.Count)
+            {
+                _tipsList[_counter].gameObject.SetActive(false);
+            }
+        }
+
+        private void DisableTipsBackground()
+        {
+            if (_counter == _tipsList.Count)
+            {
+                _tipsBackground.gameObject.SetActive(false);
+            }
+        }
+
+        private void DisableTipsNextButton()
+        {
+            if (_counter == _tipsList.Count)
+            {
+                _nextButton.gameObject.SetActive(false);
+            }
+        }
+
+        private void DisableKeyboardInput()
+        {
+            DisableInput?.Invoke();
+        }
+
+        private void EnableKeyboardInput()
+        {
+            if (_counter == _tipsList.Count)
+            {
+                EnableInput?.Invoke();
+            }
         }
     }
 }
